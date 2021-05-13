@@ -52,6 +52,7 @@ class Domain(Dataset):
                  sample_by_metadata: Optional[Tuple[str, int]] = None,
                  metadata_file: Optional[Path] = None,
                  sample: int = None,
+                 sample_from_head: bool = False,
                  **metadata_filters):
         super().__init__()      
         self.add_bos_token = add_bos_token 
@@ -101,7 +102,15 @@ class Domain(Dataset):
         
                 if sample:
                     print(f"Loading {sample} files from {domain_directory}...")
-                    sample_files = reservoir_sampling(fs, sample)
+                    if sample_from_head:
+                        sample_files = []
+                        for ix, file in enumerate(fs):
+                            if ix < sample:
+                                sample_files.append(file)
+                            else:
+                                break
+                    else:
+                        sample_files = reservoir_sampling(fs, sample)
                     self.files = {x: [] for x in sample_files}
                 else:
                     print(f"Loading all files from {domain_directory}...")

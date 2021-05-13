@@ -10,11 +10,11 @@ import pandas as pd
 from pathlib import Path
 import gzip
 
-from loader.constants import PROJECT_DIR, TOKEN_COUNTS
-from loader.utils import take_n_tokens
+from domain_loader.constants import PROJECT_DIR, TOKEN_COUNTS
+from domain_loader.utils import take_n_tokens
 from tqdm.auto import tqdm
 import numpy as np
-from loader.domain_loader import Domain
+from domain_loader.domain_loader import Domain
 import argparse
 import humanize
 
@@ -30,7 +30,7 @@ def write_split(domain, add_bos_token, num_workers, batch_size, output_dir, spli
         pbar = tqdm(loader)
         
         written = False
-        for fname, text in pbar:
+        for fname, text,_ in pbar:
             files.extend(fname)
             for item in text:
                 curr_tokens += len(item.split())

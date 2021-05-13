@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import List, Optional, Tuple
 
 import pickle
-import faiss
+# import faiss
 import numpy as np
 import torch
 from domain_loader.constants import PROJECT_DIR, TOKEN_COUNTS
@@ -24,8 +24,8 @@ from tqdm.auto import tqdm
 from sklearn.decomposition import TruncatedSVD
 import json
 from typing import TypeVar, Iterable, List, Sequence, Union, Any
-
-
+from sklearn.cluster import MiniBatchKMeans
+from k_means_constrained import KMeansConstrained
 
 T = TypeVar('T')
 
@@ -58,7 +58,7 @@ def sample_docs(domain, sample=None, sample_from_head=False):
             sample_ = sample
         else:
             sample_ = None
-    dataset = Domain(PROJECT_DIR / domain / domain, sample=sample_)
+    dataset = Domain(PROJECT_DIR / domain / domain, sample=sample_, sample_from_head=False)
     
     loader = DataLoader(dataset,
                         num_workers=0,
@@ -85,8 +85,8 @@ def sample_docs(domain, sample=None, sample_from_head=False):
     return docs
 
 
-def get_clusters(domain, svd, count_vectorizer, kmeans, sample, preloaded=False, batched_write=False, output_dir=None):
-    dataset = Domain(PROJECT_DIR / domain / domain, sample=None)
+def get_clusters(domain, svd, count_vectorizer, kmeans, sample, balanced=False, preloaded=False, batched_write=False, output_dir=None):
+    dataset = Domain(PROJECT_DIR / domain / domain, sample=sample, sample_from_head=False)
     if domain == '1b':
         loader = DataLoader(dataset, num_workers=0, batch_size=100, collate_fn=collate_fn)
     elif domain == 'reddit':
@@ -110,8 +110,11 @@ def get_clusters(domain, svd, count_vectorizer, kmeans, sample, preloaded=False,
                 docs.append(t)
         eval_embeddings = count_vectorizer.transform(tqdm(docs))
         eval_vectors = svd.transform(eval_embeddings).astype(np.float32)
-        _, I = kmeans.search(eval_vectors, 1)
-        I = I.squeeze(1)
+        if balanced:
+            I = kmeans.predict(eval_vectors).tolist()
+        else:
+            _, I = kmeans.search(eval_vectors, 1)
+            I = I.squeeze(1)
         z = defaultdict(list)
         for cluster_id, doc in zip(I, docs):
             z[cluster_id].append("<|endoftext|> " + doc.strip())
@@ -167,22 +170,45 @@ if __name__ == '__main__':
     parser.add_argument('--kmeans_output_dir', type=Path)
     parser.add_argument('--output_dir', type=Path)
     parser.add_argument('--domains', nargs="+", type=str)
+    parser.add_argument('--min_cluster_size', type=int, default=None)
+    parser.add_argument('--sample_size', type=int, default=1000)
     parser.add_argument('--num_clusters', type=int, default=8)
+    parser.add_argument('--balanced', action='store_true')
     args = parser.parse_args()
     if args.domains:
         domains = args.domains
     if not args.load:
         args.kmeans_output_dir.mkdir(exist_ok=True)
-        kmeans = faiss.Kmeans(args.dim, args.num_clusters, verbose=True, gpu=True)
-        for domain in domains:
-            ds = sample_docs(domain, sample=1000)
+        #if args.balanced:
+            #kmeans = KMeansConstrained(n_clusters=args.num_clusters,
+             #                          init=domain_embeddings,
+              #                          size_min=args.min_cluster_size)
+        #else:
+         #   kmeans = faiss.Kmeans(args.dim, args.num_clusters, verbose=True, gpu=True)
+        domain_ids = []
+        for domain_id,domain in enumerate(domains):
+            ds = sample_docs(domain, sample=args.sample_size)
             docs.extend(ds)
+            domain_ids.extend([domain_id]*len(ds))
         count_vectorizer = TfidfVectorizer(stop_words="english")
         embeddings = count_vectorizer.fit_transform(tqdm([x['text'] for x in docs]))
         svd = TruncatedSVD(n_components=args.dim)
         vectors = svd.fit_transform(embeddings).astype(np.float32)
-        kmeans.train(vectors)
-        np.save(args.kmeans_output_dir / "kmeans.index", kmeans.centroids)
+        domain_ids = np.array(domain_ids)
+        domain_embeddings = []
+        for domain_id in np.unique(domain_ids):
+            domain_embedding = np.mean(vectors[domain_ids == domain_id,:], 0)
+            domain_embeddings.append(np.expand_dims(domain_embedding,1))
+        domain_embeddings = np.concatenate(domain_embeddings,1)
+        kmeans = MiniBatchKMeans(n_clusters=args.num_clusters, init=domain_embeddings.T)
+        if args.balanced:
+            out = kmeans.fit_predict(vectors)
+            with open(args.kmeans_output_dir / "kmeans.index", "wb+") as f:
+                pickle.dump(kmeans, f)
+        else:
+            kmeans.train(vectors)
+            np.save(args.kmeans_output_dir / "kmeans.index", kmeans.centroids)
+
         with open(args.kmeans_output_dir / "tfidf.pkl", "wb+") as f:
             pickle.dump(count_vectorizer, f)
         with open(args.kmeans_output_dir / "svd.pkl", "wb+") as f:
@@ -191,9 +217,13 @@ if __name__ == '__main__':
     else:
         with open(args.load / "tfidf.pkl", "rb") as f:
             count_vectorizer = pickle.load(f)
-        centroids = np.load(args.load / "kmeans.index.npy")
-        kmeans = faiss.IndexFlatL2(args.dim)
-        kmeans.add(centroids)
+        if args.balanced:
+            with open(args.load / 'kmeans.index', 'rb') as f:
+                kmeans = pickle.load(f)   
+        else:   
+            centroids = np.load(args.load / "kmeans.index.npy")
+            kmeans = faiss.IndexFlatL2(args.dim)
+            kmeans.add(centroids)
         with open(args.load / 'svd.pkl', 'rb') as f:
             svd = pickle.load(f)        
  
@@ -206,5 +236,6 @@ if __name__ == '__main__':
                     sample=None,
                     preloaded=args.load or False,
                     batched_write=domain == 'reddit',
-                    output_dir=args.output_dir)
+                    output_dir=args.output_dir,
+                    balanced=args.balanced)
 

@@ -10,17 +10,17 @@ import pandas as pd
 from pathlib import Path
 import gzip
 
-from loader.constants import PROJECT_DIR
-from loader.utils import take_n_tokens
+from domain_loader.constants import PROJECT_DIR
+from domain_loader.utils import take_n_tokens
 from tqdm.auto import tqdm
 import numpy as np
-from loader.domain_loader import Domain
+from domain_loader.domain_loader import Domain
 
 if __name__ == '__main__':
 
-    domain = "reviews"
+    domain = "gutenberg"
    
-    dataset = Domain(PROJECT_DIR / domain / domain)
+    dataset = Domain(PROJECT_DIR / domain)
     
     dataloader = DataLoader(dataset,
                             num_workers=16,
@@ -28,7 +28,7 @@ if __name__ == '__main__':
     
     pbar = tqdm(dataloader)
     curr_tokens = 0
-    for fname, text in pbar:
+    for fname, text, _ in pbar:
         for item in text:
             curr_tokens += len(item.split())
 

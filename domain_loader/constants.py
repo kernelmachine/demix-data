@@ -26,5 +26,8 @@ TOKEN_COUNTS = {"1b": {'num_train_tokens': 700_000_000,
                 "med": {'num_train_tokens': 9_500_000_000, 
                         'num_dev_tokens': 10_000_000,
                         'num_test_tokens': 10_000_000}, 
+                "gutenberg": {'num_train_tokens': 3_000_000_000,
+                              'num_dev_tokens': 10_000_000,
+                              'num_test_tokens': 10_000_000}
                 }
                 
