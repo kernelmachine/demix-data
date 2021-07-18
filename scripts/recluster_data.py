@@ -47,7 +47,7 @@ def batchify(data: Iterable[T], batch_size: int) -> Iterable[List[T]]:
         yield batch
 
 
-def sample_docs(domain, sample=None, sample_from_head=False):
+def sample_docs(domain, sample=None, sample_from_head=True):
     if domain in ['reddit', '1b']:
         if sample:
             sample_ = 1
@@ -58,7 +58,7 @@ def sample_docs(domain, sample=None, sample_from_head=False):
             sample_ = sample
         else:
             sample_ = None
-    dataset = Domain(PROJECT_DIR / domain / domain, sample=sample_, sample_from_head=False)
+    dataset = Domain(PROJECT_DIR / domain / domain, sample=sample_, sample_from_head=True)
     
     loader = DataLoader(dataset,
                         num_workers=0,
@@ -86,7 +86,7 @@ def sample_docs(domain, sample=None, sample_from_head=False):
 
 
 def get_clusters(domain, svd, count_vectorizer, kmeans, sample, balanced=False, preloaded=False, batched_write=False, output_dir=None):
-    dataset = Domain(PROJECT_DIR / domain / domain, sample=sample, sample_from_head=False)
+    dataset = Domain(PROJECT_DIR / domain / domain, sample=sample, sample_from_head=True)
     if domain == '1b':
         loader = DataLoader(dataset, num_workers=0, batch_size=100, collate_fn=collate_fn)
     elif domain == 'reddit':
@@ -99,12 +99,12 @@ def get_clusters(domain, svd, count_vectorizer, kmeans, sample, balanced=False, 
         output_dir.mkdir(parents=True)
         for i in range(8):
             (output_dir / str(i)).mkdir()
-    for _,text, _ in pbar:
+    for fname,text, _ in pbar:
         docs = []
         if domain in ['reddit', '1b']:
             for t in text:
                 for tt in t.split('<|endoftext|>'):
-                    docs.append(tt)
+                    docs.append({"text": tt})
         else:
             for t in text:
                 docs.append(t)

@@ -19,6 +19,7 @@ from domain_loader.utils import take_n_tokens
 from tqdm.auto import tqdm
 import numpy as np
 from scipy import sparse
+import re
 
 def vec_collate_fn(batch):
         return [x[0] for x in batch],  sparse.vstack([x[1] for x in batch]),  [x[2] for x in batch]
@@ -42,6 +43,12 @@ def collate_fn(batch):
     return [x[0] for x in batch],  [x[1] for x in batch],  [x[2] for x in batch]
 
 
+
+
+
+
+
+
 class Domain(Dataset):
     def __init__(self,
                  domain_directory: Path,
@@ -53,9 +60,41 @@ class Domain(Dataset):
                  metadata_file: Optional[Path] = None,
                  sample: int = None,
                  sample_from_head: bool = False,
+                 track_token_count: bool = False,
+                 anonymize: bool = False,
                  **metadata_filters):
         super().__init__()      
-        self.add_bos_token = add_bos_token 
+        self.add_bos_token = add_bos_token
+        self.anonymize = anonymize 
+
+        re1 = {
+            "regex": "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?",
+            "repl": "<|EMAIL|>"
+        }
+
+        re2 = {"regex": "[0-9]{10}-[0-9A-Fa-f]{53}", "repl":"<|DART|>"}
+
+        re3 = {"regex": "@\[[0-9]+:[0-9]+:(?=[^\]])(([^\\:\]]*(?:\\.)*)*)\]", "repl": "<|FBUSERID|>"}
+
+        re4 ={"regex": "(?:(?<![\d-])(?:\+\d{1,3}[-.\s*]?)?(?:\(?\d{3}\)?[-\/.\s*]?)?\d{3}[-.\s*]?\d{4}(?![\d-]))", "repl": "<|PHONE_NUMBER|>"}
+
+        re5 ={"regex": "(?:4\d{12}(?:\d{3})?|(?:5[1-5]\d{2}|222[1-9]|22[3-9]\d|2[3-6]\d{2}|27[01]\d|2720)\d{12}|3[47]\d{13}|5019\d{12}|3(?:0[0-5]|[68]\d)\d{11}|6(?:011|5\d{2})\d{12}|(?:2131|1800|35\d{3})\d{11})", "repl": "<CREDIT_CARD_NUMBER>"}
+
+        re6 ={"regex": "(?!(?:000|666|9))\d{3}-(?!00)\d{2}-(?!0000)\d{4}", "repl": "<|SSN|>"}
+
+        re7 = {"regex": "\d+\s(?:(?:[a-z0-9.-]+[ ]?)+\s(?:Alley|Aly|Ave(?:nue)?|Boulevard|Blvd|Br(?:anch)?|Center|Ctr|Cir(?:cle)?|Court|Ct|Crossing|Xing|Dr(?:ive)?|Est(?:ate)?|Expressway|Expy|Freeway|Fwy|Highway|Hwy|Hills|Hls|Knoll|Knl|Landing|Lndg|Lane|Ln|Manor|Mnr|Meadow|Mdw|Parkway|Pkwy|Pass|Path|Plaza|Plz|Road|Rd|Run|Sq(?:uare)?|St(?:ation|reet|a)?|Ter(?:ace)?|Trail|Trl|Turnpike|Tpke|Valley|Vly|View|Vw|Village|Vlg|Vis(?:ta)?|Walk|Way)|(?:Route|Rte|Interstate|I)[- ]?\d{1,3})(?:\s(?:Apt[\.]?|Apartment|#)[ ]?\d+[a-z]?)?(?:\s(?:[a-z-]+[ ]?)+,?(?:\s(?:AK|AL(?:aska|abama)?|AR(?:kansas|izona)?|AZ|CA(?:lifornia)?|CO(?:lorado|nnecticut)?|CT|DC|DE(?:laware)?|FL(?:orida)?|GA|Georgia|GU(?:am)?|HI|Hawaii|IA|Iowa|ID(?:aho)?|IL(?:linois)?|IN(?:diana)?|KS|Kansas|KY|Kentucky|LA|Louisiana|MA(?:ssachusetts|ryland|ine)?|MD|ME|MI(?:chigan|nnesota|ssissippi|ssouri)|MN|MO(?:ntana)?|MS|MT|NC|North[ ]Carolina|ND|North[ ]Dakota|NH|New[ ]Hampshire|NJ|New[ ]Jersey|NM|New[ ]Mexico|NV|Nevada|NY|New[ ]York|OH(?:io)?|OK(?:lahoma)?|OR(?:egon)?|PA|Pennsylvania|PR|Puerto[ ]Rico|RI|Rhode[ ]Island|SC|South[ ]Carolina|SD|South[ ]Dakota|TN|Tennessee|TX|Texas|UT(?:ah)?|VA|Virginia|VI(?:rgin[ ]Islands)?|VT|Vermont|WA(?:shington(?:[ ]D[. ]?C[.]?)?)?|WI(?:sconsin)?|WV|West[ ]Virginia|WY(?:oming)?)(?:\s\b\d{5}(?:-\d{4})?\b)?)?)?", 
+            "repl": "<|ADDRESS|>"}
+
+        re8 = {"regex": "@[a-zA-Z0-9_\.\-]{1,30}", "repl": "@USER"}
+
+
+        re_list = [re1,re2,re3,re4,re5,re6,re8]
+
+
+        self.anonymizer = {re.compile(x['regex']): x['repl'] for x in re_list}
+
+
+
         self.bos_token = "<|endoftext|> " 
         self.domain_directory = domain_directory
         self.files = {}
@@ -93,8 +132,7 @@ class Domain(Dataset):
                 if isinstance(filenames[0], Tuple):
                     self.files = dict(filenames)
                 else:
-                    for x in filenames:
-                        self.files[Path(x)] = []
+                    self.files = filenames
                 # assert all(file.exists for file in self.files)
             else:
                 
@@ -111,10 +149,10 @@ class Domain(Dataset):
                                 break
                     else:
                         sample_files = reservoir_sampling(fs, sample)
-                    self.files = {x: [] for x in sample_files}
+                    self.files = sample_files
                 else:
                     print(f"Loading all files from {domain_directory}...")
-                    self.files = {x: [] for x in list(fs)}
+                    self.files = list(fs)
                 # if sample is not None:
                 #     print(f"Loading {sample} of files from {domain_directory}...")
                 #     for ix, x in enumerate(fs):
@@ -208,13 +246,14 @@ class Domain(Dataset):
         #         self.files = list(fs)
         
         if ignore_files:
-            for file in ignore_files:
-                if self.files.get(Path(file)):
-                    del self.files[Path(file)]
+            self.files = list(set(self.files) - set(ignore_files))
+            # for file in ignore_files:
+            #     if self.files.get(file):
+            #         del self.files[file]
             # self.files = set([str(x) for x in self.files]) - set(ignore_files)
             # self.files = [Path(x) for x in self.files]
         print(f"loaded {len(self.files)} files, ignoring {len(ignore_files)} files") 
-        self.files = list(self.files.items())
+        # self.files = list(self.files.items())
     def __getitem__(self, idx):
         # if self.sample_by_metadata:
         #     metadata, files = self.files[idx]
@@ -233,16 +272,23 @@ class Domain(Dataset):
         #     return [str(x) for x in files], texts, [metadata] * len(files)
         # else:
         
-        file, metadata = self.files[idx]
-        file = self.domain_directory / file
-        if file.name.endswith('.gz'):
-            with gzip.open(file, 'rb') as f:
-                text = f.read().decode('utf-8')
-        else:
-            text = file.read_text(errors='ignore')
+        file = str(self.files[idx])
+        try:
+            if file.endswith('.gz'):
+                with gzip.open(file, 'rb') as f:
+                    text = f.read().decode('utf-8')
+            else:
+                with open(file, "r") as f:
+                    text = f.read()
+        except:
+            text = ""
         if self.add_bos_token:
             text = self.bos_token + text
-        return str(file), text, metadata
+        if self.anonymize:
+            for x,y in self.anonymizer.items():
+                text = x.sub(y, text)
+        token_count = len(text.split())
+        return file, text, token_count, []
 
     def __len__(self):
         return len(self.files)
