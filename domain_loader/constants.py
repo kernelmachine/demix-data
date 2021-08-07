@@ -48,5 +48,8 @@ TOKEN_COUNTS = {"1b": {'num_train_tokens': 700_000_000,
                                     "num_dev_tokens": 10_000_000,
                                     "num_test_tokens": 10_000_000},
         
+                "latest_news": {"num_train_tokens":11_000_000,
+                                "num_dev_tokens": 1_000_000,
+                                "num_test_tokens": 1_000_000}
                 }
                 
