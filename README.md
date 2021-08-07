@@ -1,2 +1,3 @@
-# multidomain_benchmark
-Benchmark API for Multidomain Language Modeling
+# DEMix Data
+
+Data utilities for DEMix Layers: Disentangling Domains for Modular Language Modeling
