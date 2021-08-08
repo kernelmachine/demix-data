@@ -44,11 +44,6 @@ def collate_fn(batch):
 
 
 
-
-
-
-
-
 class Domain(Dataset):
     def __init__(self,
                  domain_directory: Path,
@@ -63,9 +58,9 @@ class Domain(Dataset):
                  track_token_count: bool = False,
                  anonymize: bool = False,
                  **metadata_filters):
-        super().__init__()      
+        super().__init__()
         self.add_bos_token = add_bos_token
-        self.anonymize = anonymize 
+        self.anonymize = anonymize
 
         re1 = {
             "regex": "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?",
@@ -82,7 +77,7 @@ class Domain(Dataset):
 
         re6 ={"regex": "(?!(?:000|666|9))\d{3}-(?!00)\d{2}-(?!0000)\d{4}", "repl": "<|SSN|>"}
 
-        re7 = {"regex": "\d+\s(?:(?:[a-z0-9.-]+[ ]?)+\s(?:Alley|Aly|Ave(?:nue)?|Boulevard|Blvd|Br(?:anch)?|Center|Ctr|Cir(?:cle)?|Court|Ct|Crossing|Xing|Dr(?:ive)?|Est(?:ate)?|Expressway|Expy|Freeway|Fwy|Highway|Hwy|Hills|Hls|Knoll|Knl|Landing|Lndg|Lane|Ln|Manor|Mnr|Meadow|Mdw|Parkway|Pkwy|Pass|Path|Plaza|Plz|Road|Rd|Run|Sq(?:uare)?|St(?:ation|reet|a)?|Ter(?:ace)?|Trail|Trl|Turnpike|Tpke|Valley|Vly|View|Vw|Village|Vlg|Vis(?:ta)?|Walk|Way)|(?:Route|Rte|Interstate|I)[- ]?\d{1,3})(?:\s(?:Apt[\.]?|Apartment|#)[ ]?\d+[a-z]?)?(?:\s(?:[a-z-]+[ ]?)+,?(?:\s(?:AK|AL(?:aska|abama)?|AR(?:kansas|izona)?|AZ|CA(?:lifornia)?|CO(?:lorado|nnecticut)?|CT|DC|DE(?:laware)?|FL(?:orida)?|GA|Georgia|GU(?:am)?|HI|Hawaii|IA|Iowa|ID(?:aho)?|IL(?:linois)?|IN(?:diana)?|KS|Kansas|KY|Kentucky|LA|Louisiana|MA(?:ssachusetts|ryland|ine)?|MD|ME|MI(?:chigan|nnesota|ssissippi|ssouri)|MN|MO(?:ntana)?|MS|MT|NC|North[ ]Carolina|ND|North[ ]Dakota|NH|New[ ]Hampshire|NJ|New[ ]Jersey|NM|New[ ]Mexico|NV|Nevada|NY|New[ ]York|OH(?:io)?|OK(?:lahoma)?|OR(?:egon)?|PA|Pennsylvania|PR|Puerto[ ]Rico|RI|Rhode[ ]Island|SC|South[ ]Carolina|SD|South[ ]Dakota|TN|Tennessee|TX|Texas|UT(?:ah)?|VA|Virginia|VI(?:rgin[ ]Islands)?|VT|Vermont|WA(?:shington(?:[ ]D[. ]?C[.]?)?)?|WI(?:sconsin)?|WV|West[ ]Virginia|WY(?:oming)?)(?:\s\b\d{5}(?:-\d{4})?\b)?)?)?", 
+        re7 = {"regex": "\d+\s(?:(?:[a-z0-9.-]+[ ]?)+\s(?:Alley|Aly|Ave(?:nue)?|Boulevard|Blvd|Br(?:anch)?|Center|Ctr|Cir(?:cle)?|Court|Ct|Crossing|Xing|Dr(?:ive)?|Est(?:ate)?|Expressway|Expy|Freeway|Fwy|Highway|Hwy|Hills|Hls|Knoll|Knl|Landing|Lndg|Lane|Ln|Manor|Mnr|Meadow|Mdw|Parkway|Pkwy|Pass|Path|Plaza|Plz|Road|Rd|Run|Sq(?:uare)?|St(?:ation|reet|a)?|Ter(?:ace)?|Trail|Trl|Turnpike|Tpke|Valley|Vly|View|Vw|Village|Vlg|Vis(?:ta)?|Walk|Way)|(?:Route|Rte|Interstate|I)[- ]?\d{1,3})(?:\s(?:Apt[\.]?|Apartment|#)[ ]?\d+[a-z]?)?(?:\s(?:[a-z-]+[ ]?)+,?(?:\s(?:AK|AL(?:aska|abama)?|AR(?:kansas|izona)?|AZ|CA(?:lifornia)?|CO(?:lorado|nnecticut)?|CT|DC|DE(?:laware)?|FL(?:orida)?|GA|Georgia|GU(?:am)?|HI|Hawaii|IA|Iowa|ID(?:aho)?|IL(?:linois)?|IN(?:diana)?|KS|Kansas|KY|Kentucky|LA|Louisiana|MA(?:ssachusetts|ryland|ine)?|MD|ME|MI(?:chigan|nnesota|ssissippi|ssouri)|MN|MO(?:ntana)?|MS|MT|NC|North[ ]Carolina|ND|North[ ]Dakota|NH|New[ ]Hampshire|NJ|New[ ]Jersey|NM|New[ ]Mexico|NV|Nevada|NY|New[ ]York|OH(?:io)?|OK(?:lahoma)?|OR(?:egon)?|PA|Pennsylvania|PR|Puerto[ ]Rico|RI|Rhode[ ]Island|SC|South[ ]Carolina|SD|South[ ]Dakota|TN|Tennessee|TX|Texas|UT(?:ah)?|VA|Virginia|VI(?:rgin[ ]Islands)?|VT|Vermont|WA(?:shington(?:[ ]D[. ]?C[.]?)?)?|WI(?:sconsin)?|WV|West[ ]Virginia|WY(?:oming)?)(?:\s\b\d{5}(?:-\d{4})?\b)?)?)?",
             "repl": "<|ADDRESS|>"}
 
         re8 = {"regex": "@[a-zA-Z0-9_\.\-]{1,30}", "repl": "@USER"}
@@ -95,7 +90,7 @@ class Domain(Dataset):
 
 
 
-        self.bos_token = "<|endoftext|> " 
+        self.bos_token = "<|endoftext|> "
         self.domain_directory = domain_directory
         self.files = {}
         if sample_by_metadata:
@@ -119,7 +114,7 @@ class Domain(Dataset):
                                 self.files[z['filename']] = metadata_
                     else:
                         self.files[z['filename']] = metadata_
-            
+
             if sample_by_metadata:
                 files_ = {}
                 for file in self.files:
@@ -135,9 +130,9 @@ class Domain(Dataset):
                     self.files = filenames
                 # assert all(file.exists for file in self.files)
             else:
-                
+
                 fs = tqdm(domain_directory.glob("*/*"))
-        
+
                 if sample:
                     print(f"Loading {sample} files from {domain_directory}...")
                     if sample_from_head:
@@ -153,125 +148,13 @@ class Domain(Dataset):
                 else:
                     print(f"Loading all files from {domain_directory}...")
                     self.files = list(fs)
-                # if sample is not None:
-                #     print(f"Loading {sample} of files from {domain_directory}...")
-                #     for ix, x in enumerate(fs):
-                #         if ix < sample:
-                #             self.files[Path(x)] = []
-                #         else:
-                #             break
-                # else:
-        
-        # self.files_  = {}
-        # if sample is not None:
-        #     print(f"{sample} files from {domain_directory}...")
-        #     for ix, x in enumerate(self.files):
-        #         if ix < sample:
-        #             self.files.append(Path(fname))
-        #         else:
-        #             break
-        #     else:
 
-        # if metadata_filters:
-        #     if metadata_file is None:
-        #         raise Exception("metadata_file cannot be none if metadata_filters applied.")
-        #     print("metadata filter detected, loading metadata...")
-        #     metadata = pd.read_json(metadata_file, lines=True)
-            
-        #     for filename in self.filenames:
-        #         if 
-        #     fnames = []
-        #     for key, items in metadata_filters.items():
-        #         m = metadata.loc[metadata[key].isin(items)]
-        #         if 'filename' in m.columns:
-        #             m.filename.apply(lambda x: fnames.extend(x))
-        #         else:
-        #             fnames.extend(m.filename.values)
-        #     filenames = list(set(fnames))
-        #     filenames = [domain_directory / Path(filename) for filename in filenames]
-
-        # if sample_by_metadata:
-        #     self.sample_by_metadata = True
-        #     if metadata_file is None:
-        #         raise Exception("metadata_file cannot be none if sample_by_metadata applied.")
-        #     print("metadata sampling detected, loading metadata...")
-            
-        #     filenames = defaultdict(list)
-        #     # metadata = pd.read_json(metadata_file, lines=True)
-            
-        #     # [sample_by_metadata['metadata_column']].value_counts()
-        #     # most_prevalent = most_prevalent.loc[most_prevalent > 1000]
-        #     # most_prevalent = most_prevalent.index.values
-    
-        #     with open(metadata_file, 'r') as f:
-        #         for line in tqdm(f):
-        #             if len(filenames[z[sample_by_metadata['metadata_column']]]) < sample_by_metadata['sample_size']:
-        #                 fname = z['filename']
-        #                 filenames[z[sample_by_metadata['metadata_column']]].append(fname)
-            
-        #     filenames = list(filenames.values())
-        #     print(f"loaded {len(filenames)} files.")
-        #     from fairseq import pdb; pdb.set._trace()
-        # else:
-        #     self.sample_by_metadata = False
-        
-        # if self.filenames:
-        #     if sample is not None:
-        #         self.files = []
-        #         print(f"Loading {sample} of files from {domain_directory}...")
-        #         for ix, (fname, x) in enumerate(self.filenames.items()):
-        #             if ix < sample:
-        #                 self.files.append(Path(fname))
-        #             else:
-        #                 break
-        #     else:
-        #         print(f"Loading list of files from {domain_directory}...")
-        #         self.files = [Path(x) for x in self.filenames]
-        #     # if self.sample_by_metadata:
-        #     #     assert all(all(file.exists for file in y) for _, y in self.files)
-        #     # else:
-        #     assert all(file.exists for file in self.files)
-        # else:
-        #     fs = tqdm(domain_directory.glob("*/*"))
-        #     if sample is not None:
-        #         self.files = []
-        #         print(f"Loading {sample} of files from {domain_directory}...")
-        #         for ix, x in enumerate(fs):
-        #             if ix < sample:
-        #                 self.files.append(Path(x))
-        #             else:
-        #                 break
-        #     else:
-        #         print(f"Loading all files from {domain_directory}...")
-        #         self.files = list(fs)
-        
         if ignore_files:
             self.files = list(set(self.files) - set(ignore_files))
-            # for file in ignore_files:
-            #     if self.files.get(file):
-            #         del self.files[file]
-            # self.files = set([str(x) for x in self.files]) - set(ignore_files)
-            # self.files = [Path(x) for x in self.files]
-        print(f"loaded {len(self.files)} files, ignoring {len(ignore_files)} files") 
+
+        print(f"loaded {len(self.files)} files, ignoring {len(ignore_files)} files")
         # self.files = list(self.files.items())
     def __getitem__(self, idx):
-        # if self.sample_by_metadata:
-        #     metadata, files = self.files[idx]
-            
-        #     files = [file for file in files]
-        #     texts = []
-        #     for file in files:
-        #         if file.name.endswith('.gz'):
-        #             with gzip.open(file, 'rb') as f:
-        #                 text = f.read().decode('utf-8')
-        #         else:
-        #             text = file.read_text(errors='ignore')
-        #         if self.add_bos_token:
-        #             text = self.bos_token + text
-        #         texts.append(text)
-        #     return [str(x) for x in files], texts, [metadata] * len(files)
-        # else:
-        
         file = str(self.files[idx])
         try:
             if file.endswith('.gz'):
@@ -349,17 +232,6 @@ class DomainVectorized(Domain):
             self.vectorizer = vectorizer
         print("fitting vectorizer...")
 
-        # def partial_fit(file, vectorizer):
-        #     file = self.domain_directory / file
-        #     if file.name.endswith('.gz'):
-        #         with gzip.open(file, 'rb') as f:
-        #             text = f.read().decode('utf-8')
-        #     else:
-        #         text = file.read_text(errors='ignore')
-        #     vectorizer.fit([text])
-        # for file, _ in tqdm(self.files):
-        #     partial_fit(file, self.vectorizer)
-            
     def __getitem__(self, idx) -> Tuple[str, np.array]:
         filename, text, metadata = super().__getitem__(idx)
         tokenized_text = " ".join(map(str, self.tokenizer.encode(text, truncation=True)))
@@ -379,5 +251,3 @@ def domain_dataloader(domain_directory: Path,
         dataset = Domain(domain_directory, metadata_file, filenames, **metadata_filters)
     dataloader = DataLoader(dataset, num_workers=os.cpu_count(), batch_size=batch_size)
     return dataloader
-
-
