@@ -13,10 +13,6 @@ import numpy as np
 import pandas as pd
 import torch
 import re
-from sklearn.cluster import MiniBatchKMeans
-from k_means_constrained import KMeansConstrained
-from sklearn.decomposition import TruncatedSVD
-from sklearn.feature_extraction.text import TfidfVectorizer
 from torch.utils.data import DataLoader, Dataset
 from torch.utils.data.sampler import SubsetRandomSampler
 from tqdm import tqdm
@@ -263,50 +259,7 @@ if __name__ == '__main__':
         output_dir = args.output_dir
         output_dir.mkdir(exist_ok=True)
 
-    if args.pretrain_clusters:
-        clusterer = {"svd": TruncatedSVD(n_components=64),
-                     "vectorizer": TfidfVectorizer(stop_words="english")}
-
-        texts = {}
-        # load texts
-        for domain in args.pretrain_clusters:
-            if domain in ['reddit', '1b']:
-                add_bos_token = False
-                num_workers = 1
-                batch_size = 1
-            else:
-                add_bos_token = False
-                num_workers = 1
-                batch_size = 16
-            text, curr_tokens, curr_docs = load_text(domain, add_bos_token, num_workers, batch_size, num_expected_docs=100000)
-
-            texts[domain] = {'text': text}
-
-
-        ts = [texts[domain]['text'] for domain in texts]
-        ts = [y for x in ts for y in x]
-        vecs = clusterer['vectorizer'].fit_transform(ts)
-        clusterer['svd'].fit(vecs)
-        domain_embeddings = []
-        for domain in texts:
-            texts[domain]['vecs'] = clusterer['vectorizer'].transform(texts[domain]['text'])
-            texts[domain]['vecs'] = clusterer['svd'].transform(texts[domain]['vecs'])
-            domain_embeddings.append(np.expand_dims(np.mean(texts[domain]['vecs'], 0),1))
-        domain_embeddings = np.concatenate(domain_embeddings, 1)
-        kmeans = KMeansConstrained(n_clusters=8, init=domain_embeddings.T, size_min=len(texts) // 8)
-        clusterer['kmeans'] = kmeans
-        out = clusterer['kmeans'].fit_predict(np.concatenate([texts[domain]['vecs'] for domain in texts], 0))
-        args.output_clusters.mkdir(exist_ok=True)
-        with open(args.output_clusters / "clusters.pkl", "wb+") as f:
-            pickle.dump(clusterer, f)
-
-        if args.pretrain_clusters_only:
-            sys.exit(1)
-    elif args.load:
-        with open(args.load / "clusters.pkl", "rb") as f:
-            clusterer = pickle.load(f)
-    else:
-        clusterer=None
+    clusterer=None
 
     if args.train_files:
         with open(args.train_files, 'r') as f:
