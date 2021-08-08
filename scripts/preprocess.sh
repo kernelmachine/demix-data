@@ -14,6 +14,4 @@ mv ${OUTPUT_DIR}/${DOMAIN}/valid.bin ${OUTPUT_DIR}/${DOMAIN}/valid_${DOMAIN}.bin
 mv ${OUTPUT_DIR}/${DOMAIN}/valid.idx ${OUTPUT_DIR}/${DOMAIN}/valid_${DOMAIN}.idx
 mv ${OUTPUT_DIR}/${DOMAIN}/test.bin ${OUTPUT_DIR}/${DOMAIN}/test_${DOMAIN}.bin
 mv ${OUTPUT_DIR}/${DOMAIN}/test.idx ${OUTPUT_DIR}/${DOMAIN}/test_${DOMAIN}.idx
-mv ${OUTPUT_DIR}/${DOMAIN}/train.bin ${OUTPUT_DIR}/${DOMAIN}/train_${DOMAIN}.bin
-mv ${OUTPUT_DIR}/${DOMAIN}/train.idx ${OUTPUT_DIR}/${DOMAIN}/train_${DOMAIN}.idx
 cp ${DATA_DIR}/gpt2_bpe/dict.txt ${OUTPUT_DIR}/dict.txt

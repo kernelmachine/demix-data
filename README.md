@@ -61,7 +61,7 @@ Of course, you might find it easier to do the conversion in python, based on how
 ## Shard Data
 
 ```bash
-python -m domain_loader.shard_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 16 --text-field text
+python -m domain_loader.shard_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 512 --text-field text
 ```
 
 
@@ -116,15 +116,21 @@ These scripts will output a `data-bin` files in `${DATA_DIR}/data-bin/`, which y
 
 Building a multi-domain dataset follows the same procedure above, except you just add multiple domains in the same data-bin folder (i.e., `${DATA_DIR}/data-bin/`).
 
-You can apply the same process to the `ag-news` domain:
+You can apply the same process to the all other domains in the `example_domains` folder, e.g.:
 
 ```bash
 export DOMAIN=ag_news
-python -m domain_loader.shard_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 16 --text-field text
+python -m domain_loader.shard_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 512 --text-field text
 python -m domain_loader.scan_filenames --domain $DOMAIN
 python -m domain_loader.count_words --domain $DOMAIN
 ## set token counts for "ag_news" in domain_loader/constants.py
 python -m domain_loader.make_splits --domain $DOMAIN --num-workers 0 --batch-size 1 --output-dir $DATA_DIR/$DOMAIN/splits
 bash scripts/pretokenize.sh ${DATA_DIR}/$DOMAIN/splits
 bash scripts/preprocess.sh ${DATA_DIR}/$DOMAIN/splits $DOMAIN ${DATA_DIR}/data-bin/
+```
+
+We make this easy with a script:
+
+```bash
+bash scripts/preprocess_all_example_domains.sh
 ```
