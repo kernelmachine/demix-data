@@ -27,10 +27,9 @@ def batchify(data: Iterable[T], batch_size: int) -> Iterable[List[T]]:
 
 if __name__ == '__main__':
     texts_dir = Path('legal/')
-    
+
     files = list(Path(".").glob('*/data/data.jsonl'))
-    print(files)
-    for file in files:  
+    for file in files:
         with open(file, 'r') as f, open('metadata/metadata.jsonl', 'a+') as g:
             for ix, batch in tqdm(enumerate(batchify(f, batch_size=512))):
                 batch = [json.loads(x) for x in batch]
@@ -46,6 +45,6 @@ if __name__ == '__main__':
                     g.write("\n")
                 (texts_dir / f"subset_{ix}").mkdir(parents=True, exist_ok=True)
                 for x in text:
-                    for fname, line in x: 
+                    for fname, line in x:
                         with open(texts_dir / fname, 'w') as h:
                             h.write(line)

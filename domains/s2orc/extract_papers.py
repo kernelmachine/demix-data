@@ -7,7 +7,7 @@ import random
 import json
 from joblib import Parallel, delayed
 pd.options.mode.chained_assignment = None  # default='warn'
-
+import argparse
 
 def get_papers(texts_dir, file, paper_ids_to_keep, ix):
     with gzip.open(file, 'rb') as f, open(texts_dir / 'metadata.jsonl', 'a+') as g:
@@ -34,7 +34,7 @@ def get_papers(texts_dir, file, paper_ids_to_keep, ix):
                 pbar.set_description(f"papers to extract: {len(paper_ids_to_keep)}, written {ix} subsets")
                 ix += 1
                 papers = []
-            
+
     return ix, paper_ids_to_keep
 
 
@@ -54,17 +54,17 @@ def get_metadata(file, name):
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--fields-of-study", type=str, nargs='+')
+    args = parser.parse_args()
 
-    fields_of_study = ['Medicine', "Computer Science"]
+    fields_of_study = args.fields_of_study
 
     metadata_files = list(Path('20200705v1/full/metadata/').rglob('*'))
     pdf_parses = list(Path('20200705v1/full/pdf_parses/').rglob('*'))
 
-    # for name in fields_of_study:
-    #     for file in tqdm(metadata_files):
-    #         get_metadata(file, name)
 
-    
+
     for name in fields_of_study:
         texts_dir = Path(f'{name}/')
         texts_dir.mkdir(exist_ok=True)
@@ -83,4 +83,3 @@ if __name__ == '__main__':
             print(f"reached end of input")
         elif not paper_ids_to_keep:
             print(f"finished extracting all papers")
-    
