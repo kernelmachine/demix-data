@@ -41,22 +41,6 @@ export DOMAIN=imdb
 
 Check this [file](DOWNLOAD_DATA.md) for more information on how to download the data used in the DEMix paper.
 
-### Converting to jsonl from raw text or CSV
-
-Sometimes the data you want to preprocess is not in jsonl to begin with. If each line in a file `raw_text.txt` is a new document, it's easy to convert it to jsonl with `jq`:
-
-```bash
-jq -R '{"text": .}' raw_text.txt
-```
-
-If you've got a CSV instead, you can use the script in `scripts/csv2json.jq` to convert this to jsonl:
-
-```bash
-jq -R -s -f scripts/csv2json.jq text.csv | jq -c .[]
-```
-
-Of course, you might find it easier to do the conversion in python, based on how large your dataset is you'd like to convert.
-
 
 ## Shard Data
 
@@ -119,7 +103,7 @@ Building a multi-domain dataset follows the same procedure above, except you jus
 You can apply the same process to the all other domains in the `example_domains` folder, e.g.:
 
 ```bash
-export DOMAIN=ag_news
+export DOMAIN=1b
 python -m domain_loader.shard_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 512 --text-field text
 python -m domain_loader.scan_filenames --domain $DOMAIN
 python -m domain_loader.count_words --domain $DOMAIN
