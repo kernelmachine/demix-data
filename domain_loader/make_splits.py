@@ -16,7 +16,6 @@ import re
 from torch.utils.data import DataLoader, Dataset
 from torch.utils.data.sampler import SubsetRandomSampler
 from tqdm import tqdm
-from transformers import GPT2Tokenizer
 from typing import TypeVar, Iterable, List, Sequence, Union, Any
 
 
