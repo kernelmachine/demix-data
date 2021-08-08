@@ -21,9 +21,7 @@ Download 1B words corpus from here: https://opensource.google/projects/lm-benchm
 
 Create an account and download data here https://case.law/
 
-
 Use the script at `domains/legal/split_legal.py` to split the resulting jsonl files into separate files.
-
 
 ### S2ORC (e.g., Med, CS)
 
@@ -90,17 +88,38 @@ Download dataset here https://www.yelp.com/dataset
 
 Then split into files using a process similar to `domains/realnews/split_realnews.py`.
 
-## Build fairseq data-bin
+## Build metadata.jsonl
+
+To make data loading faster, we first gather a list of filenames in a separate file `${DOMAIN}/metadata.jsonl`. To build this file, use `domain_loader/build_filenames.py`.
 
 ```bash
-python -m domains.s2orc.extract_papers
+python domain_loader/build_filenames.py --domains med
 ```
+
+## Build fairseq data-bin
+
+Download the gpt2 vocabulary:
+
+```bash
+mkdir gpt2_bpe
+curl -Lo gpt2_bpe/encoder.json https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/encoder.json
+curl -Lo gpt2_bpe/vocab.bpe https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/vocab.bpe
+```
+
+We set the total number of tokens for train, dev, and test splits in `domain_loader/constants.py`. You can set these numbers by first using `domain_loader/count_words.py`, and then set the train/dev/test tokens appropriately:
+
+```bash
+export DOMAIN=med
+python -m domain_loader.count_words --domain $DOMAIN
+```
+
+
 ```bash
 export DOMAIN=med
 export NUM_WORKERS=16
 export BATCH_SIZE=16
 export DATA_BIN_DIR=${DATA_PATH}/data-bin/
-python -m domain_loader.make_splits --domain $DOMAIN  --num-workers $NUM_WORKERS --batch-size $BATCH_SIZE --output-dir ${DATA_PATH}/${DOMAIN}/splits-big/
+python -m domain_loader.make_splits --domain $DOMAIN  --num-workers $NUM_WORKERS --batch-size $BATCH_SIZE --output-dir ${DATA_PATH}/${DOMAIN}/splits/
 bash scripts/pretokenize.sh $DOMAIN
 bash scripts/preprocess.sh $DOMAIN $DATA_BIN_DIR
 ```

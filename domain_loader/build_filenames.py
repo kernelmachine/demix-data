@@ -15,14 +15,19 @@ from domain_loader.utils import take_n_tokens
 from tqdm.auto import tqdm
 import numpy as np
 from domain_loader.domain_loader import Domain
+import argparse
+
 
 if __name__ == '__main__':
 
-    domains = ["1b", "realnews", "med", "legal", "openwebtext", "reddit", "cs", "reviews"]
-    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--domains", type=str, nargs='+')
+    args = parser.parse_args()
+    domains = args.domains
+
     for domain in domains:
         dataset = Domain(PROJECT_DIR / domain / domain)
-        
+
         if domains in ["1b", "reddit"]:
             num_workers = 1
             batch_size = 1
@@ -32,7 +37,7 @@ if __name__ == '__main__':
         dataloader = DataLoader(dataset,
                                 num_workers=16,
                                 batch_size=16)
-        
+
         pbar = tqdm(dataloader)
         curr_files = 0
         (PROJECT_DIR / domain / "metadata" ).mkdir(exist_ok=True)
