@@ -22,11 +22,13 @@ export DATA_PATH=/private/home/suching/raw_data/
 
 ## Download data
 
-We provide an example data input file in `example_domains/`
+We provide an example data input file in `example_domains/`.
+
 ```bash
 export DOMAIN=imdb
 ```
 
+Check this [file](DOWNLOAD_DATA.md) for more information on how to download data used in the DEMix paper.
 
 ## Shard Data
 

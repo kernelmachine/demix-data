@@ -1,5 +1,6 @@
+# Download Instructions for DEMix Data
 
-Here we provide instructions to download data. Most datasets involve getting approval from dataset hosters.
+Here we provide instructions to download data used in the DEMix paper. Note that downloading most datasets involve getting approval from dataset hosters.
 
 ### 1B Words
 
