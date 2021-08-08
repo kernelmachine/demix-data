@@ -1,0 +1,1 @@
+Macromedia has launched Flex Builder, a development tool for its Flex application-development platform. The new tool will help speed creation of rich Internet applications, including visual data 

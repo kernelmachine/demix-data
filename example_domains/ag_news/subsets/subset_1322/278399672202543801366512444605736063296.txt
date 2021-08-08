@@ -1,0 +1,1 @@
+OPEN SOURCE champion, Microsoft has released the code for its FlexWiki, under an open source licence. FlexWiki, which is a Web-based user collaboration and content management program, is the third that Vole has released under an open source licence.

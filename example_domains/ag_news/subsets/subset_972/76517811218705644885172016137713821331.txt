@@ -1,0 +1,1 @@
+Microsoft Operations Manager 2005 offers new features such as graphical systems views and enhanced reporting tools, and has been designed to be easier to deploy than its predecessor.

@@ -1,0 +1,1 @@
+Bookselling giant Barnes and Noble outlined plans to implement the SQL Server 2000 Business Intelligence offering.  quot;SQL Server 2000 will significantly reduce the time it takes our developers to aggregate data.

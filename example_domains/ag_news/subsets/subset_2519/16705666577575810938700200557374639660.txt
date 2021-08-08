@@ -1,0 +1,1 @@
+Silicon Graphics (SGI) has launched the successor line to its Onyx visualization systems. Called Prism, the systems will be based on Intel #39;s Itanium 2 processor and the Linux operating system.

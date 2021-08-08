@@ -1,0 +1,1 @@
+NewsFactor - The open source Mozilla Foundation has released Thunderbird 1.0, an e-mail client, as a follow-up to last month's much-discussed debut of the group's Firefox 1.0 browser.

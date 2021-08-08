@@ -1,0 +1,1 @@
+A TROJAN HORSE with a name that takes over a PC so that it sends SMS spam to mobile phones has been spotted in Russia. The Delf-HA Trojan contacts a Web site for details on which spam campaign to run and then 

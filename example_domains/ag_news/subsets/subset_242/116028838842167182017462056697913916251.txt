@@ -1,0 +1,1 @@
+The Internet security community is preparing for a working virus or worm attack based on the Microsoft JPEG exploit revealed last week.

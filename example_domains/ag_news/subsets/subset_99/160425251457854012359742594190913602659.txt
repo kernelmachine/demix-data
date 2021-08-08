@@ -1,0 +1,1 @@
+The HyperTransport Technology Consortium today announced the first HyperTransport technology expansion connector specification. The new EATX Motherboard/Daughtercard 

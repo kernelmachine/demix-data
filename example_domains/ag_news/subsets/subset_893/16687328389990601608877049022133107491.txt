@@ -1,0 +1,1 @@
+Four small Linux vendors are working together to create a new Linux Standard Base 2.0-compliant binary set that they hope will attract independent software vendors and hardware makers to port their wares to the new code.

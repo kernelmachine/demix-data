@@ -1,0 +1,1 @@
+One challenge will be to link the call center with back-office databases of CRM applications so that agents can see, for example, the identity of the caller and the history of their account.

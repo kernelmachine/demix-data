@@ -1,0 +1,1 @@
+IBM next month will begin shipping high-end servers in their pSeries and iSeries lines running on its Power5 processor. The Armonk, NY, company will launch the 32-way p590, the 64-way p595 and the 64-way i595, IBM officials will announce Friday.

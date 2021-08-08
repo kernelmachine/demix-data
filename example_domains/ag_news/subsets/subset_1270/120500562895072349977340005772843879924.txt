@@ -1,0 +1,1 @@
+Funner.A has no destructive properties, although it will make a nuisance of itself by sending a copy of itself as funny.exe to all contacts found in the application.

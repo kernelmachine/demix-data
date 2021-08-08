@@ -1,0 +1,1 @@
+\\It turns out that MySQL  has a terrible upper limit on the max MyISAM table\size.  It appears that innodb doesn't have this problem.\\Jeremy talks about it over on his blog \\

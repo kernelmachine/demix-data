@@ -1,0 +1,1 @@
+Microsoft has added new business intelligence (BI) capabilities to SQL Server 2000 and SQL Server 2005; according to an announcement today at the 2004 Professional Association for SQL Server community summit in Orlando, USA.

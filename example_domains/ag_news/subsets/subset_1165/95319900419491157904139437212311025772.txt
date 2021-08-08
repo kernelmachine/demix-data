@@ -1,0 +1,1 @@
+Microsoft on Tuesday laid out five new security bulletins, including three that address problems in Windows XP Service Pack 2 (SP2), the massive security update rolled out in October, and one that fixes a vulnerability made public several weeks ago.

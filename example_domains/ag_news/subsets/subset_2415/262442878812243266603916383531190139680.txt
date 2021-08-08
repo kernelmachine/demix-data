@@ -1,0 +1,1 @@
+This article discusses how a virus outbreak will produce a few unique opportunities to examine the health of an organization's network -- and learn ways to further harden the network from future automated attacks.

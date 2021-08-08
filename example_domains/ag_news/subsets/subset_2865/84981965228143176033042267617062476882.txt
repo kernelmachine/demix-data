@@ -1,0 +1,1 @@
+As chipmakers plunge into the world of multicore processors to increase performance, software companies are struggling to catch up.

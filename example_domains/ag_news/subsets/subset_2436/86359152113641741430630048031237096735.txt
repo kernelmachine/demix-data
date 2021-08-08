@@ -1,0 +1,1 @@
+Microsoft has revised its anti-spam specification Sender ID following the spec #39;s near-death in the technical community. The software giant said Monday that it has rewritten Sender ID -- a specification for 

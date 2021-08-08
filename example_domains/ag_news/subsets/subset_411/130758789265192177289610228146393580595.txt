@@ -1,0 +1,1 @@
+After years of trying to make it easier for peripheral devices to work smoothly with computers, Microsoft is building in some difficulty. The upcoming Longhorn OS should allow companies to keep gizmos like iPod from stealing data.

@@ -1,0 +1,1 @@
+Exabyte has announced the release of the Magnum 1X7 LTO Autoloader, a 2U, rack-mountable, automated backup and restore system for less that \$5,000.

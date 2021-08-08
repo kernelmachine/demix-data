@@ -1,0 +1,1 @@
+Citing a lack of agreement on basic issues in the discussions of the working group, the IETF (Internet Engineering Task Force) has disbanded the MARID (MTA Authorization Records In DNS) working group.

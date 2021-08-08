@@ -1,0 +1,1 @@
+NewsFactor - Seeking an edge in the entry-level computing system space, \IBM (NYSE: IBM) has unveiled a Linux-based \server using the company's Power5 processors. The OpenPower 720 product is being touted as an alternative to basic Unix systems from \HP (NYSE: HPQ) and Sun.

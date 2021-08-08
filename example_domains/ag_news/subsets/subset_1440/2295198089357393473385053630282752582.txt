@@ -1,0 +1,1 @@
+com staff. Danish security firm Secunia has reported a  quot;moderately critical quot; window injection vulnerability in Firefox, Internet Explorer, Opera, Netscape, Safari and Konqueror.

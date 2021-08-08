@@ -1,0 +1,1 @@
+The first images crafted to contain a malicious program that can take control of a PC have been found on the net. Security experts have been expecting such images to turn up after Microsoft revealed a weakness 

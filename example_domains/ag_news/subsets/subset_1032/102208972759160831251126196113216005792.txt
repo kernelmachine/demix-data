@@ -1,0 +1,1 @@
+The Banker-AJ trojan has been coded to lie dormant in the background on infected Windows PCs. When users visit legitimate online banking Web sites of certain UK banks, the malicious code is 

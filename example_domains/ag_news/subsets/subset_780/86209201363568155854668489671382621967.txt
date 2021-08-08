@@ -1,0 +1,1 @@
+When Macromedia #39;s Flex was released, the company noted that it reflected the emergence of a push toward services-oriented architectures (SOAs), which resulted in applications that are 

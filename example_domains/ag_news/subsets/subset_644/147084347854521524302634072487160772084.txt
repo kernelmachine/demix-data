@@ -1,0 +1,1 @@
+Ziff Davis - With a common goal of providing a more constant, smoother and faster development cycle, new technologies are being put directly into Linux kernel 2.6.x.

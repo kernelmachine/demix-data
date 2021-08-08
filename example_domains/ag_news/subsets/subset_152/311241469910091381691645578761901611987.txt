@@ -1,0 +1,1 @@
+Apple Computer Inc. released this week a security patch for its Mac OS X iChat instant messaging client, which contains a flaw that could a hacker could use to takeover a person #39;s computer.

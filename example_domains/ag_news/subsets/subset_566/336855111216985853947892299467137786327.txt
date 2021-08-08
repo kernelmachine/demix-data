@@ -1,0 +1,1 @@
+\\I've never seen a solid explanation of why Lucene always prefers shorter\documents rather than longer documents.  This seems like a *major* problem but\I've never seen it addressed.\\For example lets assume you have 3 documents:\\Document 1.txt contains\\

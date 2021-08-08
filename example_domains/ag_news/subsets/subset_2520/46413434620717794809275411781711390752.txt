@@ -1,0 +1,1 @@
+Microsoft (Quote, Chart) is expanding business intelligence capabilities in its database software with two free software service packs that augment the reporting capabilities in SQL Server 2000.

@@ -1,0 +1,1 @@
+Microsoft says SP2 may not work on computers powered by chipmaker's 64-bit processors under certain circumstances.

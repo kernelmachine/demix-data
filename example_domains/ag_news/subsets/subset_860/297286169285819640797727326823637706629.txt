@@ -1,0 +1,1 @@
+Nvidia today launched its first mobile PCI Express GPU. The GeForce Go 6800 will soon appear in desktop replacement notebooks and push mobile graphics to a new performance level.

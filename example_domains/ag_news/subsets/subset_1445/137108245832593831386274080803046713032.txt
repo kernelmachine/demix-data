@@ -1,0 +1,1 @@
+It's a hacker's nightmare but a dream for bankers and spies: A computer network so secure that even the simplest attempts to eavesdrop will interrupt the flow of data and alert administrators to the snooping.

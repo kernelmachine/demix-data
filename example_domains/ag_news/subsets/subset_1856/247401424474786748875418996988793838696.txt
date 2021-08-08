@@ -1,0 +1,1 @@
+Hazmat:Hotzone is a networked multiplayer simulation that trains first responders to a terrorist attack.

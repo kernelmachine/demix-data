@@ -1,0 +1,1 @@
+Multiple vulnerabilities have been reported in version five of the widely-used Kerberos authentication protocol. The most serious could be exploited by crackers to gain root control to authentication servers.

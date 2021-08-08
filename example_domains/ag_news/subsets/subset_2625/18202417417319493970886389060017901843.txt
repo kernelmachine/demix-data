@@ -1,0 +1,1 @@
+This week ObjectStore, a provider of technology designed to manage massive amounts of data in real time, will unveil RFID Accelerator. The company aims to give to supply chain capabilities similar to those used by financial institutions for executing programmatic trades on the stock exchange.

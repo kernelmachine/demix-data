@@ -1,0 +1,1 @@
+Yahoo Inc.'s e-mail service will use the company's DomainKeys authentication technology starting Monday, almost a year after Yahoo first unveiled this anti-spam project.

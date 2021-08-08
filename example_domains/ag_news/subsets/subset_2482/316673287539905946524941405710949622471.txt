@@ -1,0 +1,1 @@
+Iomega on Friday introduced a new network-attached storage appliance for Windows networks in small and midsized businesses. The Iomega NAS 400r incorporates Serial ATA drives and uses Microsoft #39;s Windows Storage Server 2003 technology.

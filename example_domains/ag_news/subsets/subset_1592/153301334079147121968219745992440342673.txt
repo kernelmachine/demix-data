@@ -1,0 +1,1 @@
+A remote attacker could take complete control over computers running many versions of Microsoft software by inserting malicious code in a JPEG image that executes through an unchecked buffer 

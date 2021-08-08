@@ -1,0 +1,1 @@
+A Trojan which uses infected PCs to send spam messages to mobile phone users has been discovered.

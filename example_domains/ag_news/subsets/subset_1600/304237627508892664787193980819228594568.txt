@@ -1,0 +1,1 @@
+Dubbed MyDoom.AH by security firms, this latest variant in the MyDoom family of worms is exploiting the recently publicised vulnerability in Microsoft Internet Explorer #39;s (IE) IFRAME buffer overflow.

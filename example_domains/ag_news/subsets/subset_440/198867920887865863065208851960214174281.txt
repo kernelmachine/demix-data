@@ -1,0 +1,1 @@
+The Free Standards Group, a nonprofit organization dedicated to developing and promoting open source software standards, today announced the availability of the Linux Standard Base (LSB) 2.0, an essential component for the long-term market success of Linux 

@@ -1,0 +1,1 @@
+Microsoft this week quietly fixed a security weakness in the configuration of the built-in firewall component of Windows XP. The firewall - turned on by default by XP Service Pack 2 (SP2) - can leave files 

@@ -1,0 +1,1 @@
+Researchers have found a trio of flaws in Internet Explorer--making almost 20 in total.

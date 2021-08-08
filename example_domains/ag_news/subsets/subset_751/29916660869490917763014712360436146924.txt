@@ -1,0 +1,1 @@
+A critical hole in Windows XP firewall in Service Pack 2 makes computers accessible to anyone on the network. The configuration problem only affects dial-up users: some dialling software mistakes the entire 

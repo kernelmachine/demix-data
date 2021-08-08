@@ -1,0 +1,1 @@
+Perpendicular recording places bits of data end-to-end, instead of using the traditional method of storing them flat on the disk surface.

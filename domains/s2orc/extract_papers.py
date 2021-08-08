@@ -18,7 +18,7 @@ def get_papers(texts_dir, file, paper_ids_to_keep, ix):
                 continue
             z = json.loads(line)
             if paper_ids_to_keep.get(z['paper_id']):
-                pbar.set_description(f"papers to extract: {len(paper_ids_to_keep)}, written {ix} subsets")
+                pbar.set_description(f"papers to extract: {len(paper_ids_to_keep)}, written {ix} shards")
                 _ = paper_ids_to_keep.pop(z['paper_id'])
                 z['filename'] = str(Path(f"subset_{ix}") / (str(random.getrandbits(128)) + ".txt"))
                 text = " ".join([paper['text'] for paper in z['body_text']])
@@ -31,7 +31,7 @@ def get_papers(texts_dir, file, paper_ids_to_keep, ix):
                 for fname, paper in papers:
                     with open(texts_dir / fname, 'w') as h:
                         h.write(paper)
-                pbar.set_description(f"papers to extract: {len(paper_ids_to_keep)}, written {ix} subsets")
+                pbar.set_description(f"papers to extract: {len(paper_ids_to_keep)}, written {ix} shards")
                 ix += 1
                 papers = []
 

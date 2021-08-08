@@ -1,0 +1,1 @@
+Microsoft has said the next release of Windows will still be worth the upgrade, even though Longhorn has been stripped of its unified file system and some of its other key technologies will be available for Windows XP and Windows Server 2003.

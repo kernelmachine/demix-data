@@ -1,0 +1,1 @@
+Siemens AG has begun a major migration of 350,000 users in more than 100 business units from Microsoft Exchange Version 5.5 to Exchange 2003, and is using a software tool from Quest to make the switch.

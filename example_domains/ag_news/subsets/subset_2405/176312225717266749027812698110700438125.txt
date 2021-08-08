@@ -1,0 +1,1 @@
+For its  quot;Patch Tuesday quot; this month, Microsoft delivered five security bulletins for what it called  quot;important quot; security flaws, including one publicly known flaw in the Windows Internet Naming Service (WINS).

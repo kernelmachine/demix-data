@@ -1,0 +1,1 @@
+InfoWorld - Attempting to fine-tune its software for use in business-critical applications, Blue Titan Software on Monday is unveiling Network Director RM (Reliable Messaging), a tool for policy distribution and messaging in SOAs (service-oriented architectures).

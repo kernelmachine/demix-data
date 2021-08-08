@@ -1,0 +1,1 @@
+Industry giants AMD, Intel, Dell, Microsoft and Sun have thrown their weight behind a web services specification that could provide a common way for systems to access and exchange management information.

@@ -1,0 +1,1 @@
+Ziff Davis - In an effort to seed the market for future designs, the companies plan to provide the specifications for the BladeCenter switching framework, the blade adapter framework and the design of the blade itself.

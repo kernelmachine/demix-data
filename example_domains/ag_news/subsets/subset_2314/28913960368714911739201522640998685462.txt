@@ -1,0 +1,1 @@
+Veritas has released a new version of its OpForce provisioning software. The application enables administrators to discover, provision, configure and track multiple brands of servers and applications across data centers.

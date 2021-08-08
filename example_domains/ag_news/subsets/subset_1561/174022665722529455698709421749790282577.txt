@@ -1,0 +1,1 @@
+A new worm, W32/Funner, is spread over the MSN Messenger instant messaging networks. Experts say it has caused minimal damage, but they say IM networks are ripe for more virus attacks.

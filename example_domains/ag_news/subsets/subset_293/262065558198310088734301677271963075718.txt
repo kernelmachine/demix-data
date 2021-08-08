@@ -1,0 +1,1 @@
+NewsFactor - F-Secure, the Finnish anti-virus software developer, has identified two new, fast-spreading versions of Cabir, the worm that infects cell phones using the Symbian operating system.

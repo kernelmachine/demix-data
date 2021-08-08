@@ -1,0 +1,1 @@
+Flaws in media players could automatically download malicious code, let hackers in.

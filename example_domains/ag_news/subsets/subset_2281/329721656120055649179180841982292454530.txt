@@ -1,0 +1,1 @@
+IMlogic and several partners today unveiled a threat center network to provide a central place for detecting and analyzing IM and peer-to-peer threats, including IM-borne viruses, worms, spam over IM and malicious code.

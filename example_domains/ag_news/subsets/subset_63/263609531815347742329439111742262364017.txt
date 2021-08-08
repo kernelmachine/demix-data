@@ -1,0 +1,1 @@
+Nvidia is supplying graphics drivers for Solaris-based workstations that use x86 chips such as Advanced Micro Devices' Opteron.

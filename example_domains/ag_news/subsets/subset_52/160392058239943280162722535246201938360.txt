@@ -1,0 +1,1 @@
+Ziff Davis - Security researchers have uncovered a spoofing flaw in Internet Explorer that could allow a scammer to display a fake Web site with all the attributes of a genuine, secure site.

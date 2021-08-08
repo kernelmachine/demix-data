@@ -1,0 +1,1 @@
+One feature in Firefox is tabbed browsing, which allows users to load pages from multiple sites without having to open a new browser window for each one.

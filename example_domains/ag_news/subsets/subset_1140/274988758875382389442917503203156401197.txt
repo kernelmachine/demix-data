@@ -1,0 +1,1 @@
+IBM has a new supercomputer which is currently world #39;s fastest. The new Blue Gene/L is capable to do 36.01 teraflops. The ex world #39;s fastest supercomputer, the Earth Simulator from NEC, is able to do 35.

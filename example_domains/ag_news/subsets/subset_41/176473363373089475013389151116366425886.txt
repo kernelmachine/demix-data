@@ -1,0 +1,1 @@
+Those wondering what this year's surprise cooperation deal between Microsoftand Sun Microsystems will actually produce should get an update in coming weeks, when the companies detail some of their interoperability work in areas like Web services, directory services, and security.

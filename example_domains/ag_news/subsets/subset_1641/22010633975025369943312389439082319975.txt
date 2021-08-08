@@ -1,0 +1,1 @@
+IBM #39;s Blue Gene/L supercomputer has recaptured the speed record briefly held by Silicon Graphics Columbia system. Blue Gene/L, which is being installed at Lawrence Livermore National Laboratory, hit 70.

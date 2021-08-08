@@ -1,0 +1,1 @@
+Rosedale is asystem-on-chip processor designed for networking gear that will wirelessly connect end users' homes or offices with a WiMax-based broadband network.

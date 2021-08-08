@@ -1,0 +1,1 @@
+Redmond #39;s not extending its basic support for NT 4 and Exchange 5.5, but it is extending custom paid support for the product. While Microsoft continues to emphasize that it is not extending its basic support 

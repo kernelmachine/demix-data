@@ -1,0 +1,1 @@
+Imagine a golf course that can sense rainfall, and adjust the automatic sprinkler system to delay a scheduled watering session or focus on parts of the course that didn't get as much rain as others. Or a hotel that can detect when a room is vacant, and turn off the heating or cooling systems in that room to save energy.

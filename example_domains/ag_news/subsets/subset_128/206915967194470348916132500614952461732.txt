@@ -1,0 +1,1 @@
+Security experts warn that virus writers could be preparing to create havoc using a bug in the way that Windows handles images.

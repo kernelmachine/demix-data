@@ -1,0 +1,1 @@
+Microsoft Corp. is investigating a reported vulnerability in its ASP.Net that could allow an attacker to bypass security features on a Web server and view sensitive content, the company said Thursday.

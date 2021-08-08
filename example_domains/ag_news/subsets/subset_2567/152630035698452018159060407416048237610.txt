@@ -1,0 +1,1 @@
+InfoWorld - Looking to enable transitions between application modeling platforms, IBM this week is making available the IBM Model Transformation Framework (MTF) on its alphaWorks site for previewing technologies.

@@ -1,0 +1,1 @@
+Asa Dotzler writes  quot;We took one more important change into the builds last night, moving from a blacklist to a whitelist for external protocol handlers, so today #39;s builds are the new candidate 1.0PR builds.

@@ -14,8 +14,8 @@ import argparse
 import pandas as pd
 from domain_loader.domain_loader import Domain
 from torch.utils.data import DataLoader
-from domain_loader.constants import PROJECT_DIR
-sns.set(context="paper", style="white", font_scale=1.4) 
+from domain_loader.constants import DATA_DIR
+sns.set(context="paper", style="white", font_scale=1.4)
 
 def load_data(data_path: str, sample: int=None) -> List[str]:
     examples = []
@@ -41,17 +41,17 @@ def load_data(data_path: str, sample: int=None) -> List[str]:
     return examples
 
 def load_text(domain, add_bos_token=False, num_workers=1, batch_size=1, num_expected_tokens=None, num_expected_docs=None):
-    with open(PROJECT_DIR / domain  / "splits-final" / "train_files.txt", 'r') as f:
+    with open(DATA_DIR / domain  / "splits-final" / "train_files.txt", 'r') as f:
         files = [x.strip() for x in tqdm(f.readlines())]
         np.random.shuffle(files)
 
-    dataset = Domain(PROJECT_DIR / domain / domain,
+    dataset = Domain(DATA_DIR / domain / domain,
                      filenames=files if domain not in ['1b', 'reddit'] else None,
                      add_bos_token=add_bos_token,
                      track_token_count=True)
-    
+
     loader = DataLoader(dataset, num_workers=num_workers, batch_size=batch_size)
-    
+
     pbar = tqdm(loader)
     texts = []
 
@@ -101,9 +101,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
     vocabs = {}
     for domain in ['1b', 'cs', 'legal', 'med', 'openwebtext', 'realnews', 'reviews', 'reddit']:
-        texts, curr_tokens, curr_docs = load_text(domain, 
+        texts, curr_tokens, curr_docs = load_text(domain,
                                             add_bos_token=True if domain not in ['1b', 'reddit'] else False,
-                                            num_workers=16 if domain not in ['1b', 'reddit'] else 1, 
+                                            num_workers=16 if domain not in ['1b', 'reddit'] else 1,
                                             batch_size=16 if domain not in ['1b', 'reddit'] else 1,
                                             num_expected_tokens=args.sample,
                                             num_expected_docs=None)
@@ -113,13 +113,13 @@ if __name__ == '__main__':
 
 
     file_pairs = itertools.combinations(list(vocabs.keys()), 2)
-    
+
     overlaps = {}
     for x, y in tqdm(file_pairs):
         intersection = vocabs[x] & vocabs[y]
         union = (vocabs[x] | vocabs[y])
         overlaps[x + "_" + y] = len(intersection) / len(union)
-    
+
     data = []
 
     z = {}
@@ -142,7 +142,7 @@ if __name__ == '__main__':
             else:
                 items.append(z[key][subkey])
         data.append(items)
-    
+
     data = np.array(data) * 100
 
     if args.output_data_file:

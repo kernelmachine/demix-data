@@ -1,0 +1,1 @@
+NewsFactor - Two Google site vulnerabilities that could be used to mount phishing attacks have been reported, says the Internet search giant. It already has fixed one, and expects to patch the second shortly.

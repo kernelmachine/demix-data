@@ -1,0 +1,1 @@
+On 20 November 2004, a major malicious-code attack emerged targeting European Web sites via banner ads. This two-step attack exploits two previously identified security vulnerabilities: the Bofra (or IFRAME 

@@ -1,0 +1,1 @@
+In September, IBM announced that the Blue Gene/L prototype had sustained speeds of 36 trillion calculations per second. Blue Gene/L recently achieved a sustained performance of 70.

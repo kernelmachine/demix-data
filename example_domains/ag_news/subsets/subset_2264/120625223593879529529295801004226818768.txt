@@ -1,0 +1,1 @@
+Novell today announced the November availability of SuSE Linux Professional 9.2, targeted at both unfamiliar users and open source enthusiasts, and compatible with standard 32-bit PC processors as well as AMD Athlon 64 and Intel Extended Memory 64 

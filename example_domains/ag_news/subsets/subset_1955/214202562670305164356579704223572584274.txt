@@ -1,0 +1,1 @@
+Oracle Corp. urged customers to apply software patches it released in August because of the availability of malicious code that can exploit unpatched vulnerabilities in its software.

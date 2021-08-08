@@ -1,0 +1,1 @@
+Product will allow a server to run multiple operating systems, or multiple copies of the same operating system at a single time

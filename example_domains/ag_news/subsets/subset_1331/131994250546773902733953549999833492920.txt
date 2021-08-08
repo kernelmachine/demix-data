@@ -1,0 +1,1 @@
+At the Intel Developer Forum in San Francisco yesterday, Intel President Paul Otellini provided further details of the chip giants plans to bring multicore processors to servers and desktop PCs, starting with a dual-core server chip in the second half 

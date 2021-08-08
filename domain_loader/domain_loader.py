@@ -14,7 +14,7 @@ from pathlib import Path
 import gzip
 from joblib import Parallel, delayed
 
-from domain_loader.constants import PROJECT_DIR, TOKEN_COUNTS
+from domain_loader.constants import DATA_DIR, TOKEN_COUNTS
 from domain_loader.utils import take_n_tokens, REGEXES
 from tqdm.auto import tqdm
 import numpy as np

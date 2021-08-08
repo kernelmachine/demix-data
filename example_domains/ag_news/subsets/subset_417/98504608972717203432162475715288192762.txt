@@ -1,0 +1,1 @@
+Intelhas released its Quick Start Kit for Linux, stepping up support for Asian system integrators that offer Linux-based desktop PCs.

@@ -1,0 +1,1 @@
+Trojan horse that exploits flaw in how Windows handles JPEG images may be low risk, but it's a bad omen.

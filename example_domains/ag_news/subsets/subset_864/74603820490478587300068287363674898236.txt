@@ -1,0 +1,1 @@
+The popular skinning feature in Nullsoft #39;s WinAmp media player has left the door wide open for malicious attackers to hijack PCs.

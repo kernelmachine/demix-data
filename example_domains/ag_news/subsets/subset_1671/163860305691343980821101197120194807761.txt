@@ -1,0 +1,1 @@
+A new Web Services for Management (WS-Management) specification edited by Alan Geller (Microsoft) has been published. This initial joint publication of the specification names Advanced Micro Devices (AMD), Dell 

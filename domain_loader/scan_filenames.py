@@ -6,7 +6,7 @@ import torch
 from torch.utils.data.sampler import SubsetRandomSampler
 from pathlib import Path
 
-from domain_loader.constants import PROJECT_DIR
+from domain_loader.constants import DATA_DIR
 from tqdm.auto import tqdm
 from domain_loader.domain_loader import Domain
 import argparse
@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     domain = args.domain
 
-    dataset = Domain(PROJECT_DIR / domain / "subsets")
+    dataset = Domain(DATA_DIR / domain / "shards")
 
     if domain in ["1b", "reddit"]:
         num_workers = 1
@@ -36,10 +36,10 @@ if __name__ == '__main__':
 
     pbar = tqdm(dataloader)
     curr_files = 0
-    (PROJECT_DIR / domain / "metadata" ).mkdir(exist_ok=True)
-    with open(PROJECT_DIR / domain / "metadata" / "filenames.txt", "w+") as f:
+    (DATA_DIR / domain / "metadata" ).mkdir(exist_ok=True)
+    with open(DATA_DIR / domain / "metadata" / "filenames.txt", "w+") as f:
         for fname, _, _, _ in pbar:
             for fn in fname:
                 f.write(fn + "\n")
                 curr_files += 1
-    print(f"Number of files in {str(PROJECT_DIR / domain / domain)}: {curr_files}")
+    print(f"Number of files in {str(DATA_DIR / domain / domain)}: {curr_files}")

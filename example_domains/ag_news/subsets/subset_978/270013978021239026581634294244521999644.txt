@@ -1,0 +1,1 @@
+MacCentral - Apple Computer Inc. on Monday released an update for Apple Remote Desktop (ARD), the company's software solution to assist Mac system administrators and computer managers with asset management, software distribution and help desk support. ARD 2.1 includes several enhancements and bug fixes.

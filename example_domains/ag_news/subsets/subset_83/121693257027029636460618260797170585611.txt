@@ -1,0 +1,1 @@
+Intelligent sensor networks moved a little closer to commercial deployment on Tuesday with the ratification of ZigBee. ZigBee is a short-range, very low-power wireless technology.

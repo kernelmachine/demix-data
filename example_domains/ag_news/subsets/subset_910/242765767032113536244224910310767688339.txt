@@ -1,0 +1,1 @@
+Microsoft Corp. does not plan to change its per-processor software licensing model when hardware containing dual-core and multicore processor technology for the Windows platform becomes available next year.

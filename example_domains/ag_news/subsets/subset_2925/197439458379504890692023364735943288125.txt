@@ -1,0 +1,1 @@
+The updates are designed to protect against network-scanning worms and keep phishing attacks at bay. 

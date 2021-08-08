@@ -1,0 +1,1 @@
+Hoping to put in place the last missing piece of the Java stack, Gluecode Software and the Apache Software Foundation this week unwrapped Project Agila, which the companies claim is the first embeddable open source BPM engine.

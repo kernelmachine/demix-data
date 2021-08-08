@@ -1,0 +1,1 @@
+Google SMS is a new service that enables you to search for certain kinds of information with Google from a mobile phone or handheld device (such as an iPAQ 6315), and returns your search results as text messages.

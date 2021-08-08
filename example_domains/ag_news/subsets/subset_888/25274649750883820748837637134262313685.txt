@@ -1,0 +1,1 @@
+The security research group The SANS Institute on Friday released its annual Top 20 list of the most critical Internet-related vulnerabilities to give organizations a way to prioritize their defensive efforts.

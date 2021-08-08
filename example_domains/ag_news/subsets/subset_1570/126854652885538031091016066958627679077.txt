@@ -1,0 +1,1 @@
+Security company Internet Security Systems is warning of a critical security hole in a commonly used technology from the Mozilla Foundation called the Netscape Network Security Services library that could leave Web servers vulnerable to remote attack.

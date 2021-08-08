@@ -1,0 +1,1 @@
+SAN FRANCISCO - Sun Microsystems Inc. last week quietly released a version of its Java Desktop System (JDS) software based on the Solaris x86 operating system, a move the company is calling the first step in a long-term strategy to unify the user interface for Sun's Linux and Solaris products, Sun officials said Thursday.

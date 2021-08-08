@@ -1,0 +1,1 @@
+WinFS is perhaps one of the most awaited feature from the Microsoft stable after Longhorn was announced. Microsoft says that it has been their dream to come out with something like WinFS and completely change the way file system works.

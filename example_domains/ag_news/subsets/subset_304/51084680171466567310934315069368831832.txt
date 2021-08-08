@@ -1,0 +1,1 @@
+MICROSOFT has found a new security flaw with its Windows XP operating system, warning an attacker could infiltrate other computers by persuading their owners to open a specialised graphics file.

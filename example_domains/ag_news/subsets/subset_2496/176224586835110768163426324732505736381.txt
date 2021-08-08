@@ -1,0 +1,1 @@
+America Online (AOL) has ditched Microsoft #39;s Sender ID technology in favour of Sender Policy Framework (SPF). The move follows concerns over Sender ID voiced by the Internet Engineering Task Force (IETF) earlier this week.

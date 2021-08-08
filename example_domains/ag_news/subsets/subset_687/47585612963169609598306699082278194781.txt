@@ -1,0 +1,1 @@
+It #39;s not that there aren #39;t Unix attacks that work. It #39;s that pretty much everything the security industry does misrepresents the actual balance between attacks on Microsoft #39;s products and attacks on Unix and open source.

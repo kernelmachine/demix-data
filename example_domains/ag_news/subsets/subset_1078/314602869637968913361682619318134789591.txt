@@ -1,0 +1,1 @@
+The Delf-HA Trojan horse infects PCs and then contacts a Russian Web site to download instructions for running a spam campaign. The Trojan sends spam SMS by using the  quot;Send a text message quot; facility 

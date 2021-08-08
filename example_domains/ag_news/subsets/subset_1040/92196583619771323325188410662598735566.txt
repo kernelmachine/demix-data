@@ -1,0 +1,1 @@
+Attachmate's new Synapta presentation and builder tools are designed to abstract host information so developers can more quickly build composite applications with existing assets.

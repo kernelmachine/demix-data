@@ -1,0 +1,1 @@
+We reported on PCI-Express chipsets in numerous articles in the past two months, by reading those you would almost start to think that AGP was indeed dead and buried.

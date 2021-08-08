@@ -1,0 +1,1 @@
+IBM announced on Friday a lower-cost blade server option--a pared-down chassis geared for small and medium-sized businesses. The new Express version of IBM #39;s BladeCenter chassis still can accommodate as many 

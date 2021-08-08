@@ -1,0 +1,1 @@
+TRANSMETA HAS started shipping limited quantities of its X86 compatible Efficeon TM8800 processor, a low-powered CPU fabbed on 90-nanometre silicon.

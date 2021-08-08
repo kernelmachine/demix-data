@@ -1,0 +1,1 @@
+Microsoft is offering a patch for a critical security flaw related to the processing of JPEG images by its operating systems and other applications.

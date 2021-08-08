@@ -1,0 +1,1 @@
+An adapter made by Siemens allows phones to make calls using the Internet or the traditional phone network.

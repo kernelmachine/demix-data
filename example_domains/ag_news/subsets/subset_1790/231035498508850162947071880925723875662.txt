@@ -1,0 +1,1 @@
+BMC Software Inc. has added IBM Corp.'s IMS mainframe database to the platforms supported by its SmartDBA family of products, completing a two-year mission to provide tools for managing all of the major databases from a single, Web-based console.

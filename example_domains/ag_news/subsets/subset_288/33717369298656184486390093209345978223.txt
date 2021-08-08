@@ -1,0 +1,1 @@
+Intel has unveiled its first Flash Software Developer Kit (SDK) for mobiles, promising that the Flash Data Integrator 6.0 (Intel FDI) will help developers boost performance of advanced applications for multimedia smartphones.

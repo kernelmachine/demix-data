@@ -1,0 +1,1 @@
+Microsoft did recently announce that they are going to allow users to subscribe to the pre-alert alerts. Premium customers have been privileged to receive a heads up in advance of the actual Security Bulletins 

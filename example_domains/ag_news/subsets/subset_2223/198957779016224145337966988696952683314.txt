@@ -1,0 +1,1 @@
+The latest Linux Standard Base specifications are now out, allowing open-source vendors and developers to maintain easy portability and compatibility among applications for Linux.

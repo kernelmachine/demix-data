@@ -1,0 +1,1 @@
+Oracle Corp. released several high-risk vulnerabilities reported last month in its database software and other products, and urged customers to download and install them.

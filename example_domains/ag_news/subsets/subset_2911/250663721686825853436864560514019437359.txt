@@ -1,0 +1,1 @@
+Voice-over-IP software maker Skype starting today will include the beta of its Skype API (Application Program Interface) with its Skype for Windows product.

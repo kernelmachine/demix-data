@@ -1,0 +1,1 @@
+Sun Microsystems #39; latest edition of its Java platform offers improved performance and scalability, better system monitoring and management, and an updated look and feel for the desktop client 

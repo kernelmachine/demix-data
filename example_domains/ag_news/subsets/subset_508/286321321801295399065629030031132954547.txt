@@ -1,0 +1,1 @@
+A leading provider of secure content management solutions, Finjan Software, has reported 10 serious security vulnerabilities in Windows XP Service Pace 2. According to the company, the attacker can remotely take control over a machine running Windows XP 

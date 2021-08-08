@@ -1,0 +1,1 @@
+A variant of a bug that uses an Internet Explorer 6 vulnerability exposes Microsoft Windows systems patched with Service Pack 2. A security researcher claims to have crafted a simpler version of a bug first identified in late October.

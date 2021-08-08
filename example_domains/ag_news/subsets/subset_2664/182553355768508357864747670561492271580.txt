@@ -1,0 +1,1 @@
+IBM will continue pushing its Linux on Power strategy Monday when it unveils a new line of Linux-only servers running on its 64-bit Power5 processor.

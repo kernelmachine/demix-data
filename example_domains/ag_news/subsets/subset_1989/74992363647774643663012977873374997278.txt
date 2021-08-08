@@ -1,0 +1,1 @@
+An anonymous reader writes  quot;All browsers have been reported vulnerable to different vulnerabilities today. Starting with: Internet Explorer on XP SP1/SP2, which suffers a new system compromise (of course) vulnerability.

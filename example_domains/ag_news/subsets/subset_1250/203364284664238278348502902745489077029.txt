@@ -1,0 +1,1 @@
+Linux software maker Red Hat on Tuesday released an update to its enterprise product with security upgrades, support for IBM Power5 servers, new driver support and bug fixes.

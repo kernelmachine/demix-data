@@ -1,0 +1,1 @@
+IBM has added a new feature to WebSphere Application Server designed to help safeguard Internet business applications against outages.

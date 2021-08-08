@@ -1,0 +1,1 @@
+Intel will try to further cut power consumption in its next generation of chips by using improved strained silicon, along with transistors that block power to other circuits, and other added features.

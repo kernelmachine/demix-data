@@ -1,0 +1,1 @@
+SANTA CLARA, CALIF. -- Simplifying Java programming is on the minds of Java development executives at Sun, but making the language available via an open source format remains off the table, according to executives at a Sun Chalk Talk session here on Wednesday.

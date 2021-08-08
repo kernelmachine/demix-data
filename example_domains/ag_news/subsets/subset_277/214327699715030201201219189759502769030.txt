@@ -1,0 +1,1 @@
+New version turns off security, attempts to download malicious programs from Net--but it's not likely to get far.

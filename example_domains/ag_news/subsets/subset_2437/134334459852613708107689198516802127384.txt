@@ -1,0 +1,1 @@
+BOSTON - A planned component for Microsoft Corp.'s next version of Windows is causing consternation among antivirus experts, who say that the new module, a scripting platform called Microsoft Shell, could give birth to a whole new generation of viruses and remotely exploitable attacks.

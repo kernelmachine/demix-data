@@ -1,0 +1,1 @@
+Microsoft #39;s flagship Internet Explorer has once again come under the spotlight, albeit for all the wrong reasons. Two more vulnerabilities were uncovered in the widely used Web browser version 6, according to security firm Secunia.

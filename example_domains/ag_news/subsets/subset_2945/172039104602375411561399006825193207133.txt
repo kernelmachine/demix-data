@@ -1,0 +1,1 @@
+With Apple planning to offer similar features in its next version of OS X, programmer Arlo Rose moves Konfabulator to Windows.

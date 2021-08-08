@@ -1,0 +1,1 @@
+The days of relying on shrinking transistors to achieve performance gains are over, and the chip industry needs to enter a new era of innovation where system-level features are just as important as thinner transistor gates, said IBM Corp.

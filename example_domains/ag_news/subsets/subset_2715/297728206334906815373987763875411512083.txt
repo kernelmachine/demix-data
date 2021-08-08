@@ -1,0 +1,1 @@
+Security researchers found two software flaws in the Windows XP Service Pack 2 that could allow virus writers and malicious hackers to sidestep new security features in the operating system.

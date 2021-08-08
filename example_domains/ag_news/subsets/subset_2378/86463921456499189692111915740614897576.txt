@@ -1,0 +1,1 @@
+Stinger update of DB2 will focus on automatic administration and an improvement in clustered performance.

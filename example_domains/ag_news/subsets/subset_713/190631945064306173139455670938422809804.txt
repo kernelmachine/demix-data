@@ -1,0 +1,1 @@
+On Wednesday Microsoft announced that it had completed the development of Microsoft Operations Manager (MOM) 2005, its next-generation operations management server product, which will ship in separate versions aimed at enterprises and mid-sized businesses 

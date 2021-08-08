@@ -1,0 +1,1 @@
+Microsoft (Quote, Chart) announced another entry in its line of .NET development tools, adding Visual Studio 2005 Standard Edition to the mix.

@@ -1,0 +1,1 @@
+I have tested Google search on WAP and it works fine. But considering Google has around 4.2 Billion pages (as per their homepage), finding information on a mobile phone is not fun.

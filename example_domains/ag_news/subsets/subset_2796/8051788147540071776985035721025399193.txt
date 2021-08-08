@@ -1,0 +1,1 @@
+The current Office System lineup--including the various Office SKUs, Live Communications Server, SharePoint Portal Server, Project Server, Content Management Server, etc.

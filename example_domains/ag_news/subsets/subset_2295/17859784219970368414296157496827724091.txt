@@ -1,0 +1,1 @@
+com. Open-source company JBoss Inc. on Monday introduced a workflow engine that broadens the company #39;s middleware stack. JBPM 2.0 was developed with the open-source project of the same name and joins 

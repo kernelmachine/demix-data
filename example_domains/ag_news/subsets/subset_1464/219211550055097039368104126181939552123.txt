@@ -1,0 +1,1 @@
+ATI HAS developed a new technology to allow system memory to be fully utilised by graphics boards, it said today. The extra bandwidth of the PCI Express bus means that shuttling data to and fro between the 

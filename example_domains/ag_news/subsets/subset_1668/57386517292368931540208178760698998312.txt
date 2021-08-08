@@ -1,0 +1,1 @@
+Open Source Development Lab has upgraded a key Linux kernel development tool, the Scalable Test Platform, with new features to improve simulations of enterprise data centers on the Linux kernel.

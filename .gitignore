@@ -1,6 +1,6 @@
 metadata/
 splits/
-subsets/
+shards/
 data-bin/
 
 # Byte-compiled / optimized / DLL files

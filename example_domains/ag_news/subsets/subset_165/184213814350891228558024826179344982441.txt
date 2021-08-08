@@ -1,0 +1,1 @@
+InfoWorld - Sun Microsystems and several other vendors on Wednesday will release an early draft of a specification intended to ease integration of Java-based systems, but IBM and BEA Systems have dropped out of participation in the effort.

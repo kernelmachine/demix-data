@@ -1,0 +1,1 @@
+Microsoft revised its Sender ID e-mail authentication technology to address concerns raised by AOL. Microsoft said yesterday it submitted the new Sender ID specification to the Internet Engineering Task Force, the Internet #39;s standards body.

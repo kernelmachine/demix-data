@@ -1,0 +1,1 @@
+\\I've been a big fan of Log4J  for a while now but haven't migrated any code\over for one central reason.  The following line of code:\\    final static Logger logger = Logger.getLogger( 

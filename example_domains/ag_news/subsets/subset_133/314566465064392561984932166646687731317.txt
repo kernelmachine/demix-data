@@ -1,0 +1,1 @@
+Application developers are getting a raft of new options this week with Sun updating J2SE, Borland upping its CORBA ante, and Compuware detailing products that will work with Microsoft's Visual Studio 2005 toolbox.

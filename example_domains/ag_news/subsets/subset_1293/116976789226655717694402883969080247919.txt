@@ -1,0 +1,1 @@
+San Jose, Calif. - Borland Software at its BorCon conference here on Monday will preview the upcoming Diamondback release of its Delphi development tool for the Microsoft platform, which is to support development via managed code.

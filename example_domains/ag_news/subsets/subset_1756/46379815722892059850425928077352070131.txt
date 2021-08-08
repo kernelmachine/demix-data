@@ -1,0 +1,1 @@
+Because Internet Explorer is one of the programs vulnerable to a newly discovered Windows image flaw, it is possible that someone could fall victim to a virus written to exploit it just by visiting a Web site that uses JPEG images.

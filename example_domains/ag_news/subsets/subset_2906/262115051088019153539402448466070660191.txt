@@ -1,0 +1,1 @@
+AP - Results of recent polls on the presidential race. Listed above each set of results is the name of the organization that conducted the poll, the dates, the number interviewed, whether they were adults, registered voters (RV) or likely voters (LV) and the margin of error (MoE). Results might not total 100 percent because of rounding.

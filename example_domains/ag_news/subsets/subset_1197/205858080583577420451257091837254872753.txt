@@ -1,0 +1,1 @@
+Slashdot is so popular that traffic from its links can cripple small websites, sometimes for days. So a couple of fans have set up a site called Mirrordot to alleviate the problem by hosting copies of sites mentioned on Slashdot. By Daniel Terdiman.

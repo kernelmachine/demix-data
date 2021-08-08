@@ -1,0 +1,1 @@
+A recently detected exploit code foreshadows a likely worm-style attack on Windows machines plagued with the JPEG vulnerability made public last week, security experts said Thursday.

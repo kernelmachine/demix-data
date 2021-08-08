@@ -1,0 +1,1 @@
+Computer Associates International on Monday kicked off its entry into open-source software with the release of its Ingres r3 database.

@@ -1,0 +1,1 @@
+The latest version of the Rbot worm contains features that allow malicious hackers to easily turn on the webcam and microphone of infected Windows computers, effectively allowing them to spy on their victims, according to an anti-virus firm.

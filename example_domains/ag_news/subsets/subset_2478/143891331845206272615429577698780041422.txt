@@ -1,0 +1,1 @@
+In this article we will look at a means to bypass the access control restrictions of a company's router or firewall.  This information is intended to provide help for those who are legitimately testing the security of a network (whether they are in-house expertise or outside consultants).

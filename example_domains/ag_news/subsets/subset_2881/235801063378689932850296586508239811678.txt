@@ -1,0 +1,1 @@
+Computer Associates International, Inc. (NYSE:CA) today announced general availability of Ingres r3 for Linux and Windows under the CA Trusted Open Source License (CATOSL).

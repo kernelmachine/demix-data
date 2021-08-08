@@ -1,0 +1,1 @@
+Intel has announced the latest version of its Centrino mobile processor family, the Pentium M 765, which offers 2 MB of Level 2 cache and a 400-MHz system bus.

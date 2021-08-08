@@ -1,0 +1,1 @@
+A new company thinks it has the answer to the complaints of scientists and engineers looking for high-performance computing (HPC) on the desktop. The Orion Cluster Workstation packs the power of a PC cluster into a desktop-size package using low-power chips and an innovative motherboard design.

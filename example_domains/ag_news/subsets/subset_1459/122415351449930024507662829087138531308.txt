@@ -1,0 +1,1 @@
+Microsoft #39;s patent on the File Allocation Table disk format has been rejected by the US Patent Office, on the grounds that it should never have been granted in the first place.

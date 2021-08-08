@@ -1,0 +1,1 @@
+Red Hat has expanded its Open Source portfolio through an agreement to acquire specific assets of Netscape Security Solutions, namely the Netscape Directory Server and the Netscape Certificate Management System, both part of the Netscape Enterprise Suite.

@@ -1,0 +1,1 @@
+WPA2 Wi-Fi Protected Access products, both access points and client air cards, will soon be flooding the market. This uses the Advanced Encryption Standard AES which is compliant with the FIPS140-2 government security requirements.

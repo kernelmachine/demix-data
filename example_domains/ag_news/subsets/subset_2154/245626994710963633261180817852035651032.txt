@@ -1,0 +1,1 @@
+ATLANTA -- Low-end server technology is racing ahead of the ability of many data centers to keep the increasingly dense and fast systems cool, a problem that's stopping some IT managers from using the new machines.

@@ -1,0 +1,1 @@
+Faced with concerns from IT professionals, Microsoft Corp. gave users more time to prepare for Windows XP Service Pack 2 by doubling the time a special registry key will prevent PCs from automatically downloading and installing the mammoth update.

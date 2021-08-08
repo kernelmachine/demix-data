@@ -1,0 +1,1 @@
+Newly updated. This article provides insight into the Metasploit Framework, a very useful tool for the penetration tester. Part two of three.

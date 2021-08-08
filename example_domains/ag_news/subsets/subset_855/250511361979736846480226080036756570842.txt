@@ -1,0 +1,1 @@
+Company goes head-to-head with MySQL and PostgreSQL with a free version of its ASE database for Linux.

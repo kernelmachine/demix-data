@@ -1,0 +1,1 @@
+IBM will launch Friday a new version of its Tivoli transaction-performance monitoring product that greatly expands the range of application transactions it can track.

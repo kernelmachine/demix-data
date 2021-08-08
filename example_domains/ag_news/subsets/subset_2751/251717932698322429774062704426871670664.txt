@@ -1,0 +1,1 @@
+MicroWorld Software has cautioned Internet users about a new malicious worm known as the W32/Zafi-D. According to the antivirus and content security software provider, W32/Zafi-D behaves in a typical worm manner.

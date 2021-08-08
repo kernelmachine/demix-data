@@ -1,0 +1,1 @@
+An independent researcher finds an Internet Explorer vulnerability that could turn drag-and-drop into drag-and-infect.

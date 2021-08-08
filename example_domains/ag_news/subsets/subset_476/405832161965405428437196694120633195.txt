@@ -1,0 +1,1 @@
+Symantec has admitted its flagship consumer security application, Norton AntiVirus 2005, has a security vulnerability that allows certain types of malicious script to infect a user #39;s personal computer with a virus.

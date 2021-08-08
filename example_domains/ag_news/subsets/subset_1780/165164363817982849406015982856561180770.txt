@@ -1,0 +1,1 @@
+LogicLibrary, a provider of software asset management tools, Tuesday announced Logidex 3.5 for J2EE and .NET platforms that features compliance with the Basic Profile of the Web Services 

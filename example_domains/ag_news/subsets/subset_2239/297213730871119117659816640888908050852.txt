@@ -1,0 +1,1 @@
+In order to achieve the speed of one gigabit per second, Siemens combined an  quot;intelligent antenna system quot; consisting of three transmitting and four receiving antennas with Orthogonal Frequency Division Multiplexing.

@@ -1,0 +1,1 @@
+Oracle today announced that it is moving to a quarterly patch release schedule, even as the company faces criticism from analyst firm Gartner Inc. for its handling of a recent critical security fix.

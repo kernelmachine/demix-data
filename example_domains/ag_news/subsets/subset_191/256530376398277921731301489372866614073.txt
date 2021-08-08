@@ -1,0 +1,1 @@
+A toolkit designed to exploit a recently-disclosed Microsoft JPEG vulnerability has been released onto the net. The toolkit (screen shot from AV firm F-Secure here) makes it trivially easy for maliciously-minded 

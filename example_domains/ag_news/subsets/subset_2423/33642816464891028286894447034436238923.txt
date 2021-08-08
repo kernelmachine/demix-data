@@ -1,0 +1,1 @@
+Engineers at NEC have developed a processor for cellular telephones that includes three ARM processor cores in a single chip, a moved aimed at improving the multimedia capabilities of cell phones.

@@ -1,0 +1,1 @@
+The seriousness of an already critical flaw in the way a Microsoft component processes JPEG files got ratcheted up a notch this week as exploit code began circulating.

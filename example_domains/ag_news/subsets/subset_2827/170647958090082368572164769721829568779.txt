@@ -1,0 +1,1 @@
+Description: A new Microsoft upgrade tries to make Windows XP more secure against attack. Service Pack 2 contains a program -- known as a firewall -- that keeps out some destructive computer worms.

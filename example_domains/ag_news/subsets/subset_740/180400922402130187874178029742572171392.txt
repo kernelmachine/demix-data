@@ -1,0 +1,1 @@
+Updated: A  quot;cumulative security update quot; plugs eight holes in the Internet Explorer browser, while other patches address  quot;critical quot; vulnerabilities in the Windows shell, in SMTP and elsewhere.

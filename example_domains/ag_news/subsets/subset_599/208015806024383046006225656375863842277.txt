@@ -1,0 +1,1 @@
+The giant has released a patch so that Windows doesn #39;t let in hackers when it handles JPEG graphics formats. The flaw means that attackers can create an image file that will automatically run dodgy code, dump 

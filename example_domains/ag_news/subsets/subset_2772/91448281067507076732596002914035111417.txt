@@ -1,0 +1,1 @@
+Ziff Davis - The update fixes about eight vulnerabilities, including an image file problem and printing and networking holes.

@@ -1,0 +1,1 @@
+It lets users search for scholarly literature such as peer-reviewed papers, theses, abstracts and technical reports from resources such as academic publishers, universities, professional societies and preprint repositories.

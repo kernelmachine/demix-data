@@ -1,0 +1,1 @@
+Update to Enterprise Linux 3 also includes support for IBM Power5 servers, new driver support and bug fixes.

@@ -1,0 +1,12 @@
+name: demix
+channels:
+    - pytorch
+dependencies:
+    - pytorch
+    - pip
+    - pip:
+        - pandas
+        - humanize
+        - transformers
+        - scikit-learn
+        - fairseq

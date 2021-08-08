@@ -1,0 +1,1 @@
+News.com: Yahoo fixed two flaws in its free mail system that could have allowed a malicious user to read a victim #39;s browser cookies and change the appearance of some pages, Yahoo said Thursday. 

@@ -1,0 +1,1 @@
+Microsoft and Sun Microsystems on Friday published a specification to leverage Web services for managing a broad range of IT systems including PCs and devices on a network.

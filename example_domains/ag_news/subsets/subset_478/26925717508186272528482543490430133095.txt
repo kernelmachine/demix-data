@@ -1,0 +1,1 @@
+Computer code that exploits a flaw in the way many Microsoft applications process JPEG images has been published on the Internet and could indicate coming attacks on vulnerable PCs, experts said.

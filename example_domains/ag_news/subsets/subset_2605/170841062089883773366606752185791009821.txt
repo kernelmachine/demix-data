@@ -1,0 +1,1 @@
+Dartmouth College computer scientists create software that uses statistical techniques to authenticate art, to sort out real works from fakes. Their first finding: A painting purportedly by Perugino may have been done by four different artists. By Noah Shachtman.

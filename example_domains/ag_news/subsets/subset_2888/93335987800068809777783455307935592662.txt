@@ -1,0 +1,1 @@
+A new variant of the MyDoom worm that exploits an unpatched flaw in Microsoft Corp.'s Internet Explorer (IE) browser is in the wild and posing particular risk to home and small business users, security experts warned this week.

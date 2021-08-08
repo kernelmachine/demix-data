@@ -1,0 +1,1 @@
+The Mozilla Project has issued a warning for a series of  quot;highly critical quot; security holes in three of its core projects, including its flagship Firefox Web browser and the Thunderbird e-mail client.

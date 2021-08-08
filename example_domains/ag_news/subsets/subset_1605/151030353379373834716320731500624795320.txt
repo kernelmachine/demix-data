@@ -1,0 +1,1 @@
+stocks of companies with a market capitalization between \$100 million and \$2 billion, calculated as shares outstanding times share price -- outperformed larger-cap stocks last quarter.

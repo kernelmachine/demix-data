@@ -1,0 +1,1 @@
+In the past, IBM has offered Linux as an option on its pSeries Power4 line, and has also offered Linux in certain partitions on its iSeries products.

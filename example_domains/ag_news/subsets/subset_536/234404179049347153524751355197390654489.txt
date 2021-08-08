@@ -1,0 +1,1 @@
+IBM #39;s new WebSphere release, Version 6, automatically troubleshoots systems and identifies network glitches that could lead to power outages.

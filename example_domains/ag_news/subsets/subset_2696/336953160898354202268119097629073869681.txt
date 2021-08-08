@@ -1,0 +1,1 @@
+The country's Ministry of Finance chooses JBoss on Linux over Microsoft's BizTalk to run a key system.

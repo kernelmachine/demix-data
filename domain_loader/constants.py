@@ -1,7 +1,7 @@
 from pathlib import Path
 import os
 
-PROJECT_DIR = Path(os.environ['PROJECT_DIR'])
+DATA_DIR = Path(os.environ['DATA_DIR'])
 
 
 TOKEN_COUNTS = {"1b": {'num_train_tokens': 700_000_000,
@@ -52,11 +52,28 @@ TOKEN_COUNTS = {"1b": {'num_train_tokens': 700_000_000,
                 "latest_news": {"num_train_tokens":11_000_000,
                                 "num_dev_tokens": 1_000_000,
                                 "num_test_tokens": 1_000_000},
-                "ag_news": {"num_train_tokens": 800_000,
-                            "num_dev_tokens": 300_000,
-                            "num_test_tokens": 300_000},
+                "ag_news": {"num_train_tokens": 100_000,
+                            "num_dev_tokens": 10_000,
+                            "num_test_tokens": 10_000},
                 "imdb": {"num_train_tokens": 800_000,
                             "num_dev_tokens": 100_000,
                             "num_test_tokens": 100_000},
-
+                "sciie": {"num_train_tokens": 80_000,
+                            "num_dev_tokens": 10_000,
+                            "num_test_tokens": 10_000},
+                "hp-news": {"num_train_tokens": 200_000,
+                            "num_dev_tokens": 10_000,
+                            "num_test_tokens": 10_000},
+                "chemprot": {"num_train_tokens": 100_000,
+                            "num_dev_tokens": 10_000,
+                            "num_test_tokens": 10_000},
+                "rct": {"num_train_tokens": 100_000,
+                            "num_dev_tokens": 10_000,
+                            "num_test_tokens": 10_000},
+                "citation_intent": {"num_train_tokens": 50_000,
+                            "num_dev_tokens": 10_000,
+                            "num_test_tokens": 10_000},
+                "amazon": {"num_train_tokens": 500_000,
+                            "num_dev_tokens": 100_000,
+                            "num_test_tokens": 100_000},
                 }

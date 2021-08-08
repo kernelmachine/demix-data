@@ -1,0 +1,1 @@
+measured against the industry-standard LINPACK benchmark -- was able to turn in a sustained a performance of 36.01 teraflops. That edges it ahead of the three-year-old top mark 

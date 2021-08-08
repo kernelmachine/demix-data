@@ -1,0 +1,1 @@
+PC World - Handling of images could allow an attacker to take over your PC.

@@ -1,0 +1,1 @@
+Novell is this week expected to spruce up a version of its Linux desktop aimed squarely at enterprise users. Built on the same core code base as Suse Linux Enterprise Server 9, Linux Desktop 9 is best suited 

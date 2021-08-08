@@ -1,0 +1,1 @@
+Its new software lets PC administrators create policy controls specifying how long a user will have access to the operating system and applications, what peripherals can connect to the environment, and more.

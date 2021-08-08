@@ -1,0 +1,1 @@
+Dell has announced a dense blade server designed for enterprises with space-tight, hard-to-cool data centres. The PowerEdge 1855 can pack as many as 10 blade servers in a 7U-sized 

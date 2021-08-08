@@ -1,0 +1,1 @@
+A screensaver that uses idle computing power to identify the sites of spammers and forward data traffic to them has been too successful, according to reports, generating so much traffic that the sites are being forced off-line.

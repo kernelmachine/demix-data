@@ -1,0 +1,1 @@
+Internet-based assaults continue to be a major concern, according to a new report from security software maker Symantec. The time from discovery of a vulnerability to attacks exploiting that vulnerability is shrinking.

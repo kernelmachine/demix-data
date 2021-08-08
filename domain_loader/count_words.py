@@ -11,7 +11,7 @@ import pandas as pd
 from pathlib import Path
 import gzip
 
-from domain_loader.constants import PROJECT_DIR
+from domain_loader.constants import DATA_DIR
 from domain_loader.utils import take_n_tokens
 from tqdm.auto import tqdm
 import numpy as np
@@ -30,7 +30,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     domain = args.domain
 
-    dataset = Domain(PROJECT_DIR / domain/ "subsets")
+    dataset = Domain(DATA_DIR / domain/ "shards")
 
     dataloader = DataLoader(dataset,
                             num_workers=args.num_workers,
@@ -42,4 +42,4 @@ if __name__ == '__main__':
         curr_tokens += sum(token_count)
         pbar.set_description(f"{humanize.intword(curr_tokens)} tokens")
 
-    print(f"Number of tokens in {str(PROJECT_DIR / domain / domain)}: {humanize.intword(curr_tokens)}")
+    print(f"Number of tokens in {str(DATA_DIR / domain / domain)}: {humanize.intword(curr_tokens)}")

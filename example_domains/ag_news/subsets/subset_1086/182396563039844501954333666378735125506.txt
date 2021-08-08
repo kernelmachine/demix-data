@@ -1,0 +1,1 @@
+SHANGHAI - While much has been made of efforts by Advanced Micro Devices Inc. and Intel Corp. to bring dual-core processors to PCs and servers, Freescale Semiconductor Inc. announced Tuesday at a conference in Frankfurt, Germany, details of a dual-core PowerPC processor designed for embedded applications, such as networking and storage.

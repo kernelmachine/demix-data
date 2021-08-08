@@ -1,0 +1,1 @@
+Microsoft Corp. wants to deliver its Windows Server 2003 update, known as  quot;R2, quot; in 2005. To make sure it will be able do so, the company is prioritizing its feature list and moving some R2 features into later releases.

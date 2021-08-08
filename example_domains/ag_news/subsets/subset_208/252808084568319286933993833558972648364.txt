@@ -1,0 +1,1 @@
+Virus writers have grafted a network sniffer into the latest variant of the SDBot worm series.

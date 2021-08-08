@@ -1,0 +1,1 @@
+Microsoft this week released a patch to fix an important vulnerability in Internet Explorer, even as a new worm that took advantage of an as-yet-unpatched hole in the Web browser spread.

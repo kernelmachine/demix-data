@@ -1,0 +1,1 @@
+The  quot;highly criticial quot; vulnerability affects Internet Explorer 5.01, 5.5, and 6 on fully patched PCs running either Windows XP SP1 or the newer SP2. 

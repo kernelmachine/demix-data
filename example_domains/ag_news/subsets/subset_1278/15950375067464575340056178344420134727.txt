@@ -1,0 +1,1 @@
+This update resolves a newly-discovered, privately reported vulnerability. The vulnerability is documented in the Vulnerability details section of this bulletin.

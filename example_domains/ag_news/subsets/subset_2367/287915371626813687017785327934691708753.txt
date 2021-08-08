@@ -1,0 +1,1 @@
+Under the terms of the agreement Red Hat will obtain products derived from the Netscape Enterprise Suite, including Netscape Directory Server and Netscape Certificate Management System.

@@ -1,0 +1,1 @@
+A partially assembled prototype of a new IBM supercomputer set a record of 70.72 trillion transactions per second earlier this week.

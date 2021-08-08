@@ -1,0 +1,1 @@
+We are all used to IE getting a monthly new security bug found, but Winamp? In fact, this is not the first security flaw found in the application.

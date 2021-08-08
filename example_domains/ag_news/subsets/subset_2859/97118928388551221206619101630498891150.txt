@@ -1,0 +1,1 @@
+Web Services Management supports a full spectrum of usage models, including the management of everything from silicon components and handheld devices to PCs, servers and large-scale data centers.

@@ -1,0 +1,1 @@
+A technical working group at the Internet Engineering Task Force (IETF) last weekend voted to veto a proposal by Microsoft that was designed to identify the real source of email messages.

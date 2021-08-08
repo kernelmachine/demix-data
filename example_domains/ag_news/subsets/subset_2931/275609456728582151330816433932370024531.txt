@@ -1,0 +1,1 @@
+Presenters at the Crypto 2004 conference identify faster ways to forge digital signatures with common security algorithms.

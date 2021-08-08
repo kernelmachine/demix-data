@@ -1,0 +1,1 @@
+A new version of the Cabir  quot;Skulls quot; malware program is on the lose. The first version, discovered only a few weeks ago, was a trojan horse program that blocked access to built-in applications and erased data.

@@ -1,0 +1,1 @@
+Adobe has issued a patch for Acrobat Reader to correct a vulnerability that could allow an atacker to take over a user #39;s system with an infected PDF file.

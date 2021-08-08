@@ -1,0 +1,1 @@
+Yahoo has started checking incoming e-mail using DomainKeys, its content-signing e-mail authentication technology, the company said Monday.

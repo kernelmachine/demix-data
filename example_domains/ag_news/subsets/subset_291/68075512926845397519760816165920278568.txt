@@ -1,0 +1,1 @@
+JBoss has released a new version of its open-source business process management application, called  quot;jBPM. quot; It is the latest evidence that the open-source provider is serious about pushing 

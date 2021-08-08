@@ -1,0 +1,1 @@
+Netsky-P, an email computer worm allegedly written by a German teenager, was the hardest-hitting virus of 2004, disrupting tens of thousands of businesses and homes worldwide, Web security firm Sophos says.

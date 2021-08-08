@@ -1,0 +1,1 @@
+Hewlett-Packard(HP) has abandoned plans to integrate a number of advanced technologies it acquired in its 2002 purchase of Compaq into its flagship HP-UX operating system. The Palo Alto, California, computer maker has instead decided to partner with Veritas Software to bring new file system and clustering capabilities to its Unix software, the two companies announced Thursday.

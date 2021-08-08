@@ -1,0 +1,1 @@
+A bug in Microsoft #39;s Internet Security and Acceleration (ISA) Server 2000 and Proxy Server 2.0 can let hackers spoof Web content, such as a trusted site, with their own fake content, the Redmond 

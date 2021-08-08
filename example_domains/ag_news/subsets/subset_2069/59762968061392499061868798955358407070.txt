@@ -1,0 +1,1 @@
+Linux vendors from Europe, Asia, and North and South America have teamed up to create a common core implementation of the Linux Standard Base (LSB) 2.0.

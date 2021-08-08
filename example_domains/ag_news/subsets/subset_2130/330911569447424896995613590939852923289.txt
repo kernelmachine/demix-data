@@ -1,0 +1,1 @@
+Called W32.Funner, the worm upon infection attempts to spread itself through the host #39;s MSN Messenger contact list. Apart from altering Windows #39; host file and adding nearly 1000 URLs, the worm also attempts 

@@ -1,0 +1,1 @@
+ quot;Last week #39;s simultaneous outages of GeorgeWBush.com and RNC.org prompted speculation that an electronic attack may have occurred, as the two sites are hosted on separate Web servers, quot; Netcraft analyst Rich Miller said.

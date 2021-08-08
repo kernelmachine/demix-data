@@ -1,0 +1,1 @@
+A highly critical security hole has been reported in the X Pixmap (libXpm) technology shipped with Solaris and JDS for Linux, which could allow someone to run code on your system if a modified X Pixmmap (.xpm) image is loaded.

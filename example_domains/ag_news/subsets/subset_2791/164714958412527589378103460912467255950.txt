@@ -1,0 +1,1 @@
+SEATTLE: Microsoft Corp was dealt a setback on Tuesday after the Internet Engineering Task Force (IETF) decided not to adopt its e-mail sender ID standard that would make it easier for Internet service providers to block unwanted junk e-mail.

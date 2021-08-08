@@ -1,0 +1,1 @@
+Veritas Software on Monday will announce a new version of its OpForce provisioning software designed to make it easier for administrators to install and manage applications, as well as operating systems, on servers.

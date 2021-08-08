@@ -1,0 +1,1 @@
+Sun Microsystems has introduced a pay-for-use pricing model for grid computing, enabling customers to gain access to computing cycles on an on-demand basis.

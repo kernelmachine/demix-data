@@ -1,0 +1,1 @@
+New versions of the MyDoom worm that began spreading late Monday afternoon are among the fastest-ever exploits of an unpatched Microsoft vulnerability, security experts said Tuesday.

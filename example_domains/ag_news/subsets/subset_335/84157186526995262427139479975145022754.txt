@@ -1,0 +1,1 @@
+&lt;p&gt;\&lt;/p&gt;&lt;p&gt; AMSTERDAM (Reuters) - A new computer worm emerged on\Tuesday which broke the speed record from the announcement of a\security vulnerability in Microsoft's Internet Explorer to a\full-blown virus that spreads in the wild.&lt;/p&gt;

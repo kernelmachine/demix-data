@@ -1,0 +1,1 @@
+ZDNet is reporting on a script-based threat that spies on Mac OS X users: The malware, which has been dubbed Opener by Mac user groups, has the potential to disable Mac OS X #39;s built-in firewall, steal personal information or destroy data.

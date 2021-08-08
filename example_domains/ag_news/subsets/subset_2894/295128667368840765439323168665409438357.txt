@@ -1,0 +1,1 @@
+NewsFactor - IBM (NYSE: IBM) has released what it says is the first software that automatically self-manages and self-tunes databases containing key business information without human intervention.

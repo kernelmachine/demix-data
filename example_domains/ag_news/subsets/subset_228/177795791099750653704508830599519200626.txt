@@ -1,0 +1,1 @@
+This middleware offering is touted as the first open source application server to achieve compatibility certification for the Java 2 Platform Enterprise Edition (J2EE) version 1.4 by passing the 23,000 tests of the test compatibility kit.

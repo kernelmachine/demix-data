@@ -1,0 +1,1 @@
+New top-end Power5-based Unix server has commanding lead in performance test of servers running a large database.

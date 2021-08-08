@@ -1,0 +1,1 @@
+Intel today released the latest Pentium M chip in the form of the Pentium M model 765. The Pentium M 765 clocks in at 2.10GHz, contains 2MB cache and a 400MHz system bus.

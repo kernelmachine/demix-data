@@ -1,0 +1,1 @@
+IBM on Monday will unveil free developer resources for Cloudscape, a small-footprint, Java-based database that the company recently contributed to the Apache Software Foundation as an open source project.

@@ -18,7 +18,7 @@ from tqdm import tqdm
 from typing import TypeVar, Iterable, List, Sequence, Union, Any
 
 
-from domain_loader.constants import PROJECT_DIR, TOKEN_COUNTS
+from domain_loader.constants import DATA_DIR, TOKEN_COUNTS
 from domain_loader.domain_loader import Domain
 from domain_loader.utils import take_n_tokens
 
@@ -62,7 +62,7 @@ def write_split(domain: str,
                 anonymize=False):
 
     if not from_file:
-        dataset = Domain(PROJECT_DIR / domain / domain,
+        dataset = Domain(DATA_DIR / domain / domain,
                          filenames=files,
                          add_bos_token=add_bos_token,
                          bos_token=bos_token,
@@ -236,8 +236,8 @@ if __name__ == '__main__':
         args_test_files = None
 
     if not args.from_file:
-        resolved_path = str(PROJECT_DIR / domain / domain)
-        with open(PROJECT_DIR / args.domain  / "metadata" / "filenames.txt", 'r') as f:
+        resolved_path = str(DATA_DIR / domain / domain)
+        with open(DATA_DIR / args.domain  / "metadata" / "filenames.txt", 'r') as f:
             domain_files = []
             for x in tqdm(f.readlines()):
                 fp = x.strip()

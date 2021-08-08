@@ -1,0 +1,1 @@
+Microsoft Corp. has quietly released a  quot;critical quot; Windows XP Service Pack 2 update to fix a serious flaw in the Windows Firewall utility.

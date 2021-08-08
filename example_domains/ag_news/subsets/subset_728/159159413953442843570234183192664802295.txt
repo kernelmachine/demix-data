@@ -1,0 +1,1 @@
+IT security experts have uncovered a critical vulnerability in the popular Winamp media player, which could be exploited by hackers to compromise a user #39;s system.

@@ -1,0 +1,1 @@
+p2pnet.net News:- W32/Rbot-GR is a Windows worm that lets others access your computer. It steals information, uses its own emailing engine, reduces system security, records keystrokes and installs itself in the registry.

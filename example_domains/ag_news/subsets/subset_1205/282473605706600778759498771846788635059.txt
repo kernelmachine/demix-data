@@ -1,0 +1,1 @@
+A variant of the Zafi worm, Zafi.d, is doing the rounds disguised as a Christmas message. This worm arrives via email and through peer-to-peer networks bearing the message  quot;Happy Hollydays quot; and the subject 

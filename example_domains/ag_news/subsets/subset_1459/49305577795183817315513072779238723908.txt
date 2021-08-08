@@ -1,0 +1,1 @@
+Developers of the NetBeans released the second beta iteration version 4.0 software last week, squashing more than 900 bugs found in the first beta release.

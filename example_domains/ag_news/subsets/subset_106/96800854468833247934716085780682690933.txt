@@ -1,0 +1,1 @@
+IBM has issued an upgrade of its WebSphere middleware product, adding autonomic troubleshooting capabilities that autmatically detects system problems and recovers Web-based business transactions that would take days to fix manually.

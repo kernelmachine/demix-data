@@ -1,0 +1,1 @@
+Advanced Micro Devices (AMD) showcased its dual-core x86 Opteron microprocessor this week. The upcoming dual-core CPU for the enterprise enviornment is expected to debut in mid-2005 and was housed in a HP ProLiant DL585 server.

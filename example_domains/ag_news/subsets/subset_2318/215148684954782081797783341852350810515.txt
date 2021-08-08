@@ -1,0 +1,1 @@
+Update fixes crashes caused by incompatibility with hidden advertising app.

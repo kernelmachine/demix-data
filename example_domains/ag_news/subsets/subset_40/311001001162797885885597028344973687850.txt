@@ -1,0 +1,1 @@
+When Novell #39;s Linux desktop arrives at the end of this year it will be stripped down to avoid integration problems and to keep it simple for users.

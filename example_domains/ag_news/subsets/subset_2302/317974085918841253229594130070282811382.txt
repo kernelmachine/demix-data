@@ -1,0 +1,1 @@
+Accommodating large patch sets in Linux is expected to mean forking off of the 2.7 version of the platform to accommodate these changes, according to Andrew Morton, lead maintainer of the Linux kernel for Open Source Development Labs (OSDL).

@@ -1,0 +1,1 @@
+Microsoft is dropping the WinFS file system technology from Longhorn, the next version of Windows, in a bid to introduce the operating system by 2006.

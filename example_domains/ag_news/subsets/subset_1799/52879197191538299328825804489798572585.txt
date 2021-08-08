@@ -1,0 +1,1 @@
+Cisco releases an advisory warning that certain devices running IOS Version 12.2S software can be disabled by hackers. By Preston Gralla, Networking Pipeline.

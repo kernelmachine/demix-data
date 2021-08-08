@@ -1,0 +1,1 @@
+The pack addresses several stability issues with Microsoft Word, PowerPoint, Excel and Entourage and Microsoft Visual Basic for Applications for Office 2004.

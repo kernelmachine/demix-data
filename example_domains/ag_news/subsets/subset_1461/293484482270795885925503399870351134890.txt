@@ -1,0 +1,1 @@
+IBM on Friday is scheduled to make available early versions of three grid-based technologies intended to help corporate and third-party developers better manage grid-based resources as a way to solve large and compute-intensive problems.

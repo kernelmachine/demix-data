@@ -1,0 +1,1 @@
+The BBC has demonstrated an open source video codec named Dirac which it claims offers twice the bit rate of MPEG-2. According to a story on The Register, the new codec was revealed at the LinuxWorld exhibition 

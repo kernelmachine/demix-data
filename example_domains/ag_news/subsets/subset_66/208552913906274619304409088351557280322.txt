@@ -1,0 +1,1 @@
+IBM and AMD have jointly developed a new method for implementing strained silicon technology on both positive and negative transistors, a technique they said could improve transistor speeds by as much as 24.

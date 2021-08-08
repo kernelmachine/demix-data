@@ -1,0 +1,1 @@
+The patch fixes a flaw in the e-mail server software that could be used to get access to in-boxes and information.

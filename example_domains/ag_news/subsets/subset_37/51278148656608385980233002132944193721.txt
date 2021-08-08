@@ -1,0 +1,1 @@
+RSS feeds, search alerts and other information monitoring technologies are great, but often end up providing too much of a good thing.  PubSub is a 'matching engine' that offers a promising new way to keep up to date while alleviating information overload.

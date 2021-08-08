@@ -1,0 +1,1 @@
+Fujitsu Limited, Hitachi, Ltd., and NEC Corporation have released their jointly developed messaging software as open source. This software implements the Web Services Reliability (WS-Reliability) standard, a 

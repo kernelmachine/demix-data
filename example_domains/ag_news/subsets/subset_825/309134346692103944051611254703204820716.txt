@@ -1,0 +1,1 @@
+Microsoft released a  quot;cumulative security update quot; for Internet Explorer (MS04-38) that plugs eight holes in the popular browser, as well as six other unique patches for vulnerabilities that the company rated as critical.

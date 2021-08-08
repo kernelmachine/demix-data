@@ -1,0 +1,1 @@
+Virus writers have grafted a network sniffer into the latest variant of the SDBot worm series. So far there are no reports of SDBot-UH in the wild but the inclusion of selective network sniffing along with 

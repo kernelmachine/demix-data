@@ -1,0 +1,1 @@
+A router software bug could lead to denial-of-service attacks--but only techies could launch one, an analyst says.

@@ -1,0 +1,1 @@
+Yahoo on Monday implemented its own sender authentication scheme, dubbed DomainKeys, for its free Web-based mail service. DomainKeys is one of several authentication technologies that hope to put a stop to 

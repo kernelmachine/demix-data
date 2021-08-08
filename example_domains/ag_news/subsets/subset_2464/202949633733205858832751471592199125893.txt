@@ -1,0 +1,1 @@
+Enterprise developers looking for a guide to test applications against the new Windows XP Service Pack 2 (SP2) are getting some help from Microsoft (Quote, Chart).

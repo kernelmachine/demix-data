@@ -1,0 +1,1 @@
+This WeatherBug Backyard weather station, dubbed the Wireless Vantage Pro2, streams meteorology data to a desktop.

@@ -1,0 +1,1 @@
+The Web Services Interoperability Organization (WS-I) on Tuesday is releasing three profiles intended to make it easier to send attachments using Web services technologies.

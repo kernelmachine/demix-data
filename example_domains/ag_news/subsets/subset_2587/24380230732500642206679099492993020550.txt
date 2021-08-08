@@ -1,0 +1,1 @@
+This third and final article in the Metasploit series covers the msfcli scripting interface as well as the intuitive web interface to the Framework. The article also discusses what's new with version 2.2, and then introduces the exploit development process through an example.

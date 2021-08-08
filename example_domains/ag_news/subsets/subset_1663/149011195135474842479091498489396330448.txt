@@ -1,0 +1,1 @@
+Cisco Systems has announced an eight-slot single-shelf version of its CRS-1 Carrier Routing System, which is designed to let service providers offer services like edge, core and peering for 

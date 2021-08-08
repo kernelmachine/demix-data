@@ -1,0 +1,1 @@
+Microsoft will support only x86 processors with 64-bit extensions when it releases a special version of Windows Server for high-performance computing next year, leaving support for Intel #39;s Itanium 2 chip to a later, unspecified date.

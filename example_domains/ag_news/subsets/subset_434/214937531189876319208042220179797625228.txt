@@ -1,0 +1,1 @@
+Sun Microsystems will integrate drivers for S2io's Xframe 10 Gigabit Ethernet Adapter into the Solaris operating system for Sparc, AMD Opteron, and Intel Xeon servers. In addition, S2io will partner with Sun to develop a TCP/IP offload engine with remote direct memory access functionality to enhance performance and scalability in intense computer and server environments.

@@ -1,0 +1,1 @@
+InfoWorld - Former executives from companies such as Sun Microsystems, BEA Systems, and Oracle this week are formally launching a venture called Cassatt, which is endeavoring to automate IT operations, leverage commodity hardware and software, and govern network compute cycles in a grid-like manner.

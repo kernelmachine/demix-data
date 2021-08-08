@@ -1,0 +1,1 @@
+After more than two weeks of investigating the IFRAME Bofra exploit, Microsoft has yet to announce when it will be able to fix the problem.

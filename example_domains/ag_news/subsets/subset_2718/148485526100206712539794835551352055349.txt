@@ -1,0 +1,1 @@
+Microsoft plans to ship the first release candidate of Service Pack 1 for Windows Server 2003 by year's end and will release a developer's kit for the high-performance computing version of Windows Server next month.

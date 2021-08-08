@@ -1,0 +1,1 @@
+Microsoft Corp. is developing a new front-end application for its upcoming Live Communications Server (LCS) 2005 instant messaging server that links LCS 2005 with end-users' telephones.

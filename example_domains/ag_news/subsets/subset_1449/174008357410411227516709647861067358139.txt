@@ -1,0 +1,1 @@
+IBM said that its Blue Gene/L supercomputer trumps the performance of SGI #39;s recently announced Columbia system installed at NASA by more than 65 percent.

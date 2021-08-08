@@ -1,0 +1,1 @@
+HONG KONG -- Nokia Corp. has developed a prototype handset that supports Mobile IPv6 (Internet Protocol version 6), a version of the protocol that will help to improve the quality of VOIP (voice over IP), streaming video and other applications delivered to wireless devices, the company said Tuesday.

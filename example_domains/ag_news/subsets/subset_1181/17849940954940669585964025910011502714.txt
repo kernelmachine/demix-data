@@ -1,0 +1,1 @@
+mallumax writes  quot;A security hole in GMail has been found (an XSS vulnerability) which allows access to user accounts without authentication.

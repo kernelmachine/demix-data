@@ -1,0 +1,1 @@
+AMD, Dell, Intel, Microsoft and Sun Microsystems have joined forces on Web Services Management, a new specification that promises to simplify systems management.

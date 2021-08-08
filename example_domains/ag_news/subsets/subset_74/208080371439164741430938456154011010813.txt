@@ -1,0 +1,1 @@
+IBM is claiming a storage management victory over EMC, saying it can now control its leading competitor's entire line of storage arrays with the latest version its SAN Volume Controller appliance.

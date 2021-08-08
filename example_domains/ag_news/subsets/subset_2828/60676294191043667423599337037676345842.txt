@@ -1,0 +1,1 @@
+It was obvious that the one-two punch of Opteron and then Intel #39;s adoption of x86-64 would spell trouble for Itanium, and now HP, the (for all intents and purposes) originator of IA-64, has axed its Itanium 2 workstation line so that they can focus on 

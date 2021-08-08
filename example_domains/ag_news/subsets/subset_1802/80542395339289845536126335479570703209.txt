@@ -1,0 +1,1 @@
+Microsoft is recasting ambitions for its .Net Passport identification system, saying the service now will be limited to its own online offerings and those of close partners. Microsoft no longer sees Passport as a single sign-on system for the Web at large, a spokeswoman said.

@@ -1,0 +1,1 @@
+A quick course in how some of the most esoteric aspects of COM work.

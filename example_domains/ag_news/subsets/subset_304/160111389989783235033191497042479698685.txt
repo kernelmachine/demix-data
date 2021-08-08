@@ -1,0 +1,1 @@
+IBM Friday said it has filled out gaps in its virtualization portfolio, adding support for EMC #39;s remaining Clariion systems. The company added Clariion 300, 500 and 700 systems support for its SAN Volume Controller 

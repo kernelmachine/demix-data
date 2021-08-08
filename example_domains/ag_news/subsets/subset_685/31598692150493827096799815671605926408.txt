@@ -1,0 +1,1 @@
+Microsoft has extended the reach of its business data platform, demonstrating new business intelligence capabilities for SQL Server 2000 and SQL Server 2005.

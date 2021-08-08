@@ -1,0 +1,1 @@
+Microsoft #39;s decision to scrap plans for Windows 2000 Service Pack 5 has effectively killed all hopes that security enhancements built into Windows XP SP2 will be back-ported to Windows 2000.

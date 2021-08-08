@@ -1,0 +1,1 @@
+Come November, customers will see the Power5-based p5-590 and p5-595 servers hit the market. The 32-way 590 is a direct replacement for the current Power4-based p690.

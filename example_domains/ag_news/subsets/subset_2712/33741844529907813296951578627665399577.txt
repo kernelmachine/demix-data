@@ -1,0 +1,1 @@
+Researcher finds two flaws that under unusual circumstances could let a malicious program read private data or render a phone unusable.

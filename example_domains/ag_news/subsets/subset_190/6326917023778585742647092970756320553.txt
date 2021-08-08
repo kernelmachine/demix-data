@@ -1,0 +1,1 @@
+The Mac BU today announced the availability of Service Pack 1 (SP1) for Office 2004 for Mac via Microsoft AutoUpdate, which it says addresses potential security issues and bugs reported via the new Microsoft Error Reporting Protocol (MERP), which 

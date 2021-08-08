@@ -1,0 +1,1 @@
+SDBot.UJ, the latest variant of the SDbot worm that monitors network traffic after it infects a computer has been discovered by security experts.

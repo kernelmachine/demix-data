@@ -1,0 +1,1 @@
+MySQL AB has made version 4.1 of its database software available to the public after months of testing customer production deployments.

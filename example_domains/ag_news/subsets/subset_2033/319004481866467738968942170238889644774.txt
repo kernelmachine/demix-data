@@ -1,0 +1,1 @@
+Continuing to fill out its Visual Studio tools line, Microsoft on Monday is announcing Visual Studio 2005 Standard Edition, intended for developers working in small organizations.

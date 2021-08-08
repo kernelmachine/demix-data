@@ -1,0 +1,1 @@
+Ziff Davis - The company's new carrier-grade servers will be compliant with the new ATCA specification, which allows carriers to buy off-the-shelf blade servers for high-bandwidth applications such as VOIP.

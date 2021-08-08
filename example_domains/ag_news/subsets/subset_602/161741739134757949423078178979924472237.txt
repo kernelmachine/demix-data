@@ -1,0 +1,1 @@
+SAP AG this week unveiled a service that evaluates security settings across a customer #39;s SAP enterprise system. SAP Security Optimization helps customers identify and fix vulnerabilities, and minimise the 
