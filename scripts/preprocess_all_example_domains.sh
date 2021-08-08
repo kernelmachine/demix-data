@@ -18,7 +18,7 @@ bash scripts/pretokenize.sh ${DATA_DIR}/$DOMAIN/splits
 bash scripts/preprocess.sh ${DATA_DIR}/$DOMAIN/splits $DOMAIN ${DATA_DIR}/data-bin/
 
 
-export DOMAIN=sciie
+export DOMAIN=1b_test
 python -m domain_loader.shard_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 512 --text-field text
 python -m domain_loader.scan_filenames --domain $DOMAIN
 python -m domain_loader.count_words --domain $DOMAIN
@@ -53,7 +53,7 @@ python -m domain_loader.shard_dataset --domain $DOMAIN --input-file example_doma
 python -m domain_loader.scan_filenames --domain $DOMAIN
 python -m domain_loader.count_words --domain $DOMAIN
 ## set token counts for "rct" in domain_loader/constants.py
-python -m domain_loader.make_splits --domain $DOMAIN --num-workers 0 --batch-size 1 --output-dir $DATA_DIR/$DOMAIN/splits
+python -m domain_loader.make_splits --domain $DOMAIN --num-workers 16 --batch-size 16 --output-dir $DATA_DIR/$DOMAIN/splits
 bash scripts/pretokenize.sh ${DATA_DIR}/$DOMAIN/splits
 bash scripts/preprocess.sh ${DATA_DIR}/$DOMAIN/splits $DOMAIN ${DATA_DIR}/data-bin/
 

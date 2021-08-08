@@ -103,7 +103,7 @@ Building a multi-domain dataset follows the same procedure above, except you jus
 You can apply the same process to the all other domains in the `example_domains` folder, e.g.:
 
 ```bash
-export DOMAIN=1b
+export DOMAIN=ag_news
 python -m domain_loader.shard_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 512 --text-field text
 python -m domain_loader.scan_filenames --domain $DOMAIN
 python -m domain_loader.count_words --domain $DOMAIN
