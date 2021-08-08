@@ -96,6 +96,8 @@ To make data loading faster, we first gather a list of filenames in a separate f
 python domain_loader/build_filenames.py --domains med
 ```
 
+You can also add other document-level metadata to these files.
+
 ## Build fairseq data-bin
 
 Download the gpt2 vocabulary:
