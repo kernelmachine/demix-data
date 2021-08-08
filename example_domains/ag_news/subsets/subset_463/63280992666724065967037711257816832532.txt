@@ -1,1 +1,0 @@
-Sybase later this year will ship PowerDesigner 11.0, an enterprise data modeling tool for building or re-engineering business processes and aligning business and IT goals, according to the company.

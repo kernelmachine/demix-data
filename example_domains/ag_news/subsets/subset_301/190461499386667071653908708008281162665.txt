@@ -1,1 +1,0 @@
-IBM today said it has demonstrated a technique that triples the performance of a standard semiconductor transistor with a process that is compatible with conventional CMOS technology.

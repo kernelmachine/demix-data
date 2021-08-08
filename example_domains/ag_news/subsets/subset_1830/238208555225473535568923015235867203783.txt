@@ -1,1 +1,0 @@
-An ingenious new Trojan is circulating that hijacks PCs and uses them to send SMS-based spam to mobile phones. After a PC has been infected, the Delf-HA Trojan contacts a Web site for details on which spam 

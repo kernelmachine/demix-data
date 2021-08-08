@@ -1,1 +1,0 @@
-AMD formally welcomed its Athlon 64 processor family into the world of PCI Express, touting the availability of chipsets that support the new add-in card format.

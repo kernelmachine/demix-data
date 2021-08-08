@@ -1,1 +1,0 @@
-A security researcher has uncovered yet another set of security flaws in an image component, which could put Linux users at risk of system compromise if they view a maliciously crafted image.

@@ -1,1 +1,0 @@
-NewsFactor - High-performance computing specialist SGI (Silicon Graphics) has launched a line of Linux-based visualization machines, providing the company's cutting-edge graphics capabilities on an open platform for the first time.

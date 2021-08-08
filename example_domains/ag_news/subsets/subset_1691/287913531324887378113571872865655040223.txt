@@ -1,1 +1,0 @@
-Microsoft will provide advanced notice to customers of upcoming patches, including what software and products will be affected, in an effort to allow customers to prepare and pre-roll patches instead of having to try and deal with issues after patches are 

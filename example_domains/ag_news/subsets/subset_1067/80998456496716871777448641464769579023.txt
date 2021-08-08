@@ -1,1 +1,0 @@
-After two years of fits and starts, Microsoft will finally deliver its Virtual Server 2005 product, which company officials contend will be an important contributor to its Dynamic Systems Initiative (DSI), the company's plan for managing distributed systems.

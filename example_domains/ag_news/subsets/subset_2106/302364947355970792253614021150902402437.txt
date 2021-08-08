@@ -1,1 +1,0 @@
-USATODAY.com - Microsoft on Tuesday issued 10 security advisories - seven of them critical - urging consumers and businesses to patch 21 new flaws in Windows software products.

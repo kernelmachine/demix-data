@@ -1,1 +1,0 @@
-A US credit card processing firm has been hit by intermittend and large-scale distributed denial-of-service attacks that have disrupted services.

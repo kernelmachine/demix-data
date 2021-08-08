@@ -1,1 +1,0 @@
-The upgrade to the OmniPilot's's Web application server tool adds compatibility with FileMaker Pro 7, allowing developers of data-driven sites to keep pace with the most popular database software available for the Mac.

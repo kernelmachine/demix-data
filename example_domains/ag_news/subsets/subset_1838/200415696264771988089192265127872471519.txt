@@ -1,1 +1,0 @@
-Microsoft's decision to cut WinFS from its Longhorn release means another delay for the Microsoft Business Framework, which promises to make it easier for developers to write business applications for the Windows platform.

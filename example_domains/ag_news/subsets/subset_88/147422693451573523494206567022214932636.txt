@@ -1,1 +1,0 @@
-WinZip Computing warned last month of a security flaw in WinZip, its compression/decompression tool that runs on the Windows platform.

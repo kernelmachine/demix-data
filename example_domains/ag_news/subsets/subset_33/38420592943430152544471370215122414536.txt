@@ -1,1 +1,0 @@
-802.14.5 is one of the many personal area network (PAN) standards around like Bluetooth and ultrawideband (UWB). Like most IEEE 802 standards, the wireless industry knew what the IEEE was doing (or didn #39;t do in the case of UWB) was not enough.

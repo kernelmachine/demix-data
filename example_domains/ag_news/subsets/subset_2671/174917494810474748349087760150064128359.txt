@@ -1,1 +1,0 @@
-Infrastructure software developer Gluecode Software Inc. plans to release Monday a new Java application development platform that ties together a number of open-source components into one integrated system.

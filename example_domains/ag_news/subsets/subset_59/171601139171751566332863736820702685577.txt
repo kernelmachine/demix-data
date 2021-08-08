@@ -1,1 +1,0 @@
-VMware, Inc., the global leader in virtual infrastructure software for industry-standard systems, announced 4-Way VMware Virtual SMP (symmetric multiprocessing).

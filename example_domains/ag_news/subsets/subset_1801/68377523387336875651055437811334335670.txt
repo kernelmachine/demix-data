@@ -1,1 +1,0 @@
-Intel Corp. is planning to introduce a faster front-side bus on an upcoming version of its Pentium 4 Extreme Edition processor that will help the firm increase the performance of its chips by improving a crucial bottleneck in system performance.

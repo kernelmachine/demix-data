@@ -1,1 +1,0 @@
-A small, fully functional, 70-megabit static random access memory computer chip crammed with more than 500,000,000 transistors has been developed by researchers at Intel Corp.

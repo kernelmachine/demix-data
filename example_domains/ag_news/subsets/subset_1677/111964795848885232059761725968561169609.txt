@@ -1,1 +1,0 @@
-Every run into an HTML page with bad code? If you were running IE, you #39;d still be able to see it. Are other browsers simply inferior, or is IE just that much better at handling faulty HTML?

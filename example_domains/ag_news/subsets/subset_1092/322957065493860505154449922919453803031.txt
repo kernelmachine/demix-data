@@ -1,1 +1,0 @@
-Internet telephony application balks on IPaq and Axim Pocket PC devices.

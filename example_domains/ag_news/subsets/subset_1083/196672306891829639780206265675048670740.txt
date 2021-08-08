@@ -1,1 +1,0 @@
-Microsofts monthly security bulletin has uncovered a critical buffer overrun vulnerability that exists in the processing of JPEG image formats.

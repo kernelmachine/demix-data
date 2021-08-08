@@ -1,1 +1,0 @@
-In its September security bulletin Microsoft has highlighted a  #39;critical #39; vulnerability in the processing of JPEG images across a huge swathe of its software products.

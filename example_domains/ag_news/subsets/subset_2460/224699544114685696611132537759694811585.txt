@@ -1,1 +1,0 @@
-On Tuesday, Microsoft unveiled the 2004 version of its Host Integration Server (HIS) product, which is designed to integrate IBM mainframes and servers with Windows systems. 

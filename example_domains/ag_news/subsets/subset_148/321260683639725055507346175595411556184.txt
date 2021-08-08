@@ -1,1 +1,0 @@
-Security specialist issues patches for vulnerabilities that could have allowed denial-of-service attacks against some hardware models.

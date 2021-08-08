@@ -1,1 +1,0 @@
-The technical standards body for the internet, the IETF, has bounced back Microsoft #39;s controversial proposal for stopping spam, Sender ID.

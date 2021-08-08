@@ -1,1 +1,0 @@
-Many emerging market businesses will soon have access to the IBM Rational software development platform for the first time, through the open source Eclipse development framework.

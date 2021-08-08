@@ -1,1 +1,0 @@
-A Microsoft-backed proposal for verifying the source of e-mail has been shelved by the Internet engineers working to turn it from specification to standard, in a final blow for antispam technology Sender ID.

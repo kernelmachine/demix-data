@@ -1,1 +1,0 @@
-As a founding member of Sun #39;s J2EE organization, Tegan-Padir managed the creation of specifications, compatibility test suites, blueprints and guided implementations of Java in the enterprise.

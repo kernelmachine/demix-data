@@ -1,1 +1,0 @@
-Macromedia will ship Flex Builder this week, which is designed to provide an interactive development environment for the company #39;s Flex presentation server.

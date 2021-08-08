@@ -1,1 +1,0 @@
-Webmail.us is announcing improvements to its service next week and will migrate its core e-mail platform from Microsoft Windows to an open-source platform.

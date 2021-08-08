@@ -1,1 +1,0 @@
-palmOne is now offering a voice dialing application for the Treo 650, based on VoiceSignal #39;s voice recognition system. The application, which requires approximately 

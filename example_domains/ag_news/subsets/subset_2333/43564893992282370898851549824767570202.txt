@@ -1,1 +1,0 @@
-Key to the announcement is the fact that the systems share microcode, said Dianne McAdam, senior analyst at Data Mobility Group.  quot;That means that if I want to make a copy of a volume on the DS6000 I use the same commands as the DS8000.

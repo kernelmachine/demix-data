@@ -1,1 +1,0 @@
-A new computer worm emerged on Tuesday which broke the speed record from the announcement of a security vulnerability in Microsoft #39;s Internet Explorer to a full-blown virus that spreads in the wild.

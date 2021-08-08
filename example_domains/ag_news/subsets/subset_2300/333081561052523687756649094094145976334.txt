@@ -1,1 +1,0 @@
-Mozilla blocks those un-requested and annoying  quot;pop-up quot; windows. It also has the ability to open new Web pages in a  quot;tabbed quot; interface, as is common to most Windows-based programs.

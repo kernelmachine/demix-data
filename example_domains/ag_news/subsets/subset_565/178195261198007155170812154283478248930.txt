@@ -1,1 +1,0 @@
-An anonymous researcher has reported through several sources that anti-virus products from six vendors fail to detect malware when it is contained in a corrupted Zip file.

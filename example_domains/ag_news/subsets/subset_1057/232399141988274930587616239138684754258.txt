@@ -1,1 +1,0 @@
-InfoWorld - Microsoft is bolstering BI and reporting features in both the existing SQL Server 2000 database and the planned SQL Server 2005 release.

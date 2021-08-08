@@ -1,1 +1,0 @@
-Microsoft Corp. MSFT.O released on Tuesday a patch for its latest  quot;critical quot; rated security flaw affecting its Windows, Office and developer tools software programs.

@@ -1,1 +1,0 @@
-The Java language is an object-oriented programming language created by James Gosling and other engineers at Sun Microsystems. It was developed in 1991, as part of the Green Project, and officially announced 

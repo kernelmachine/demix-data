@@ -1,1 +1,0 @@
-Dell, EMC, Intel and Oracle have sealed an alliance to develop grid computing technology. The move is an effort to develop a standard approach to building and deploying enterprise grid computing infrastructures.

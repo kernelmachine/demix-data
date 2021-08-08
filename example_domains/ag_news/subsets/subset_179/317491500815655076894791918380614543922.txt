@@ -1,1 +1,0 @@
-Switzerland's EndressHauser (International) Holding AG, a global supplier of process control systems, has migrated all its business applications from SAP AG to a mainframe running the open-source Linux operating system.

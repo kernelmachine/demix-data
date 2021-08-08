@@ -1,1 +1,0 @@
-In a speech at the Intel Developer Forum, Intel senior vice president Pat Gelsinger said that by outfitting the Internet with an overlay network of computational services made up of computing 

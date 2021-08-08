@@ -1,1 +1,0 @@
-The ObjectWeb Consortium added portal, content, and business process management elements to the stack of open source middleware projects it promotes, potentially providing businesses with access to cheaper technology, members of the group announced Tuesday.

@@ -1,1 +1,0 @@
-SAN FRANCISCO, Aug. 23 - Macromedia has introduced a new addition to the Flex product line, Flex Builder, a product designed to accelerate all aspects of rich Internet application development including interface 

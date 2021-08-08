@@ -1,1 +1,0 @@
-A newly intercepted malicious Trojan has begun infecting mobile phones which run the Symbian operating system. Dubbed  #39;Skulls #39; the Trojan has been detected on Symbian shareware download sites where it bills itself as  #39;Extended Theme Manager #39; by  #39;Tee-222 #39;.

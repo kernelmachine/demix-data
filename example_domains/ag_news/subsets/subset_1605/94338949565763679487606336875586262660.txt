@@ -1,1 +1,0 @@
-Anti-virus vendors have spotted a new strain of the  quot;Skulls quot; Trojan sneaking into Symbian-based cell phones, and this one drops the Cabir worm on the devices.

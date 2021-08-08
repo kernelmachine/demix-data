@@ -1,1 +1,0 @@
-Targeting Unix archrivals Hewlett-Packard and Sun Microsystems, IBM on Friday topped off the high end of its Power 5-based line of iSeries and pSeries servers, rolling out three systems all capable of hosting as many as 250 virtual servers on a single machine.

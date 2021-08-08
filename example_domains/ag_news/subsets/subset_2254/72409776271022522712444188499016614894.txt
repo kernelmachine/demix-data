@@ -1,1 +1,0 @@
-RAND report examines attack scenarios. One suggestion is eliminating long ticket lines in terminal lobbies. By Ian Gregor and David Zahniser.

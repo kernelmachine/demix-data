@@ -1,1 +1,0 @@
-Company is testing Java System Application Server 8--and hoping that it'll boost the company's share of the Java server software market.

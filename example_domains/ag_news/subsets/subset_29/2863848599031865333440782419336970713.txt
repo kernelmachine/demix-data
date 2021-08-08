@@ -1,1 +1,0 @@
-This paper discusses the use of NetFlow, a traffic profile monitoring technology available on many routers, for use in the early detection of worms, spammers, and other abnormal network activity in large enterprise networks and service providers.

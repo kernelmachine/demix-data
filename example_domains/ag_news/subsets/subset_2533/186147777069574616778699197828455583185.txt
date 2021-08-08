@@ -1,1 +1,0 @@
-The new version of the personal finance program drops support for a widely used file format.

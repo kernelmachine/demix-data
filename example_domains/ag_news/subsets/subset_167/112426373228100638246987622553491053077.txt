@@ -1,1 +1,0 @@
-The Blogger Web-logging service broke away from its English-only status on Monday, becoming available in 9 other languages in what Google Inc. is calling the first phase of the service's internationalization.

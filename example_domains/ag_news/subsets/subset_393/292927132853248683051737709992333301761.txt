@@ -1,1 +1,0 @@
-Open-source developers have warned of serious security holes in two Linux components that could allow attackers to take over a system by tricking a user into viewing a specially crafted image file or opening an archive. Patches exist for the bugs, which affect LHA and imlib.

@@ -1,1 +1,0 @@
-NewsFactor - Open-source software company JBoss has introduced JBoss jBPM 2.0, a workflow engine developed in conjunction with the Java Business Process Management (jBpm) project.

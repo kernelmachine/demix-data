@@ -1,1 +1,0 @@
-Flawed software code used by numerous Microsoft applications to render images mean that a specially constructed image file could hijack a computer or spread a virus.

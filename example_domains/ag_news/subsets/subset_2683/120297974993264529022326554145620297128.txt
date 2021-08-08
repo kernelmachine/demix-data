@@ -1,1 +1,0 @@
-Sybase (Quote, Chart) announced it has tailored its Linux-based database to run on rival IBM #39;s eServer OpenPower systems, providing customers more choice in the increasingly popular market for Linux systems.

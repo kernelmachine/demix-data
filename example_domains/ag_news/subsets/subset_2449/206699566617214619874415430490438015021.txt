@@ -1,1 +1,0 @@
-A new push is on for a smarter, less finicky Java mobile architecture -- with the goal of making it easier for Java/J2ME architects and devs to design, deploy, develop and manage mobile apps.

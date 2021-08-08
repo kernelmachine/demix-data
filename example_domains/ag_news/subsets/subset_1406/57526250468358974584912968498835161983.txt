@@ -1,1 +1,0 @@
-In an effort to integrate its IP-based communications products with Microsoft customer relationship management software, Cisco Systems today announced the Cisco CRM Communications Connector.

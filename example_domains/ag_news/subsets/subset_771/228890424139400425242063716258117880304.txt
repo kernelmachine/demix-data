@@ -1,1 +1,0 @@
-Downloader.Lunii, a new Trojan horse program that attacks and removes troublesome advertising software, also modifies the configuration of Windows machines and attempts to download files from a remote location, according to Symantec Corp.

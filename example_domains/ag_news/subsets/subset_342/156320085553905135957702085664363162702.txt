@@ -1,1 +1,0 @@
-IBM on Tuesday announced two new storage products  upper midrange and high-end disk arrays designed for ease of use and lower cost. The DS6000 and DS8000 feature higher physical storage capacities, a modular architecture, and additional visualization technology, all in systems considerably smaller than previous versions.

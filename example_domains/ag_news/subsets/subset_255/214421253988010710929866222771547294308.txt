@@ -1,1 +1,0 @@
-Security advisory service Secunia said that it has discovered a highly critical vulnerability in Microsoft Word 2000 and 2002 that can be exploited to cause a denial of service attack and compromise a user #39;s system.

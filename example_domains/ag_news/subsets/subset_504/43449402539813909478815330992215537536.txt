@@ -1,1 +1,0 @@
-The latest point release of MySQL database is now good to go, the company said Wednesday. MySQL 4.1, available in both open-source and commercial versions, promises more enterprise-worthy features and faster 

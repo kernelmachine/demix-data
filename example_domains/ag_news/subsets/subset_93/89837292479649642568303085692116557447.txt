@@ -1,1 +1,0 @@
-Sun Microsystems has quietly delivered on its promise of a Solaris flavor of JDS (Java Desktop System), its alternative to Microsoft Windows.

@@ -1,1 +1,0 @@
-As the number of Web services specifications proliferates, some developers advocate a return to a simpler approach.

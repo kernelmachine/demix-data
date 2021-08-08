@@ -1,1 +1,0 @@
-IBM, a while back, showcased its supercomputer, Blue Gene/L, at Top 500 supercomputer contest. At that time, the company was behind in performance by a Japanese firms supercomputer that managed to take away the first place crown.

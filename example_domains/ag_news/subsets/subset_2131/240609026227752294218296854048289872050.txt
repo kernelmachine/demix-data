@@ -1,1 +1,0 @@
-Ziff Davis - The new release of Sun's visual development environment allows users to develop Java applications on Mac OS X, Windows XP and Solaris for deployment on any platform compatible with the Java 2 Standard Edition.

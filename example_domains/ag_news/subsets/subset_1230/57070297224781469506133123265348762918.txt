@@ -1,1 +1,0 @@
-The specification builds on the WS-architecture that a vast group of engineers have been working on for more than two years to develop specific standards.

@@ -1,1 +1,0 @@
-Microsoft announced today that they were rolling out a new set of tools under the Mid-Market Netware Migration Program banner, aimed at convincing existing NetWare clients to move to Windows Server 2003 instead of Linux.

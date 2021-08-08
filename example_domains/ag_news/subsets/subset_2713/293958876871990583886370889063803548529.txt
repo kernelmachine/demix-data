@@ -1,1 +1,0 @@
-Microsoft Corp., a worldwide leader in operating systems and Internet technologies, announced that it has found a major flaw in Windows XP operating system that is related to the JPEG image format.

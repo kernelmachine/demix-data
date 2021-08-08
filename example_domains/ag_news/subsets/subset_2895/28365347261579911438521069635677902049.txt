@@ -1,1 +1,0 @@
-A Download.Ject-style worm which spreads through instant messages is spreading across the Net, according to intrusion prevention firm PivX.\

@@ -1,1 +1,0 @@
-Novell Inc has released a new version of its ZENworks management software for Linux as it moves towards a common management interface for Linux, Windows, Unix and NetWare.

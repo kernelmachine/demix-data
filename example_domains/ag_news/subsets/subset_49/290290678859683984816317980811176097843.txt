@@ -1,1 +1,0 @@
-National Semiconductor has released its Safekeeper Trusted Input/Output chip, which stores passwords, digital certificates and encryption keys on PCs.

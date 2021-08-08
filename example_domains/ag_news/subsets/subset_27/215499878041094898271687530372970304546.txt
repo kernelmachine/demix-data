@@ -1,1 +1,0 @@
-As part of its service, Symantec will use a global network of probes and decoy e-mail accounts to collect, analyze and identify new phishing scams targeted at customers that use its Online Fraud Management services.

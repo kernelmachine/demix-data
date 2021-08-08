@@ -1,1 +1,0 @@
-Still in beta form, new browser allows you to view pages as they would appear in IE.

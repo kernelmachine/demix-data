@@ -1,1 +1,0 @@
-While inheriting the basic functions and design philosophy of the current PlayStation 2, the internal design architecture of the new PS2 model has been completely overhauled, resulting in a slimmer and more lightweight form.

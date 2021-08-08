@@ -1,1 +1,0 @@
-Dec 10, 2004: A new web browser security hole has been uncovered by a security firm, which could provide scammers with the means to launch phishing attacks from pop-up windows on genuine, trusted websites.

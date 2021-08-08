@@ -1,1 +1,0 @@
-Cisco Systems last week warned that a denial of service (DoS) vulnerability exists for its products. The threat affects all Cisco products running the vendor #39;s Internetwork Operating System (IOS).

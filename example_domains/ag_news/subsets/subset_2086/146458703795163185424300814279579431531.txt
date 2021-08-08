@@ -1,1 +1,0 @@
-Ziff Davis - The latest version of its Microsoft Operations Manager includes 20 new Microsoft Management Packs that encapsulate intimate knowledge about how specific applications should work, with the aims of cutting operational cost and complexity.

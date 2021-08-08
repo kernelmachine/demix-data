@@ -1,1 +1,0 @@
-There #39;s a fake security alert targeting users of Red Hat #39;s Fedora distribution, the company warned in an advisory. The Linux distributor posted a note on its security updates page to caution users against downloading security updates received via e-mail.

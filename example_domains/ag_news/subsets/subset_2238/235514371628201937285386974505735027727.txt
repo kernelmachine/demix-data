@@ -1,1 +1,0 @@
-WITH billions of devices going online, Sun Microsystems expects more opportunities to open up for developers and system integrators who can build new applications on top of these devices.

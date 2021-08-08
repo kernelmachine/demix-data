@@ -1,1 +1,0 @@
-Novell has announced the release of its all-in-one Linux product for newcomers and technical enthusiasts. SuSE Linux Professional 9.2 comes with latest open source features, including kernel 2.6 enhancements, KDE 3.3 and GNOME 2.6 desktop environments.

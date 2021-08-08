@@ -1,1 +1,0 @@
-Microsoft this week updated an administrative tool for delaying Automatic Update and Windows Update rollouts of Windows XP Service Pack 2 from four months to eight months.

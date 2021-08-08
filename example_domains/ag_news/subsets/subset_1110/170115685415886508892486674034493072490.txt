@@ -1,1 +1,0 @@
-Google has launched a search service for mobile devices, based on the SMS (short messaging service) protocol. Users can perform searches for phone numbers, dictionary definitions and product 

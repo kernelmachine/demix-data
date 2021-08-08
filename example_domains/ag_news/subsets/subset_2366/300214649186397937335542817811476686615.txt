@@ -1,1 +1,0 @@
-Microsoft on Wednesday released an update to Internet Explorer (IE) to fix a security flaw that was discovered a month ago and has since been exploited to attack users.

@@ -1,1 +1,0 @@
-It will be Sun's first chip to be built with a 90-nanometer process technology and it will have a higher clock speed and larger and more flexible memory caches than the current generation of UltraSparc IV processors.

@@ -1,1 +1,0 @@
-Grid computing links computers to harness their collective resources. HP said its grid approach to storage is designed to let customers focus more on how they use data, not how they store it.

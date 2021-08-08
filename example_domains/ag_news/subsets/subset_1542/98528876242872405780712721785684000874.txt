@@ -1,1 +1,0 @@
-Demo shows the chip running a Java applet, a browser and displaying some video at the same time.

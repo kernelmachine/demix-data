@@ -1,1 +1,0 @@
-The AMD processor, which is designed to compete with Intel #39;s high-end Centrino chips, offers extra protection against the spread of malicious viruses when enabled by Microsoft Windows XP SP2.

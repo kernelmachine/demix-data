@@ -1,1 +1,0 @@
-Microsoft is delaying distribution of Windows XP Service Pack 2 via its Automatic Update service by at least nine days in order to give corporate customers more time to temporarily block automatic downloading of SP2 by their employees. 

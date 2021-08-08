@@ -1,1 +1,0 @@
-A classic tweaking tool that began life as the freeware 98 Lite gets updated to work with XP SP2. In tests, it helped slim down a Windows XP installation by more than 50.

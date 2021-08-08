@@ -1,1 +1,0 @@
-Microsoft is offering a preview of its next-generation SQL Server 2005 database by providing an interim version of the product to customers.

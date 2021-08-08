@@ -1,1 +1,0 @@
-A new worm can spy on users by hijacking their Web cameras, a security firm warned Monday. The Rbot.gr worm -- the latest in a long line of similar worms; one security firm estimates that more 

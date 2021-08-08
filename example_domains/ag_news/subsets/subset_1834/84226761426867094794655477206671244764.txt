@@ -1,1 +1,0 @@
-Cisco Systems on Tuesday introduced the Cisco File Engine Series, a line of appliance-based solutions utilizing WAFS (wide area file services) technology designed for branch office consolidation. 

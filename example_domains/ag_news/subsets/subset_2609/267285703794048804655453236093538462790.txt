@@ -1,1 +1,0 @@
-PivX Solutions, Inc. of Newport Beach, California, on Monday announced the availability of Qwik-Fix Pro, an intrusion prevention software product for Windows machines that disables or modifies features of Microsoft Corp. Windows and the Internet Explorer (IE) Web browser that are frequent targets of malicious computer hackers and virus writers.

@@ -1,1 +1,0 @@
-Sybase has announced that its Adaptive Server Enterprise (ASE) for Linux, the enterprise-class, relational database management system (RDBMS), will run on IBM #39;s eServer OpenPower systems, IBM #39;s POWER5 microprocessor- based servers tuned specifically for 

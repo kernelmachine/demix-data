@@ -1,1 +1,0 @@
-InfoWorld - Fresh from introducing a major upgrade to the Java platform, Sun Microsystems officials on Thursday revealed some details of the next release of Java, code-named  #8220;Mustang #8221; and expected in Spring 2006.

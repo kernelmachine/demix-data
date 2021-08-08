@@ -1,1 +1,0 @@
-InfoWorld - Plumtree Software further extended its portal-based, Web applications building and management platform Monday, announcing upgrades to its Content and Collaboration servers, APIs for search and collaboration, and support and services for J2EE and .Net platforms.

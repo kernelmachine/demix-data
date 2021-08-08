@@ -1,1 +1,0 @@
-The XD1 uses Opteron processors and the Linux operating system--and sports a starting price tag of \$50,000.

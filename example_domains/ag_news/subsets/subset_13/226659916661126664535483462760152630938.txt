@@ -1,1 +1,0 @@
-In the very week Mozilla Firefox Version 1.0 was launched, a series of potentially nasty security holes have been uncovered in older versions of the browser.

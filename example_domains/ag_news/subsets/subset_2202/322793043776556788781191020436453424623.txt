@@ -1,1 +1,0 @@
-In a bid to expand the customer base for its database software, Sybase this week released a free, limited version of its software for deployment on Linux systems.

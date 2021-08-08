@@ -1,1 +1,0 @@
-MacCentral - The Digital Video Broadcasting Steering Board (DVB) has approved a revision to its implementation guidelines for audio and video codecs over a broadcast Transport Stream. The revision includes two technologies supported by Apple Computer Inc., H.264 or Advanced Video Codec (AVC) and High Efficiency AAC (HE-AAC) audio codecs.

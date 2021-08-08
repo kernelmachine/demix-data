@@ -1,1 +1,0 @@
-The change to flash memory from DRAM (dynamic RAM) for PalmOne's new Treo 650 smart phone appears to have had the unintended consequence of reducing the amount of memory that is actually available to users. As a result, PalmOne plans to offer a free 128MB expansion card to Treo 650 purchasers to get around the problem, the company said Monday.

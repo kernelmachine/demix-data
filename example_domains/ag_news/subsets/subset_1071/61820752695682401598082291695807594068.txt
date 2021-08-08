@@ -1,1 +1,0 @@
-ATI today said that it will develop a new approach to use system memory rather than more dedicated memory on its graphics card. HyperMemory will use PCI Express 

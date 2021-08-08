@@ -1,1 +1,0 @@
-Intel on Thursday introduced tri-mode Wi-Fi support for its Centrino mobile-processor platform, as well as software to make it easier for businesses to set up a wireless connection to any available network at maximum speed.

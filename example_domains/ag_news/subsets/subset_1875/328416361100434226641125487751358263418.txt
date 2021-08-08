@@ -1,1 +1,0 @@
-Vulnerability could allow an attacker to gain complete control of a system.

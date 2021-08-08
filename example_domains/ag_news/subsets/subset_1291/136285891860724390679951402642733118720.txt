@@ -1,1 +1,0 @@
-Hewlett-Packard has dropped plans to add a number of technologies acquired in its purchase of Compaq Computer to its flagship HP-UX operating system, and will instead partner with Veritas Software on new file system and clustering capabilities.

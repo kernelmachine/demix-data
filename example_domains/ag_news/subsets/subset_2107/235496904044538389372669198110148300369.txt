@@ -1,1 +1,0 @@
-Microsoft Corp. is developing versions of its Windows operating system with only a subset of the Windows code base, designed for specific server tasks, in a move that could reduce maintenance costs for customers and create products that are less vulnerable to attack.

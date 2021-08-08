@@ -1,1 +1,0 @@
-IBM Corp. Wednesday announced a new version of its WebSphere application server platform, citing enhancements such as high-availability, new capabilities for building service oriented architectures (SOA), and 

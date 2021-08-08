@@ -1,1 +1,0 @@
-Company says replicating network latency, bandwidth and packet loss problems enables better lab testing.

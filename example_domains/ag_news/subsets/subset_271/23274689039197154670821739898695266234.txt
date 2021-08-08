@@ -1,1 +1,0 @@
-Setting the stage for what it hopes will be a  quot;breakout year quot; for its server operating systems, Microsoft this week announced it will ship the first Release Candidate of its Service Pack 1 (SP1) for Windows Server 2003 by year #39;s end as well as a SDK 

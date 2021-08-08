@@ -1,1 +1,0 @@
-Intel also unveiled a key optical design win with Emulex Corporation and a new compiler for storage applications. Intel introduced the 64 bit-capable Low Voltage Intel Xeon Processor 2.8 GHz with 800 

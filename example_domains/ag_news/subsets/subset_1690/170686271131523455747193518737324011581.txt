@@ -1,1 +1,0 @@
-NewsFactor - The SANS (SysAdmin, Audit, Network, Security) Institute has issued its latest list of 20 most critical Internet security vulnerabilities. Web servers top the list of ten vulnerabilities for Windows-based systems, and they fall second on the list for those that are Unix- or Linux-based.

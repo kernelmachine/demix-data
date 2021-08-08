@@ -1,1 +1,0 @@
-With POP3 support, Gmail users will be able to transfer their messages to a client-side e-mail application and store the messages on their local hard drives, making them accessible off-line.

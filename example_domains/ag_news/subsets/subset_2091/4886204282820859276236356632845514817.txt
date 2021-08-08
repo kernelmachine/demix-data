@@ -1,1 +1,0 @@
-Security researchers inspecting a new update to Microsoft Corp.'s Windows XP found two software flaws that could allow virus writers and malicious hackers to sidestep new security features in the operating system.

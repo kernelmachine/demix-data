@@ -1,1 +1,0 @@
-(12/13/04)The Allen Institute for Brain Science (AIBS) has released its first dataset of gene expression data in the brain for nearly 2,000 mouse genes - the first public release of the Allen Brain Atlas initiative.

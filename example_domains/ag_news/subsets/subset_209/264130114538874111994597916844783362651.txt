@@ -1,1 +1,0 @@
-Hitachi Data Systems on Tuesday announced a new enterprise storage lineup with new features such as a virtualization that allows customers to manage up to 32 Petabytes (PB) of internal and external storage.

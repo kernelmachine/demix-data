@@ -1,1 +1,0 @@
-Though its next official full release is still months away, enterprise Linux player Red Hat (Quote, Chart) is rolling out the latest incremental update to its Red Hat Enterprise Linux (RHEL) 3 product.

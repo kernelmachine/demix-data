@@ -1,1 +1,0 @@
-The new search tool from Google matches queries with the content inside a book. If there is a match, Google will show links to that particular book in the search-results page.

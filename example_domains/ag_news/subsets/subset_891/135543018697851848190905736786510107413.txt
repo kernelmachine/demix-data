@@ -1,1 +1,0 @@
-The purpose of this paper is to examine the difficulties of detecting complex viruses, including polymorphic, metamorphic and entry-point obscuring viruses. Whether or not an anti-virus (AV) technology can detect these viruses can be a useful metric to consider when evaluating AV products.

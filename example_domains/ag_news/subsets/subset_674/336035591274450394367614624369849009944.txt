@@ -1,1 +1,0 @@
-The absence of an official patch from Microsoft for a known and widely exploited Internet Explorer flaw has spawned a cottage industry for homegrown fixes.

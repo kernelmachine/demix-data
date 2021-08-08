@@ -1,1 +1,0 @@
-IBM, which manages computer operations for the United States Tennis Association, has consolidated Internet scoring, staging and Web publishing applications onto a single eServer i5 system to support the U.S. Open's processing requirements.

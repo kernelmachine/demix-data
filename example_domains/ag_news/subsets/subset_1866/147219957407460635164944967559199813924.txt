@@ -1,1 +1,0 @@
-A distributed denial-of-service attack that disrupted Web-based systems at credit card payment processing firm Authorize.Netearlier this week is indicative of a sharp increase in the number of cyberattacks being targeted at specific companies and driven by profit motives on the part of the hackers who launch them.

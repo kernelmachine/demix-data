@@ -1,1 +1,0 @@
-BigFix, an enterprise security vendor, announced yesterday that its BigFix Enterprise Suite  quot;supports and simplifies quot; the deployment of Windows XP Service Pack 2 (SP2). 

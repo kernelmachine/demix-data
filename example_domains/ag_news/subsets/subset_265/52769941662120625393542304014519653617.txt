@@ -1,1 +1,0 @@
-This week Oracle added a planning and budgeting solution, Oracle Enterprise Planning and Budgeting (EPB), to it enterprise application offerings. The application will over time replace the current Financial Analyzer and Sales Analyzer.

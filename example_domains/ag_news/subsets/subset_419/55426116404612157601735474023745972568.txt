@@ -1,1 +1,0 @@
-OCTOBER 08, 2004 (IDG NEWS SERVICE) - Microsoft Corp. is investigating a reported vulnerability in ASP.Net that could allow an attacker to bypass security features on a Web server and view sensitive content, the company said yesterday.

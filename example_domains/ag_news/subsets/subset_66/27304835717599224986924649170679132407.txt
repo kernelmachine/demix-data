@@ -1,1 +1,0 @@
-SANTA CLARA, Calif., - Intel Corporation has built fully functional SRAM (Static Random Access Memory) chips using 65 nanometer (nm) technology, its next generation high-volume semiconductor manufacturing process.

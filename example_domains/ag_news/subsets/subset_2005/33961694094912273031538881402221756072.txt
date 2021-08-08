@@ -1,1 +1,0 @@
-With performance almost double that of the Earth Simulator, in Yokohama, Japan, IBM Corp.'s Blue Gene/L on Monday was officially ranked first on the Top500 list of the world's fastest supercomputers. IBM built four of the top ten machines on the biannual list, which was set to be announced Monday evening at the SC2004 conference in Pittsburgh.

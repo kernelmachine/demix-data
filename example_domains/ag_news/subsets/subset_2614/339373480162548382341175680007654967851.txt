@@ -1,1 +1,0 @@
-Intel has pledged to reduce drastically leakage effects in its 65nm process, having punched out its first device containing over 500m transistors using the technology.

@@ -1,1 +1,0 @@
-Till now the adoption of Linux has been largely restricted to the server - thanks to disinterested ISVs and strong reluctance by Windows-only users.

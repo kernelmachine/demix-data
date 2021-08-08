@@ -1,1 +1,0 @@
-The world of software development traditionally was a clandestine one, where developers in the bowels of their institution were entrenched in writing thousands of lines of code to meet ever-changing business requirements.

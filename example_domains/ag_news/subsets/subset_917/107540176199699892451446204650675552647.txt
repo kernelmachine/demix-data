@@ -1,1 +1,0 @@
-Microsoft rejects claims from security researchers that a spoofing technique discovered on Internet Explorer is a vulnerability.

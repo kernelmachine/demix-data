@@ -1,1 +1,0 @@
-SGI begins work on an open-source version of a development tool for high-performance computing programmers.

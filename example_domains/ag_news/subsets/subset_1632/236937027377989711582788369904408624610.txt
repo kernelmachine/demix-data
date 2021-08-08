@@ -1,1 +1,0 @@
-The most significant product advancement is Salesforce.com's newly released Telephony API tool kit, which allows its sales automation software to integrate with products from partners.

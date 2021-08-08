@@ -1,1 +1,0 @@
-Microsoft has released an update to resolve a buffer overflow in Internet Explorer 6, which could allow attackers to run arbitrary code and take control of vulnerable systems.

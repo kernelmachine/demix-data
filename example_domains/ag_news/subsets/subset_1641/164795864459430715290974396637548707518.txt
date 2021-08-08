@@ -1,1 +1,0 @@
-More open-source software for businesses: The Apache Software Foundation is launching a project for a Java process automation server.

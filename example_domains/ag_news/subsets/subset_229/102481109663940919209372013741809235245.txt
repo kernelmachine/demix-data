@@ -1,1 +1,0 @@
-UK regulator Ofcom decided to make geographic and non-geographic numbers available for VoIP (voice over IP) services. Non-geographic VoIP numbers will have a 056 prefix code, and will be available to all  quot;local 

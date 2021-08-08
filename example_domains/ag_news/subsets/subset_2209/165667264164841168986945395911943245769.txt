@@ -1,1 +1,0 @@
-Symantec on Tuesday introduced versions of its consumer and small business security software with updates that protect against network-scanning worms such as Sasser, and keep phishing attacks at bay. 

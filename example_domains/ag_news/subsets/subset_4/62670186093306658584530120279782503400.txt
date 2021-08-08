@@ -1,1 +1,0 @@
-The MSI motherboard we tested is actually the very first working sample of the K8N Neo4 Platinum/SLI; in fact, as of right now there are only 4 working nForce4 SLI samples at MSI in Taiwan, two of which happen to be in my hotel room.

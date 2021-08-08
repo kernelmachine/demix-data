@@ -1,1 +1,0 @@
-Ziff Davis - IBM announces a set of free tools and support for developers using its Java relational database, also now known as Derby.

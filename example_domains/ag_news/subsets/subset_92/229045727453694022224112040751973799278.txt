@@ -1,1 +1,0 @@
-The Windows Future Storage (WinFS) technology that got cut out of Windows  quot;Longhorn quot; is in serious trouble, and not just the hot water a feature might encounter for missing its intended production vehicle.

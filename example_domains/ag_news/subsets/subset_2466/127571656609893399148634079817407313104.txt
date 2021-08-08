@@ -1,1 +1,0 @@
-Open source company JBoss has added a workflow engine to its roster as it continues building out its middleware platform around the JBoss application server.

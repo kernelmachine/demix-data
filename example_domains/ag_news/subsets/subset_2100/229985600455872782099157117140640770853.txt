@@ -1,1 +1,0 @@
-While physical security was tightened in New York for this week's GOP convention, IT security researchers uncovered an unsettling number of unencrypted wireless devices that could pose an information security nightmare for convention organizers and delegates.

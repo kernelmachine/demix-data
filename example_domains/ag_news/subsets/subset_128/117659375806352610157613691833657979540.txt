@@ -1,1 +1,0 @@
-Weeks after coming under criticism for sitting on patches for multiple holes in its database software, Oracle Corp. has announced that it is moving to a monthly patch release schedule. 

@@ -1,1 +1,0 @@
-A new add-on for Office Project Server 2003 includes tools for connecting to HR software from SAP.

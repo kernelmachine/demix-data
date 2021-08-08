@@ -1,1 +1,0 @@
-When the Hypersonic Missile Technology team at COLSA Corporation and the U.S. Army need to model hypersonic flight on a computer system, they #146;ll no longer have to wait two months to get results. They now can use one of the world #146;s largest and most powerful computers: a supercluster of 1,566 64-bit, dual-processor Apple Xserve G5 servers. Sep 14

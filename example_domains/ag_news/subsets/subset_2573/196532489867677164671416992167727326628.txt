@@ -1,1 +1,0 @@
-\\I was wondering today how many terabytes could have been saved over the years if\URLs would automatically base64 their integer values.\\232 is 2147483647\\Which is 10 bytes.  \\Of course if you base64 encode those values this leaves you with:\\f____w\\Which is only 6 bytes.  Thats a 40 savings!\\

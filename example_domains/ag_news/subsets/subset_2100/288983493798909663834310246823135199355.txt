@@ -1,1 +1,0 @@
-MySQL on Wednesday announced general availability of Version 4.1 of its MySQL open source database, which the company is positioning as production-ready for large-scale enterprise usage.

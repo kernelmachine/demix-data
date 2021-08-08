@@ -1,1 +1,0 @@
-An early version of Netscape #39;s much-anticipated browser kills two birds with one stone: it runs the recent and wildly successful Mozilla Firefox engine, but renders pages in Internet Explorer, too.

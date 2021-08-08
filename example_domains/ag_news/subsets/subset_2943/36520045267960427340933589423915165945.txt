@@ -1,1 +1,0 @@
-Trilog Group this week rolled out an integrated J2EE  development framework designed to let IBM Lotus Notes developers use their existing skills for J2EE development projects.

@@ -1,1 +1,0 @@
-The worlds of Open Source and proprietary software have collided once more with the news that Debian - builder of a version of the GNU/Linux operating system - announcing it cannot live with the terms of Microsoft #39;s licence for its technology in the 

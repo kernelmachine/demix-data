@@ -1,1 +1,0 @@
-Microsoft on Tuesday is looking to extend visual modeling of applications in its Visual Studio 2005 platform, with an early release of technology to enable developers to author industry-specific modeling tools.

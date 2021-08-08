@@ -1,1 +1,0 @@
- America Online Inc. has decided not to fully support Microsoft's Sender ID spam-fighting plan citing intellectual property concerns from the Internet Engineering Task Force and the open-source community.

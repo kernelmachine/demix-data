@@ -1,1 +1,0 @@
-The first major revamp of the collaboration package includes overhauled support, search and update features.

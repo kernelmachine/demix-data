@@ -1,1 +1,0 @@
-IBM is laying out a new road map for its mainframe that will include the adoption of the Common Information Model standard that allows different platforms to exchange information.

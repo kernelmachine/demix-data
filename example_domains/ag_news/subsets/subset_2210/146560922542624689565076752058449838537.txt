@@ -1,1 +1,0 @@
-Analysts agree that it would be of little benefit for Google to create a browser from scratch, but it could add value by adding components onto the open-source browser Mozilla.

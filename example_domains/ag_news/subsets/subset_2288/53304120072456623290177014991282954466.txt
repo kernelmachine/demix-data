@@ -1,1 +1,0 @@
-US software maker Microsoft has announced the availability of a combination of tools, prescriptive guidance, training and technical support for customers that are considering migrating from Novell NetWare to Microsoft Windows Server 2003.

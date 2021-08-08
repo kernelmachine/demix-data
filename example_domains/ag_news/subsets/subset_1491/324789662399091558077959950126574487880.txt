@@ -1,1 +1,0 @@
-An anonymous reader wonders:  quot;I had Firefox 1.0PR running smoothly on three different machines and it hardly ever crashed. After upgrading to 1.0, I seem to have at least one annoying crash a day.

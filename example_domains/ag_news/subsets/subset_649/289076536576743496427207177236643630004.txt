@@ -1,1 +1,0 @@
-Companies such as SAP and IBM must break their software packages into smaller units as their corporate clients want to cherry pick them to update systems more frequently, consultancy Gartner said on Monday.

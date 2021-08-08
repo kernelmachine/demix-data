@@ -1,1 +1,0 @@
-Borland Software this week is breaking up its Together ControlCenter package for UML modeling into separate products for developing, designing, and architecting applications.

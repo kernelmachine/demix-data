@@ -1,1 +1,0 @@
-Microsoft Corp. is continuing its push into the enterprise-level development market with a new framework and tool for Visual Studio Team System.

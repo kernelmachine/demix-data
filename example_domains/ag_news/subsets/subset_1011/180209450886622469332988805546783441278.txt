@@ -1,1 +1,0 @@
-Microsoft (Quote, Chart) has issued significant security enhancements to its operating system software, making the Windows Server 2003 SP1 Release Candidate 1 (RC1) available for download.

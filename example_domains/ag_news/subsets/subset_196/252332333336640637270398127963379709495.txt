@@ -1,1 +1,0 @@
-With Red Hat Enterprise Linux 4.0 lined up for release next year, the open source solutions vendor has released a power pack to ensure that customers using the existing version 3.0 have access to the latest enhancements in Linux.

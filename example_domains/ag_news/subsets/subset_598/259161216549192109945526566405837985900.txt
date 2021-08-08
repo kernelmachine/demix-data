@@ -1,1 +1,0 @@
-In a move to modernize its venerable line of mainframe-based CICS middleware, IBM on Wednesday introduced an updated version of its CICS Transaction Server that enables corporate IT administrators to extend the product to work better with SOAs (service-oriented architectures) through Web services.

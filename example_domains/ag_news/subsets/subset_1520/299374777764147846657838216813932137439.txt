@@ -1,1 +1,0 @@
-Software asset management tools vendor LogicLibrary on Wednesday plans to announce its acquisition of BugScan, which provides security analysis capabilities to identify code vulnerabilities before application deployment.

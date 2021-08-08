@@ -1,1 +1,0 @@
-The IETF (Internet Engineering Task Force) has disbanded its anti-spam working group, MARID (MTA Authorization Records In DNS) working group, in part because of an intellectual-property row surrounding Microsoft Corp.'s Sender ID proposal.

@@ -1,1 +1,0 @@
-Microsoft has issued a patch for a compatibility problem between the recent Windows XP Service Pack 2 and an advertising application run on many users #39; machines.

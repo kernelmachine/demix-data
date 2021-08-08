@@ -1,1 +1,0 @@
-Ziff Davis - Sender ID's license is making it impossible for open-source programmers to use it in their e-mail applications.

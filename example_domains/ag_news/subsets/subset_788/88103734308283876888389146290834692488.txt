@@ -1,1 +1,0 @@
-Ads served to search query results based on category rather than keywords.

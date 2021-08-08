@@ -1,1 +1,0 @@
-Using the Windows Speech Engine, the Amos virus greets XP users on start-up, makes a dubious claim, then bids farewell in Turkish.

@@ -1,1 +1,0 @@
-The IETF MARID working group has been slogging away all summer trying to produce a draft standard about e-mail sender verification.

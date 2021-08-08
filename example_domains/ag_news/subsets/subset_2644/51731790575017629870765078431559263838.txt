@@ -1,1 +1,0 @@
-Your processor can now run 24 faster at the same power levels based on the new strained silicon transistor technology, as claimed by IBM and AMD today.

@@ -1,1 +1,0 @@
-Sun Microsystems has posted the next version of its Java 2 Platform Standard Edition (J2SE) to the developer community for early review and feedback.

@@ -1,1 +1,0 @@
-A new worm whose payload includes the SDBot trojan tries to install a  quot;sniffer, quot; seeking to use infected computers to capture login and banking information for other computers on the same network.

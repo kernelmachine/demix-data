@@ -1,1 +1,0 @@
-Embarcadero is shipping Embarcadero Performance Center 1.9, a version of its multiplatform database monitoring product that adds a Web client and management functions for Linux and Unix databases.

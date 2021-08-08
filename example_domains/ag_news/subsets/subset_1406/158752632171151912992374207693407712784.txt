@@ -1,1 +1,0 @@
-HP has given up on trying to bring key parts of Compaq/DEC #39;s Tru64 operating system over to HP-UX and decided instead to buy similar technology from Veritas.

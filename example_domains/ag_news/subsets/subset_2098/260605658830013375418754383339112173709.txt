@@ -1,1 +1,0 @@
-Microsoft has issued an update for Windows XP SP2 to address installation problems caused by a third-party adware program, TV Media.

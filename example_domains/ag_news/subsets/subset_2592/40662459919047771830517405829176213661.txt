@@ -1,1 +1,0 @@
-Sun Microsystems has posted a prerelease,  quot;snapshot quot; version of Java 2 Standard Edition 6.0, codenamed Mustang, which represents the next generation of the Java platform.

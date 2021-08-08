@@ -1,1 +1,0 @@
-Mobile phones running Symbian's Series 60 operating system are being targeted by a new strain of the Skulls Trojan horse, which can spread to other phones within reach of Bluetooth broadcasting range, according to F-Secure.

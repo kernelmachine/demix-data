@@ -1,1 +1,0 @@
-With security experts predicting a large-scale worm attack is only a matter of days away, Microsoft (Quote, Chart) has released a scanning tool to help users identify vulnerable versions of the GDI libraries that handle JPEG processing.

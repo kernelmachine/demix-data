@@ -1,1 +1,0 @@
-IBM later this week will deliver its long-awaited DB2 Information Integrator, code-named Masala, which contains a sophisticated search engine that allows corporate users to dig out and analyze data across a wide range of IBM and non-IBM information data stores, according to sources familiar with the company's plans.

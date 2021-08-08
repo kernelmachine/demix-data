@@ -1,1 +1,0 @@
-Tasman Networks has introduced a new entry-level WAN access router and security device. The Tasman 1001 also includes new features added to a new version of the company's operating system, including multicast routing, IPSec VPN, firewall, and an integrated Web-based GUI.

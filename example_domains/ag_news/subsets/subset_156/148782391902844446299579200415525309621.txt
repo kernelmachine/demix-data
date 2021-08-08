@@ -1,1 +1,0 @@
-Micro Focus has extended its  #39;Lift and Shift #39; legacy Cobol migration service, adding the option of migrating CICS-based mainframe Cobol applications to HP and IBM Unix and Linux servers. 

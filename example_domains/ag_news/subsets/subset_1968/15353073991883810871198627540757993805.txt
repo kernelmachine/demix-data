@@ -1,1 +1,0 @@
-Since AMD furthered its industry leadership in multi-core computing by demonstrating the industry #39;s first x86 dual-core processor in August, AMD has strongly advocated this customer-centric software licensing strategy for both server and client software.

@@ -1,1 +1,0 @@
-SAN FRANCISCO -- Oracle on Wednesday will introduce Oracle Application Server 10g Release 2, which is being characterized as a significant upgrade to the product with improvements in Java, Web services, and identity management and the addition of RFID backing.

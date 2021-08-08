@@ -1,1 +1,0 @@
-SoTuA writes  quot;Few months after SP2 hit windowsupdate.com, Finjan Software reports that security flaws have been found in WinXP SP2, including malicous code execution without user intervention.

@@ -1,1 +1,0 @@
-Google #39;s short message service (SMS) is accessible immediately to beta testers. The service will enable users of mobile phones and other handheld devices to send text message queries and receive 

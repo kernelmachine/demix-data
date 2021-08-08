@@ -1,1 +1,0 @@
-IBM Wednesday introduced a significant overhaul to its WebSphere J2EE application server, with new support for standards-based messaging protocols, better management features and enhancements to improve availability of applications, according to an IBM 

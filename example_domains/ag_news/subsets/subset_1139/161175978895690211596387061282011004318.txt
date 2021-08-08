@@ -1,1 +1,0 @@
-Hewlett-Packard is working on software that it says could slow the spread of Internet-borne worms and viruses, AP reports. Researchers at the company say the new virus-throttling software would not destroy 

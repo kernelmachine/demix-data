@@ -1,1 +1,0 @@
-Despite Microsoft's release of 10 new software patches, IT managers said the monthly patching approach that the company has been using for the past 12 months is making it easier for them to keep their systems up to date on fixes for security vulnerabilities.

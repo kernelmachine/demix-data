@@ -1,1 +1,0 @@
-Java software provider releases a product designed to simplify the task of sending back-office information to mobile devices.

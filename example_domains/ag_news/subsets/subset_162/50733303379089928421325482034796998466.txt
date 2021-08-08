@@ -1,1 +1,0 @@
-Siemens has claimed a world first for its transmission of data at a rate of 1Gbit/s over a wireless link. To achieve this rate, which is 20 times faster than today #39;s 50Mbit/s wireless LANs, researchers at 

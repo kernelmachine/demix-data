@@ -1,1 +1,0 @@
-Broadcom said its new chips will operate at the highest transmission rate possible for a longer time than currently available chips, which are quicker to shift to lower data rates in order to maintain clear transmissions.

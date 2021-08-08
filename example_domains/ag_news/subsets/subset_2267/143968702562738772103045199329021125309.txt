@@ -1,1 +1,0 @@
-The first computer worm to eavesdrop on network traffic after it infects a computer has been discovered by security experts. The SDBot.

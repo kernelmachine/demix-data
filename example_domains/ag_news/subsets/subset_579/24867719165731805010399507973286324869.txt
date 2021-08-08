@@ -1,1 +1,0 @@
-VENICE -- The idea sounds good on paper: Build a mesh network of wireless Wi-Fi base stations and let users roam around an entire city instead of providing limited connectivity in a handful of hot spots. But will it work? The City of Philadelphia hopes so.

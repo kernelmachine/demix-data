@@ -1,1 +1,0 @@
-NTT DoCoMo used its proprietary signal separation technique to enable data transmission at 1 Gbps in rea ltime using a bandwidth of 100 MHz in an area with low radio signal receptivity.

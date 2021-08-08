@@ -1,1 +1,0 @@
-IBM next week will release a major revision of its DB2 database, providing fresh ammunition in the ongoing battle for supremacy in the database marketplace.

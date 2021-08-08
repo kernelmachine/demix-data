@@ -1,1 +1,0 @@
-BOSTONMicrosoft Corp. announced Tuesday an early beta of a new rich client for its Live Communications Server product designed to unite instant messaging with telephony and video, and to embed such technologies in other applications.

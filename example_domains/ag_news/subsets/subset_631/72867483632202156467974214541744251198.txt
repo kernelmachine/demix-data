@@ -1,1 +1,0 @@
-Yesterday, Novell shipped its Linux Desktop 9 product, the software maker #39;s attempt to unseat Windows on business PCs. Developed with SUSE underpinnings and based on Kernel 2.6, Novell liberally sprinkled 

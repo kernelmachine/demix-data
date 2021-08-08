@@ -1,1 +1,0 @@
-Veritas gets KVS #39;s Enterprise Vault, an app that archives business-critical data held within Microsoft Exchange, SharePoint, Office, and file systems.

@@ -1,1 +1,0 @@
-Three more vulnerabilities in Microsoft #39;s Internet Explorer 6.0 browser were disclosed Wednesday by Danish security vendor Secunia, bringing the total of IE bugs found by the firm in the last two months to an even dozen.

@@ -1,1 +1,0 @@
-Microsoft is investigating a security flaw in the Windows Internet Name Service that could allow an attacker to gain control over systems running the software.

@@ -1,1 +1,0 @@
-This third and final part of the wireless pen-test series looks at how to mitigate the security risks outlined in the previous articles, and then looks at some proposed solutions currently in front of the IETF.

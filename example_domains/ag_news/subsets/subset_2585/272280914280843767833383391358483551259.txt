@@ -1,1 +1,0 @@
-The update for the e-mail program focuses mainly on security enhancements and adds a feature dubbed ScamWatch, which aims to combat 

@@ -1,1 +1,0 @@
-Under the effort announced today, the two will share APIs and develop protocols to enable better interoperability between Microsoft's Network Access Protection technology and Cisco's Network Admission Control technology.

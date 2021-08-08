@@ -1,1 +1,0 @@
-A vulnerability in a Java plug-in from Sun Microsystems used by most web browsers poses a risk for users of IE and alternative browsers alike.

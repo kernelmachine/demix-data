@@ -1,1 +1,0 @@
-The goal is a  quot;single, coordinated solution quot; that enables network administrators to control both Windows installations and Cisco network architecture, the two tech giants said.

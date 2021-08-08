@@ -1,1 +1,0 @@
-SAN FRANCISCO -- Not to be outdone by rival Oracle's conference being held a block away, BEA Systems on Monday unveiled Version 9.0 of its WebLogic Server application server, code-named Diablo.

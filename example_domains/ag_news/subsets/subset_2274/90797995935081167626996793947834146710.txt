@@ -1,1 +1,0 @@
-Microsoft (Quote, Chart) plans to issue a patch for a security flaw in Windows Server software that may allow attackers to gain control over systems running the program, the company said.

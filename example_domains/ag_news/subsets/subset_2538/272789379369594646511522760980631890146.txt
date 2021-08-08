@@ -1,1 +1,0 @@
-One of the Web #39;s largest e-mail providers is looking to make its service safer with the adoption of DomainKeys, a cryptographic-based e-mail authentication technology, Monday.

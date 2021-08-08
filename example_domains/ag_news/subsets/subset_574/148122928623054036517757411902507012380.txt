@@ -1,1 +1,0 @@
-Computer users could be open to attack from malicious hackers because of the way that Windows displays some images. Microsoft has issued a warning about a critical vulnerability in Windows that could let carefully 

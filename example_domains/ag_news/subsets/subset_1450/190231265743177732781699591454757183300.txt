@@ -1,1 +1,0 @@
-Computers built with Advanced Micro Devices #39; Opteron processor soon will be able to take advantage of the same power management technology the company has already built into its laptop and desktop microchips.

@@ -1,1 +1,0 @@
-Vendor offers server, switch, and host-channel adapter bundle with increased I/O bandwidth, processing capability, and memory. By Larry Greenemeier.

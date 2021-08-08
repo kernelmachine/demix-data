@@ -1,1 +1,0 @@
-SAN FRANCISCO - Google Inc. has fixed a security flaw in its Gmail Web-based e-mail service that allowed attackers to hijack users' e-mail accounts.

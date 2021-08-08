@@ -1,1 +1,0 @@
-IBM and Cisco have extended their global security alliance through the integration of IBM Tivoli software with Cisco Network Admission Control technologies to help enterprises automatically comply with security policies, then quarantine and remediate at 

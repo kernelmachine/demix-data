@@ -1,1 +1,0 @@
-NEW YORKHitachi Data Systems Inc. unveiled Tuesday embedded virtualization layer technology that can aggregate up to 32 petabytes of internal and external storage into a single virtual storage pool and 

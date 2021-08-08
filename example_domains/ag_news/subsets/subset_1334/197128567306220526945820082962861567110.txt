@@ -1,1 +1,0 @@
-NEC Solutions has announced a four-way, high-availability server it #39;s pitching to enterprises as, among other things, the hardware to host virtual systems such as those made possible by Microsoft #39;s upcoming Virtual Server 2005.

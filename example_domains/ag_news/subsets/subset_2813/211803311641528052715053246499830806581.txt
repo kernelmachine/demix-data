@@ -1,1 +1,0 @@
-IBM today announced that Websphere 6, the long awaited-update to its application server software, will be available by the end of the year.

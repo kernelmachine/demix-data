@@ -1,1 +1,0 @@
-R2, an interim release, will begin beta testing later this month.

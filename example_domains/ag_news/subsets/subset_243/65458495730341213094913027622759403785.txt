@@ -1,1 +1,0 @@
-Server: requires Microsoft Windows 2000, Windows Server 2003, Windows XP, Red Hat Linux 9.0 or later, Red Hat Enterprise Linux 3, SuSE Linux 9.x, or Mac OS X 10.

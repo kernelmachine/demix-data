@@ -1,1 +1,0 @@
-Dell has teamed up with cluster-management app-maker Platform Computing Inc. to create a small but powerful rack-mounted server complete with open-source cluster-management tools.

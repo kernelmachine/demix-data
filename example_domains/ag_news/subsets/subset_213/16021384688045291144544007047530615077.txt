@@ -1,1 +1,0 @@
-Sifting through millions of documents to locate a valuable few is tedious enough, but what happens when those files are scattered across different repositories?

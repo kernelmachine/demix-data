@@ -1,1 +1,0 @@
-Linux distributor Red Hat Inc is warning customers about an email scam that claims to be a Red Hat security update but in fact encourages users to download and run potentially malicious code.

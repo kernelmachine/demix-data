@@ -1,1 +1,0 @@
-Microsoft and Dell are pairing to develop free software for Dell server customers that will integrate Microsoft Systems Management Server 2003 with Dell #39;s OpenManage 4 Change Management tool.

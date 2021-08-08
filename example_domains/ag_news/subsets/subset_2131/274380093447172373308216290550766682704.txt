@@ -1,1 +1,0 @@
-Microsoft says its Windows Server 2003 Compute Cluster Edition will not run on servers equipped with Intel #39;s latest Itanium 2 processor.

@@ -1,1 +1,0 @@
-Intel today announced a faster Pentium 4 of its high-end Extreme Edition (EE) series as well as an updated PCI Express chipset now supporting FSB1066.

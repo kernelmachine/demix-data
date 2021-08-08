@@ -1,1 +1,0 @@
-Sun Microsystems is looking to make life easier for Java developers by seeking a common ground on a data persistence model.

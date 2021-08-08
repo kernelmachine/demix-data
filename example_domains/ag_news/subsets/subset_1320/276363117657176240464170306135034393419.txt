@@ -1,1 +1,0 @@
-Grid architecture aims to protect corporate networks from interior security threats.

@@ -1,1 +1,0 @@
-Prior to the release of Windows XP Service Pack 2, Microsoft set a goal of having 100 million copies distributed through its automatic update (Windows Update downloads not included).

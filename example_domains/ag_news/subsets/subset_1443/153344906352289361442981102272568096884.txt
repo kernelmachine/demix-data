@@ -1,1 +1,0 @@
-Big Blue beefs up its WebSphere 6 application server, promising better performance, reliability and simplified administration.

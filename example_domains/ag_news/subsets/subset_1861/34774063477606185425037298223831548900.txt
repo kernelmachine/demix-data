@@ -1,1 +1,0 @@
-This update addresses several potential vulnerabilities in Adobe Reader versions 6.0.0-6.0.2. Note that currently there are no known malicious exploits of these vulnerabilities.

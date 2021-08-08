@@ -1,1 +1,0 @@
-Juniper Networks is making a big push into SSL security. The company on Monday updated its NetScreen Secure Access SSL VPNsecurity appliance that further integrates it with end-point security software packages. Juniper also announced a new initiative with several companies to provide better security across a network.

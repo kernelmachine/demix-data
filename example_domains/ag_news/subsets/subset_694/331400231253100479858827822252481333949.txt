@@ -1,1 +1,0 @@
-Marking its first foray into server virtualization, Microsoft will release its oft-delayed Virtual Server 2005 on Oct. 1. The software allows multiple operating systems to run side by side on a single machine.

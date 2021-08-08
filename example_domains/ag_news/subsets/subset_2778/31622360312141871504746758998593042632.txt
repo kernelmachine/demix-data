@@ -1,1 +1,0 @@
-Ultimately, the package will compete with collaborative-development tools from IBM's Rational unit.

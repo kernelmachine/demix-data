@@ -1,1 +1,0 @@
-Microsoft has announced general availability of Windows-Based Hosting Version 3.0, which is a platform for service providers to sell hosted offerings.

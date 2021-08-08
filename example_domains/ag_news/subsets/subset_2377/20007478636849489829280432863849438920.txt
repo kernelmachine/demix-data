@@ -1,1 +1,0 @@
-New PC indexing tools such as Google Desktop Search pose security risks to businesses that useSSL remote access because the tools copy material accessed during SSL sessions and make it available to unauthorized people who later use the same PC.

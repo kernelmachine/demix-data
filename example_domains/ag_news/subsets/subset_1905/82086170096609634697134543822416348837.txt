@@ -1,1 +1,0 @@
-Microsofthas quietly released an update to Windows XP to fix a potentially serious configuration problem in the firewall that ships as part of Windows XP Service Pack 2 (SP2).

@@ -1,1 +1,0 @@
-NewsFactor - A security firm says it has found 10 major security flaws in Microsoft's (Nasdaq: MSFT) Windows XP Service Pack 2. The weaknesses could allow intruders to bypass many of the security measures implemented by the update.

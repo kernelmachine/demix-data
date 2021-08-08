@@ -1,1 +1,0 @@
-Microsoft on Wednesday unveiled new and reworked business-intelligence tools that provide capabilities ranging from self-service report building for non-techs to mining information from data flows outside of a database.

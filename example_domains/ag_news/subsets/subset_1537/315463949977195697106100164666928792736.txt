@@ -1,1 +1,0 @@
-IBM next month will finish transitioning its core pSeries and iSeries server lines to the Power5 chip when it starts shipping three new high-end systems, two of which support as many as 64 processors.

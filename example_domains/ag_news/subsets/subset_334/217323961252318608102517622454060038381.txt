@@ -1,1 +1,0 @@
-Google has acknowledged two vulnerabilities in its Web site that could allow phishers to alter the appearance of its pages in order to dupe visitors -- and possibly lure them into giving away credit-card information.

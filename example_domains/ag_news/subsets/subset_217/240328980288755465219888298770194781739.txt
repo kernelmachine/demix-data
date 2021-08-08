@@ -1,1 +1,0 @@
-Microsoft has unveiled Host Integration Server (HIS) 2004, claiming that the legacy integration application will lower the cost of integrating existing IBM mainframe and midrange systems with Windows. 

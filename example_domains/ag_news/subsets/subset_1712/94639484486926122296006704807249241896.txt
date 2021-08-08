@@ -1,1 +1,0 @@
-SafeKeeper Trusted I/O devices have a trusted platform module (TPM), which stores passwords, digital certificates, and encryption keys.

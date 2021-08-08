@@ -1,1 +1,0 @@
-Security experts warned on Wednesday that  quot;exploit code quot; has been released for the critical flaw discovered in the way Windows and other Microsoft products handle JPEG images (see our previous coverage).

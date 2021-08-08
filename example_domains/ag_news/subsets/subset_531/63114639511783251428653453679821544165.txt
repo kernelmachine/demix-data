@@ -1,1 +1,0 @@
-When Microsoft delivers the Beta 3 version of SQL Server 2005, formerly code-named  quot;Yukon, quot; it will carry a number of feature enhancements that weren #39;t available in the more broadly distributed Beta 2 version.

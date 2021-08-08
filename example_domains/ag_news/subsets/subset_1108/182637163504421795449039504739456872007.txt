@@ -1,1 +1,0 @@
-Yet another security flaw reported for popular Web browser.

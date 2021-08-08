@@ -1,1 +1,0 @@
-NewsFactor - JBoss has released a new version of its open source business process management application, called 

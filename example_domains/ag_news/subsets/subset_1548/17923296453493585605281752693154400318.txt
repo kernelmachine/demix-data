@@ -1,1 +1,0 @@
-Google has fixed a security flaw in its Gmail web-based e-mail service that allowed attackers to hijack users #39; e-mail accounts.

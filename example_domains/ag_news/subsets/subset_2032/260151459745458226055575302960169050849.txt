@@ -1,1 +1,0 @@
-The Multiband OFDM Alliance (MBOA) has finished its ultrawideband (UWB) radio physical layer (PHY) specification. What this array of abbreviations means is that UWB chip makers can now finalise their designs 

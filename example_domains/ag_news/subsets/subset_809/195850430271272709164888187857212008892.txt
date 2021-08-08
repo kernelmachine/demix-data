@@ -1,1 +1,0 @@
-Microsoft (Quote, Chart) is ready to ship Host Integration Server 2004, offering a Windows interface to mainframes and legacy applications. 

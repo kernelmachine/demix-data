@@ -1,1 +1,0 @@
-SANTA CLARA, CALIF. -- Noting two evolving areas of software licensing, Microsoft is pondering how to license when multiple instances of an application are run on a single computer, but is not eyeing a plan for utility-based computing, in which charges are based on individual usage.

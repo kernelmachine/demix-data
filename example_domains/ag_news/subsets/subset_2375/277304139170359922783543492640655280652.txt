@@ -1,1 +1,0 @@
-Yahoo Mobile can obtain localized search results, make calls from the results page, and obtain images. Shortcuts offer quick access to information, such as weather, stock quotes, sport scores and flight information.

@@ -1,1 +1,0 @@
-A router is a computer networking device that forwards data packets toward their destinations through a process known as routing. Routing occurs at layer 3 of the OSI seven-layer model.

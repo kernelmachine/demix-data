@@ -1,1 +1,0 @@
-A new family of worms which uses an unpatched vulnerability in Internet Explorer is spreading widely across the net.

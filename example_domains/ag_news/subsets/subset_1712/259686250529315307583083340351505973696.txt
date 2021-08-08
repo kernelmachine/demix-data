@@ -1,1 +1,0 @@
-A hacker compromised the corporate Web site of France Telecom SA's ISP subsidiary earlier this week, causing the site to try to install a malicious software program on visitors' computers.

@@ -1,1 +1,0 @@
-Hitachi Data Systems (HDS) has today launched a high-end Raid storage platform and software offering complex data management. The TagmaStore Universal Storage Platform (USP) is designed to provide up to 32 

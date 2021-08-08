@@ -1,1 +1,0 @@
-Internet provider EarthLink and Yahoo! have teamed up to fight spam by incorporating DomainKeys, a technology developed by Yahoo! that filters fake addresses used by spammers.

@@ -1,1 +1,0 @@
-Antivirus firms tell PC users to turn on firewalls--Microsoft has yet to patch the Internet Explorer vulnerability.

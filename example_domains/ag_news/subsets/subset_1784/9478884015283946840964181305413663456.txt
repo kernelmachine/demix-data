@@ -1,1 +1,0 @@
-Microsoft released five security bulletins on Tuesday as part of its monthly update cycle, warning of vulnerabilities that put computers running Windows at risk of attack.

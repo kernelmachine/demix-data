@@ -1,1 +1,0 @@
-Virus writers are targeting Symbian-based cell phones with a Trojan horse that kills off system applications and replaces their icons with images of skulls.

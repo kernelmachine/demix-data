@@ -1,1 +1,0 @@
-NewsFactor - NEC (Nasdaq: NIPNY) has unveiled a blade server powered by the Intel Itanium 2 processor, combining 64-bit computing, InfiniBand capabilities and increased memory, and targeted at the high-performance computing market.

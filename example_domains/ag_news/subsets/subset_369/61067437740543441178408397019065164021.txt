@@ -1,1 +1,0 @@
-Microsoft jumped into the disk-based backup and recovery market Monday with the announcement of the Microsoft Data Protection Server (DPS), a low-cost, continuous, disk-based backup and recovery system. More than 20 storage industry partners announced support for the new software-based product, which is scheduled for release in the second quarter of next year.

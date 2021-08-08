@@ -1,1 +1,0 @@
-Vulnerabilities in technology widely used for network authentication leave computers open to attack.

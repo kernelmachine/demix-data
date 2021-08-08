@@ -1,1 +1,0 @@
-Microsoft #39;s earlier attempts at a specification for Sender ID, the technology which is used for verifying the authenticity of e-mail with Internet Protocol records 

@@ -1,1 +1,0 @@
-Its funny how circumstances can change your perception of whats possible. A few months ago, key Microsoft architects were telling me that it would be impossible to decouple the Avalon presentation subsystem from the Longhorn OS.

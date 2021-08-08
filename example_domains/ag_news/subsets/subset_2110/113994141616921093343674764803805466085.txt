@@ -1,1 +1,0 @@
-Linux distributor Suse has warned of one of the most serious security holes to date in Version 2.6 of the Linux kernel, which could allow attackers to shut down a system running 2.6-based software.

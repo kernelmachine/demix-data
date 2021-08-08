@@ -1,1 +1,0 @@
-Virginia Tech plans to announce on Tuesday that its System X now operates at 12.25 teraflops, or 12 trillion calculations per second, up from 10.

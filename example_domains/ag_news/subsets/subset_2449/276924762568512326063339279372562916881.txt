@@ -1,1 +1,0 @@
-The productivity package is added to the program that allows governments to see Microsoft source code.

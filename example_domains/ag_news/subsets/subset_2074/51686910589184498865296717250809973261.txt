@@ -1,1 +1,0 @@
-Using its strengths in virtual machine technology, VMWare on Monday unwrapped new beta software for the desktop that allows administrators to more securely deploy and mange work environments outside the corporate network.

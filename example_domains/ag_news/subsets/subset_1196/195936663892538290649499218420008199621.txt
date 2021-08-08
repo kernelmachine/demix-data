@@ -1,1 +1,0 @@
-Microsoft has won the first round against security researchers digging for flaws in its Windows XP Service Pack 2 (SP2), dismissing claims by German consultants to have identified vulnerabilities. 

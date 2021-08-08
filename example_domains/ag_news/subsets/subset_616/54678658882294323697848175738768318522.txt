@@ -1,1 +1,0 @@
-IBM is continuing work to raise the profile of grid computing beyond scientific and research markets. Several grid-based commercial projects built on IBM platforms have been launched, including one at the US Environmental Protection Agency.

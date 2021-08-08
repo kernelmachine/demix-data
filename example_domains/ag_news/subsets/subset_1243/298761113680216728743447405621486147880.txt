@@ -1,1 +1,0 @@
-Intel is shipping a new mobile processor built on 90nm process technology that clocks up to 2.1GHz. The Pentium M 765 includes 2MB of integrated L2 cache and a  quot;power optimized quot; 400MHz system bus and enhanced  quot;Speedstep quot; power saving technology.

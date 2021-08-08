@@ -1,1 +1,0 @@
-IBM Corp. next week will begin shipping the second generation of its rack-mounted dual processor servers based on Advanced Micro Devices Inc.'s (AMD) Opteron microprocessor. The new server, called the eServer 326, will be IBM's first product specifically designed to support the upcoming dual-core Opteron processors that AMD is expected to ship next year.

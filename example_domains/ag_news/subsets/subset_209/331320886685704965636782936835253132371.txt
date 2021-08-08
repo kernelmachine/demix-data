@@ -1,1 +1,0 @@
-Security flaw involving JPEG files affects at least a dozen Microsoft software applications and operating systems.

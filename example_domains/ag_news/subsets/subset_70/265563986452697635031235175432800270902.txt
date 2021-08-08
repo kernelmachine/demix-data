@@ -1,1 +1,0 @@
-Code that exploits a weakness in the way many Microsoft applications process JPEG images has been published on the internet. Microsoft only discovered the security flaw, which could allow software viewing 

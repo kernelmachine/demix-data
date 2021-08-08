@@ -1,1 +1,0 @@
-Dell and Microsoft are offering a new server toolkit that brings together Dell #39;s OpenManage 4 server management software and Microsoft SMS 2003, used to configure and upgrade servers running Windows.

@@ -1,1 +1,0 @@
-A rarity among CRM vendors, NetSuite integrates an ERP and accounting backbone directly into its SFA, marketing, and support platform, overcoming back-office deficiencies that often limit CRM effectiveness. Version 10 addresses another common shortcoming in CRM apps: actionable business intelligence.

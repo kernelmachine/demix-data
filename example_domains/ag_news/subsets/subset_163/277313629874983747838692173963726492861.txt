@@ -1,1 +1,0 @@
-NewsFactor - IBM (NYSE: IBM) announced at the start of the annual SC supercomputing show Saturday that it will now offer commercial configurations of its Blue Gene supercomputer, just days after its prototype configuration, which has been built for Lawrence Livermore National Laboratory, took the high-performance computing crown with a speed of over 70 teraflops a second.

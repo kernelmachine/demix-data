@@ -1,1 +1,0 @@
-Improvements include new file manager, ability to recognize removable storage devices and an integrated e-mail and groupwware client.

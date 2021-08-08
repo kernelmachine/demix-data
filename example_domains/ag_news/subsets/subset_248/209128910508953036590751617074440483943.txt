@@ -1,1 +1,0 @@
-A new Trojan horse that sends unauthorized spam to mobile phones via sms has been detected by anti-virus authority Sophos, marking a new trend in the convergence of viruses and mass-mail attacks.

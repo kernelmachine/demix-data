@@ -1,1 +1,0 @@
-Security researchers have warned of a vulnerability in most web browsers that could let scammers launch phishing attacks from pop-up windows on trusted websites.

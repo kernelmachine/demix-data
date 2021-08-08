@@ -1,1 +1,0 @@
-Software giant Microsoft on Tuesday announced 10 security advisories, seven of them critical, urging consumers to patch 21 new flaws in its software products.

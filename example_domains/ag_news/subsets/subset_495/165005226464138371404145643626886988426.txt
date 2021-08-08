@@ -1,1 +1,0 @@
-The drive, loaded with the open-source OS, can be plugged into the USB port of any computer to turn it into a Linux machine.

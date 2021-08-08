@@ -1,1 +1,0 @@
-Microsoft published an advisory for Web site administrators on the ASP.Net vulnerability and provided instructions for mitigating the effects of the hole, which is in a component called the canonicalization routine.

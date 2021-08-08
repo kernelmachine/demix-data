@@ -1,1 +1,0 @@
-Linux is more secure than most commercial software, which confirms what its proponents already knew. A four-year study released today by Coverity, reports Linux has a low bug count, making the code more stable and secure.

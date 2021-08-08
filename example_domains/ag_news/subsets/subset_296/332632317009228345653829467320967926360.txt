@@ -1,1 +1,0 @@
-MacCentral - Apple Computer Inc. on Thursday released its third security update in recent days. Security Update 2004-09-16 fixes a security issue with Apple's iChat application that allowed Remote iChat participants can send 

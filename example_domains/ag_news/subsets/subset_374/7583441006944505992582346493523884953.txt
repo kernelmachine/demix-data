@@ -1,1 +1,0 @@
-Developing versions of the Windows operating system with only a subset of the code base would mark a major technical shift for Microsoft and could help it to better address the threat posed by Linux.

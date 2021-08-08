@@ -1,1 +1,0 @@
-The emulation software works with Apple computers that use the G5 processor.

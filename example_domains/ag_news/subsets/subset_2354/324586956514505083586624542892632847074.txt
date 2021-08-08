@@ -1,1 +1,0 @@
-Google, which implemented an internal Web log system behind its firewall about 18 months ago, has seen tremendous benefits from it and may in the future consider providing tools and expertise for this purpose to interested clients, a Google executive said.

@@ -1,1 +1,0 @@
-Microsoft issues patches for holes that could allow remote attackers to gain control of your PC. Microsoft this week released 10 software security patches for its products, including seven it deemed critical 

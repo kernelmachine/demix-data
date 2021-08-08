@@ -1,1 +1,0 @@
-The Internet Engineering Task Force (IETF) has shut down the MARID working group, which was attempting to develop a Sender ID standard.

@@ -1,1 +1,0 @@
-Mozilla has released Thunderbird 1.0, an open-source e-mail client that complements its Firefox Web browser. Mozilla says the e-mail program will help users avoid spam and viruses, and 

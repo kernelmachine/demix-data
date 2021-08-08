@@ -1,1 +1,0 @@
-Microsoft posted a patch on Tuesday afternoon for Internet Security  amp; Acceleration Server 2000 and Proxy Server 2.0. The patch fixed a spoofing vulnerability that Microsoft rated an  quot;important quot; problem.

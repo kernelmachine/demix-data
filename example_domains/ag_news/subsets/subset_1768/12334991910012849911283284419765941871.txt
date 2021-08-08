@@ -1,1 +1,0 @@
-The World Wide Web Consortium (W3C) this week published a final version of its Architecture of the World Wide Web, Volume 1 document, looking to set forth codified principles for the Web itself.

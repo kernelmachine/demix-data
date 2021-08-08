@@ -1,1 +1,0 @@
-nazarijo writes  quot;In an article entitled Spammers using sender authentication too, study says, Infoworld reports that a study by CipherTrust shows that SPF and Sender ID (SID) aren #39;t nearly as effective as we expected them to be when combatting spam.

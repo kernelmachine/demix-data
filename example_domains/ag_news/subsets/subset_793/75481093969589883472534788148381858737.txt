@@ -1,1 +1,0 @@
-Mass-mailing Zafi-D worm, which disguises itself as a Christmas greeting, is infecting more than one in every ten emails. The worm, which spreads in a file attached to email messages containing the text Happy 

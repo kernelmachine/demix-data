@@ -1,1 +1,0 @@
-A new top-of-the-range Pentium M processor has been introduced by Intel: model 765, which clocks 2.1GHz, with a 400 MHz system bus and 2MB of Level 2 cache.

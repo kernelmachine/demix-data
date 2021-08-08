@@ -1,1 +1,0 @@
-Organizations frequently pick a corporate-grade IM system -- IBM Lotus Instant Messaging and Web Conferencing, Jabber Messenger, or Microsoft LCS (Live Communications Server), for example -- thinking that internal-only IM is immune from threats.

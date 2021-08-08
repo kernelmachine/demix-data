@@ -1,1 +1,0 @@
-Amidst claims that IT shops can now provision BEA WebLogic Servers in mere minutes instead of hours, Veritas today debuted version 4.0 of Opforce Enterprise Edition for Windows, Linux (Red Hat  amp; SUSE), Solaris and AIX.

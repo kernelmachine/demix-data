@@ -1,1 +1,0 @@
-Red Hat Enterprise Linux 3 Update 3 limits how much damage a hacker could do. The company said the release is ahead of schedule and not a reaction to any specific threat.

@@ -1,1 +1,0 @@
-Microsoft Corp. on Wednesday plans to make available a connector kit that allows users to easily link Microsoft's Office Project Server 2003 with SAP AG's ERP (enterprise resource planning) products.

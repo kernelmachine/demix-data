@@ -1,1 +1,0 @@
-IBM (Quote, Chart) upped the ante against rivals HP (Quote, Chart) and Sun Microsystems (Quote, Chart) in the server market by adding three new machines based on its Power5 processor, two of which can run 254 virtual servers on a single machine.

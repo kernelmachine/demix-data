@@ -1,1 +1,0 @@
-Security experts have spotted the first attempts to create an Internet worm that propagates using instant messages and exploits a recently disclosed flaw in Microsoft software.

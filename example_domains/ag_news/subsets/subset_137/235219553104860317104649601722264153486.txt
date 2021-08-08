@@ -1,1 +1,0 @@
-In an effort to help ensure standardization, the Free Standards Group has officially released the Linux Standard Base (LSB) 2.0, a specification composed of interoperability standards, a base set of APIs and libraries and developer environments and test 

@@ -1,1 +1,0 @@
-As it strives to improve its reputation in the server and desktop management arena, Microsoft announced on Tuesday Virtual Server 2005 and Microsoft Operations Manager (MOM) 2005 as well as the first public beta of Windows Update Services.

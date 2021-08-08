@@ -1,1 +1,0 @@
-The Bluetooth Special Interest Group (SIG) today announced the adoption of Bluetooth Core Specification Version 2.0  EDR (Enhanced Data Rate).

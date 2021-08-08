@@ -1,1 +1,0 @@
-Unisys' updated ES7000 server line includes a top-end Itanium 2  processor with 9MB of high-speed cache memory.

@@ -1,1 +1,0 @@
-IT security experts have intercepted a previously undocumented Trojan virus with a novel payload that attempts to send spam SMS messages to mobile phones.

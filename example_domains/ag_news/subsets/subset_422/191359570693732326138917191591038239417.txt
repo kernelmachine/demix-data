@@ -1,1 +1,0 @@
-According to internetnews.com, AOL has dumped the idea following concerns expressed by the Internet Engineering Task Force (IETF), coupled with the tepid support for Sender ID in the open source community.

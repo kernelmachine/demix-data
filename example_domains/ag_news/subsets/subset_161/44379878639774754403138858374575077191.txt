@@ -1,1 +1,0 @@
-On Tuesday, Microsoft warned its customers that several of its products are vulnerable to a flaw in the way they handle JPEG graphics images.

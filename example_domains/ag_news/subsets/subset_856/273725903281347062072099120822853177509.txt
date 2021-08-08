@@ -1,1 +1,0 @@
-There #39;s a new version of Java and Sun describes it as the most significant update ever to the platform-neutral programming language.

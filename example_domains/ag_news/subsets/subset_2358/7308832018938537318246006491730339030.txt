@@ -1,1 +1,0 @@
-The firm has rated the flaw as moderately critical. It demonstrated the flaw on its site, with options for both users who use pop-up blockers and those who don #39;t.

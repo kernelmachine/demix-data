@@ -1,1 +1,0 @@
-IBM has announced Version 6 of its WebSphere Application Server software, which is designed to protect applications from server downtime and aid enterprise efforts to build a service-oriented architecture.

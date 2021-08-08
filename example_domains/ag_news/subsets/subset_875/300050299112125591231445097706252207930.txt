@@ -1,1 +1,0 @@
-Sun Microsystems on Tuesday unveiled Version 7 of the companys enterprise development tool suite, Sun Java Studio Enterprise, and previewed a JVM that will support 64-bit AMD Opteron processors.

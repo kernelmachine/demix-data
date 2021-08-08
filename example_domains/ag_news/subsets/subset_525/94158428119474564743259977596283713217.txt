@@ -1,1 +1,0 @@
-A new variant of the so-called Zafi worm surfaced Tuesday, disguised to appear as a Christmas greeting. Multiple antivirus researchers reported the emergence of the latest iteration of Zafi, classified as 

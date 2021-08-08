@@ -1,1 +1,0 @@
-FileMaker today began shipping FileMaker Server 7 Advanced, an enhanced version of FileMaker Server 7 that provides advanced web publishing and connectivity options for efficiently managing shared solutions for desktop and web clients.

@@ -1,1 +1,0 @@
-Microsoft released its first service pack for Systems Management Server 2003 with support for Windows XP SP2 and Virtual Server 2005.

@@ -1,1 +1,0 @@
-Security researchers have discovered another vulnerability in Windows XP Service Pack 2, but it doesn #39;t appear to be an immediate threat.

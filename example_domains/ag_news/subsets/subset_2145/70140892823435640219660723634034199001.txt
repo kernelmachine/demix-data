@@ -1,1 +1,0 @@
-Sixteen racks of IBM's Blue Gene/L supercomputer can perform 70.7 trillion calculations per second.

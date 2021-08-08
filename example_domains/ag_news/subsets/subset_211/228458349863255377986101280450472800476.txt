@@ -1,1 +1,0 @@
-Opinion: There are only two Web servers that matter. While two-thirds of domains run Apache, Web server share numbers show that Microsoft #39;s IIS is also a respectable choice.
