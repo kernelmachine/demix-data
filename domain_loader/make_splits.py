@@ -56,9 +56,9 @@ def load_text(domain, add_bos_token, num_workers, batch_size, num_expected_token
                      filenames=files if domain not in ['1b', 'reddit'] else None,
                      add_bos_token=add_bos_token,
                      track_token_count=True)
-    
+
     loader = DataLoader(dataset, num_workers=num_workers, batch_size=batch_size)
-    
+
     pbar = tqdm(loader)
     texts = []
 
@@ -131,7 +131,7 @@ def write_split(domain, add_bos_token, num_workers, batch_size, output_dir, spli
     written = False
 
 
-    
+
 
 
 
@@ -157,7 +157,7 @@ def write_split(domain, add_bos_token, num_workers, batch_size, output_dir, spli
                 if clusterer:
                     s = f"{split}, "
                     for i, tok in curr_tokens.items():
-                        s += f"cluster {i}: {humanize.intword(tok)} || " 
+                        s += f"cluster {i}: {humanize.intword(tok)} || "
                 else:
                     s = f"{split}, num tokens: {humanize.intword(curr_tokens[0])}"
                 pbar.set_description(s)
@@ -202,7 +202,7 @@ def write_split(domain, add_bos_token, num_workers, batch_size, output_dir, spli
                 if clusterer:
                     s = f"{split}, "
                     for i, tok in curr_tokens.items():
-                        s += f"cluster {i}: {humanize.intword(tok)} || " 
+                        s += f"cluster {i}: {humanize.intword(tok)} || "
                 else:
                     s = f"{split}, num tokens: {humanize.intword(curr_tokens[0])}"
                 pbar.set_description(s)
@@ -234,7 +234,7 @@ def write_split(domain, add_bos_token, num_workers, batch_size, output_dir, spli
         return None, None, curr_tokens
     else:
         return dataset.files, files, curr_tokens
-    
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
@@ -258,11 +258,11 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     domain = args.domain
-    
+
     if args.output_dir:
         output_dir = args.output_dir
         output_dir.mkdir(exist_ok=True)
-        
+
     if args.pretrain_clusters:
         clusterer = {"svd": TruncatedSVD(n_components=64),
                      "vectorizer": TfidfVectorizer(stop_words="english")}
@@ -279,7 +279,7 @@ if __name__ == '__main__':
                 num_workers = 1
                 batch_size = 16
             text, curr_tokens, curr_docs = load_text(domain, add_bos_token, num_workers, batch_size, num_expected_docs=100000)
-            
+
             texts[domain] = {'text': text}
 
 
@@ -302,7 +302,7 @@ if __name__ == '__main__':
 
         if args.pretrain_clusters_only:
             sys.exit(1)
-    elif args.load:   
+    elif args.load:
         with open(args.load / "clusters.pkl", "rb") as f:
             clusterer = pickle.load(f)
     else:
@@ -325,7 +325,7 @@ if __name__ == '__main__':
             args_test_files = [x.strip() for x in f.readlines()]
     else:
         args_test_files = None
-    
+
     if not args.from_file:
         resolved_path = str(PROJECT_DIR / domain / domain)
         # if args.domain in ['reddit', '1b', 'openwebtext']:
@@ -399,7 +399,7 @@ if __name__ == '__main__':
                                                 ignore_files=ignore_files,
                                                 clusterer=clusterer,
                                                 from_file=args.from_file)
-    
+
         else:
             test_files = None
             test_files_to_ignore = None
@@ -408,7 +408,7 @@ if __name__ == '__main__':
         with open(args.output_dir / "train_files.txt", "w+") as f:
             for file in train_files_to_ignore:
                 f.write(str(file) + "\n")
-    if dev_files_to_ignore:   
+    if dev_files_to_ignore:
         with open(args.output_dir / "dev_files.txt", "w+") as f:
             for file in dev_files_to_ignore:
                 f.write(str(file) + "\n")
@@ -428,6 +428,3 @@ if __name__ == '__main__':
     if num_test_tokens:
         with open(args.output_dir / "test_token_counts.txt", 'w+') as f:
             json.dump(num_test_tokens, f)
-    # print(f"Num train tokens: {humanize.intword(sum(num_train_tokens.values()))}")
-    # print(f"Num dev tokens: {humanize.intword(sum(num_dev_tokens.values()))}")
-    # print(f"Num test tokens: {humanize.intword(sum(num_test_tokens.values()))}")
