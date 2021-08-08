@@ -1,4 +1,0 @@
-/Users/suching/Github/demix-data/example_domain/example_domain/subset_1/document_3.txt
-/Users/suching/Github/demix-data/example_domain/example_domain/subset_1/document_4.txt
-/Users/suching/Github/demix-data/example_domain/example_domain/subset_0/document_0.txt
-/Users/suching/Github/demix-data/example_domain/example_domain/subset_0/document_1.txt

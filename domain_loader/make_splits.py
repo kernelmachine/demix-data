@@ -336,3 +336,7 @@ if __name__ == '__main__':
     if num_test_tokens:
         with open(args.output_dir / "test_token_counts.txt", 'w+') as f:
             json.dump(num_test_tokens, f)
+
+    print(f"Num train tokens: {humanize.intword(sum(num_train_tokens.values()))}")
+    print(f"Num dev tokens: {humanize.intword(sum(num_dev_tokens.values()))}")
+    print(f"Num test tokens: {humanize.intword(sum(num_test_tokens.values()))}")

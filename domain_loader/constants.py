@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
-PROJECT_DIR = Path(os.environ['DATA_PATH'])
+
+PROJECT_DIR = Path(os.environ['PROJECT_DIR'])
 
 
 TOKEN_COUNTS = {"1b": {'num_train_tokens': 700_000_000,
@@ -51,4 +52,11 @@ TOKEN_COUNTS = {"1b": {'num_train_tokens': 700_000_000,
                 "latest_news": {"num_train_tokens":11_000_000,
                                 "num_dev_tokens": 1_000_000,
                                 "num_test_tokens": 1_000_000},
+                "ag_news": {"num_train_tokens": 800_000,
+                            "num_dev_tokens": 300_000,
+                            "num_test_tokens": 300_000},
+                "imdb": {"num_train_tokens": 800_000,
+                            "num_dev_tokens": 100_000,
+                            "num_test_tokens": 100_000},
+
                 }

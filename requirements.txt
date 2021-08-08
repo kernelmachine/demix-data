@@ -2,3 +2,4 @@ pandas
 humanize
 transformers
 scikit-learn
+fairseq

@@ -10,125 +10,91 @@ Please see the `examples/` directory for an example of this dataset structure. T
 
 ## Installation
 
+First, set your `PROJECT_DIR` to the root directory where you will be housing the domain directories.
+
+```bash
+export PROJECT_DIR=$(pwd)
+```
+
 ```bash
 export DATA_PATH=/private/home/suching/raw_data/
 ```
 
-## Download datasets
+## Download data
 
-Here we provide instructions to download data. Most datasets involve getting approval from dataset hosters.
-
-### 1B Words
-
-Download 1B words corpus from here: https://opensource.google/projects/lm-benchmark
-
-### Legal
-
-Create an account and download data here https://case.law/
-
-Use the script at `domains/legal/split_legal.py` to split the resulting jsonl files into separate files.
-
-### S2ORC (e.g., Med, CS)
-
-Follow instructions here to download papers: https://github.com/allenai/s2orc
-
-When papers are downloaded, you can extract papers using the scripts in `domains/s2orc/extract_papers.py`.
-
-### Openwebtext
-
-Download Openwebtext from here https://skylion007.github.io/OpenWebTextCorpus/.
-
-Use the script at `domains/openwebtext/unpack_openwebtext.py` to unpack the data.
-
-### RealNews
-
-Download the dataset from here: https://docs.google.com/forms/d/1LMAUeUtHNPXO9koyAIlDpvyKsLSYlrBj3rYhC30a7Ak/viewform?edit_requested=true
-
-Use the script at `domains/realnews/split_realnews.py` to split the resulting jsonl file into separate files.
-
-### Reviews
-
-Download the raw review data from here: http://deepyeti.ucsd.edu/jianmo/amazon/index.html
-
-Use the script at `domains/reviews/split_reviews.py` to split the resulting jsonl file into separate files.
-
-### Gutenberg
-
-Follow instructions here to download the data: https://github.com/aparrish/gutenberg-dammit
-
-### Github
-
-Download data here: https://console.cloud.google.com/marketplace/product/github/github-repos, under the `contents` table.
-
-### ACL Papers
-
-Download data here: https://allenai.org/data/qasper
-
-### Legal contracts
-
-Download data here: https://www.atticusprojectai.org/cuad
-
-### CORD-19
-
-Download dataset here: https://www.semanticscholar.org/cord19/download
-
-### Tweets
-
-Sign up for the [Twitter Academic API](https://developer.twitter.com/en/products/twitter-api/academic-research), and download tweets in a jsonl format. Then split into files using a process similar to `domains/realnews/split_realnews.py`.
-
-### Breaking News
-
-Use `domain/scripts/fetch_articles.py` to crawl breaking news articles. We use the URLs associated with `high factuality` in `https://github.com/ramybaly/News-Media-Reliability/blob/master/data/acl2020/corpus.tsv`.
-
+We provide an example data input file in `example_domains/`
 ```bash
-python -m domain.scripts.fetch_articles --num-articles-per-source 100 --path-to-output news.jsonl
+export DOMAIN=imdb
 ```
 
-Then split into files using a process similar to `domains/realnews/split_realnews.py`.
 
+## Shard Data
 
-### Yelp Reviews
+```bash
+python -m domain_loader.build_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 16 --text-field text
+```
 
-Download dataset here https://www.yelp.com/dataset
-
-Then split into files using a process similar to `domains/realnews/split_realnews.py`.
 
 ## Build metadata/filenames.txt
 
 To make data loading faster, we first gather a list of filenames in a separate file `${DOMAIN}/metadata/filenames.txt`. To build this file, use `domain_loader/build_filenames.py`.
 
 ```bash
-python domain_loader/build_filenames.py --domains med
+python -m domain_loader.scan_filenames --domain $DOMAIN
 ```
 
-You can also add other document-level metadata to these files.
-
-## Build fairseq data-bin
-
-Download the gpt2 vocabulary:
+## Count words
 
 ```bash
-mkdir gpt2_bpe
-curl -Lo gpt2_bpe/encoder.json https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/encoder.json
-curl -Lo gpt2_bpe/vocab.bpe https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/vocab.bpe
-```
-
-We set the total number of tokens for train, dev, and test splits in `domain_loader/constants.py`. You can set these numbers by first using `domain_loader/count_words.py`, and then set the train/dev/test tokens appropriately:
-
-```bash
-export DOMAIN=med
 python -m domain_loader.count_words --domain $DOMAIN
 ```
 
 
+## Split data into train, dev, and test files
+
+
+We set the total number of tokens for train, dev, and test splits in `domain_loader/constants.py`.
+
 ```bash
-export DOMAIN=med
-export NUM_WORKERS=16
-export BATCH_SIZE=16
-export DATA_BIN_DIR=${DATA_PATH}/data-bin/
-python -m domain_loader.make_splits --domain $DOMAIN  --num-workers $NUM_WORKERS --batch-size $BATCH_SIZE --output-dir ${DATA_PATH}/${DOMAIN}/splits/
-bash scripts/pretokenize.sh $DOMAIN
-bash scripts/preprocess.sh $DOMAIN $DATA_BIN_DIR
+python -m domain_loader.make_splits --domain $DOMAIN --num-workers 0 --batch-size 1 --output-dir $PROJECT_DIR/$DOMAIN/splits
 ```
 
-These scripts will output a `data-bin` files in $DATA_BIN_DIR, which you can train on with fairseq LMs.
+
+## Build fairseq data-bin
+
+
+Download the gpt2 vocabulary:
+
+```bash
+mkdir ${PROJECT_DIR}/gpt2_bpe
+curl -Lo ${PROJECT_DIR}/gpt2_bpe/dict.txt https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/dict.txt
+curl -Lo ${PROJECT_DIR}/gpt2_bpe/encoder.json https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/encoder.json
+curl -Lo ${PROJECT_DIR}/gpt2_bpe/vocab.bpe https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/vocab.bpe
+```
+
+```bash
+bash scripts/pretokenize.sh ${PROJECT_DIR}/$DOMAIN/splits
+bash scripts/preprocess.sh ${PROJECT_DIR}/$DOMAIN/splits $DOMAIN ${PROJECT_DIR}/data-bin/
+```
+
+These scripts will output a `data-bin` files in `${PROJECT_DIR}/data-bin/`, which you can train on with fairseq LMs.
+
+
+
+## Building multi-domain datasets
+
+
+Building a multi-domain dataset follows the same procedure above, except you just add multiple domains in the same data-bin folder (i.e., `${PROJECT_DIR}/data-bin/`).
+
+You can apply the same process to the `ag-news` domain:
+
+```bash
+export DOMAIN=ag_news
+python -m domain_loader.build_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 16 --text-field text
+python -m domain_loader.scan_filenames --domain $DOMAIN
+python -m domain_loader.count_words --domain $DOMAIN
+## set token counts for "ag_news" in domain_loader/constants.py
+python -m domain_loader.make_splits --domain $DOMAIN --num-workers 0 --batch-size 1 --output-dir $PROJECT_DIR/$DOMAIN/splits
+bash scripts/pretokenize.sh ${PROJECT_DIR}/$DOMAIN/splits
+bash scripts/preprocess.sh ${PROJECT_DIR}/$DOMAIN/splits $DOMAIN ${PROJECT_DIR}/data-bin/
+```

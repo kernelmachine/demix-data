@@ -22,16 +22,20 @@ import argparse
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--domain')
+    parser.add_argument('--domain', type=str)
+    parser.add_argument('--num-workers', type=int, default=0)
+    parser.add_argument('--batch-size', type=int, default=1)
+
+
     args = parser.parse_args()
     domain = args.domain
-   
-    dataset = Domain(PROJECT_DIR / domain/domain)
-    
+
+    dataset = Domain(PROJECT_DIR / domain/ "subsets")
+
     dataloader = DataLoader(dataset,
-                            num_workers=16,
-                            batch_size=16)
-    
+                            num_workers=args.num_workers,
+                            batch_size=args.batch_size)
+
     pbar = tqdm(dataloader)
     curr_tokens = 0
     for _, _, token_count, _ in pbar:
