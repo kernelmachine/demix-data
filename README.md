@@ -1,7 +1,12 @@
 # DEMix Data
 
-Data utilities for DEMix Layers: Disentangling Domains for Modular Language Modeling
+This repository contains data utilities for DEMix Layers: Disentangling Domains for Modular Language Modeling
 
+We assume a sharded dataset structure across domains, where the dataset is split among many folders, and each folder contains many files, each containing their own document. We found this format to be particularly amenable to PyTorch dataloading. This follows the Openwebtext dataset format.
+
+We additionally assume the existence of a `metadata/` folder, which contains `filenames.txt`, an index of the paths to all files in your dataset, and a `metadata.jsonl`, a json-lines file which contains per-document metadata.
+
+Please see the `examples/` directory for an example of this dataset structure. The scripts referenced below download and format each domain's dataset into this structure, but you can write your own scripts to do this.
 
 ## Installation
 
@@ -88,9 +93,9 @@ Download dataset here https://www.yelp.com/dataset
 
 Then split into files using a process similar to `domains/realnews/split_realnews.py`.
 
-## Build metadata.jsonl
+## Build metadata/filenames.txt
 
-To make data loading faster, we first gather a list of filenames in a separate file `${DOMAIN}/metadata.jsonl`. To build this file, use `domain_loader/build_filenames.py`.
+To make data loading faster, we first gather a list of filenames in a separate file `${DOMAIN}/metadata/filenames.txt`. To build this file, use `domain_loader/build_filenames.py`.
 
 ```bash
 python domain_loader/build_filenames.py --domains med

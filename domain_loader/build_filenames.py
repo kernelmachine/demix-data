@@ -1,19 +1,13 @@
 import os
 from typing import Optional, List, Tuple
 
-import numpy as np
 from torch.utils.data import Dataset, DataLoader
 import torch
 from torch.utils.data.sampler import SubsetRandomSampler
-from transformers import GPT2Tokenizer
-import pandas as pd
 from pathlib import Path
-import gzip
 
 from domain_loader.constants import PROJECT_DIR
-from domain_loader.utils import take_n_tokens
 from tqdm.auto import tqdm
-import numpy as np
 from domain_loader.domain_loader import Domain
 import argparse
 
@@ -22,6 +16,8 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--domains", type=str, nargs='+')
+    parser.add_argument('--num-workers', type=int, default=0)
+    parser.add_argument('--batch-size', type=int, default=1)
     args = parser.parse_args()
     domains = args.domains
 
@@ -32,11 +28,11 @@ if __name__ == '__main__':
             num_workers = 1
             batch_size = 1
         else:
-            num_workers = 16
-            batch_size=1024
+            num_workers = args.num_workers
+            batch_size = args.batch_size
         dataloader = DataLoader(dataset,
-                                num_workers=16,
-                                batch_size=16)
+                                num_workers=num_workers,
+                                batch_size=batch_size)
 
         pbar = tqdm(dataloader)
         curr_files = 0

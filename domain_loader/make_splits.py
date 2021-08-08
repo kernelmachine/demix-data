@@ -14,7 +14,6 @@ import pandas as pd
 import torch
 import re
 from torch.utils.data import DataLoader, Dataset
-from torch.utils.data.sampler import SubsetRandomSampler
 from tqdm import tqdm
 from typing import TypeVar, Iterable, List, Sequence, Union, Any
 
@@ -41,59 +40,6 @@ def batchify(data: Iterable[T], batch_size: int) -> Iterable[List[T]]:
     if len(batch) != 0:
         yield batch
 
-
-def load_text(domain, add_bos_token, num_workers, batch_size, num_expected_tokens=None, num_expected_docs=None):
-    with open(PROJECT_DIR / domain  / "splits-final" / "train_files.txt", 'r') as f:
-        files = [x.strip() for x in tqdm(f.readlines())]
-        np.random.shuffle(files)
-
-    dataset = Domain(PROJECT_DIR / domain / domain,
-                     filenames=files if domain not in ['1b', 'reddit'] else None,
-                     add_bos_token=add_bos_token,
-                     track_token_count=True)
-
-    loader = DataLoader(dataset, num_workers=num_workers, batch_size=batch_size)
-
-    pbar = tqdm(loader)
-    texts = []
-
-    curr_tokens = 0
-    curr_docs = 0
-    written = False
-    for _, text ,token_count, _ in pbar:
-        s = f"{domain}, num tokens: {humanize.intword(curr_tokens)}, num docs: {humanize.intword(curr_docs)}"
-        pbar.set_description(s)
-        if (num_expected_docs and curr_docs > num_expected_docs):
-            texts = texts[:num_expected_docs]
-            break
-        if domain in ['1b', 'reddit']:
-            tt = [t.split("<|endoftext|>") for t in text]
-            text = [y for x in tt for y in x]
-            token_count = [len(x.split()) for x in text]
-        if (num_expected_tokens and curr_tokens > num_expected_tokens):
-            if not written:
-                text = " ".join(text)[:num_expected_tokens]
-                texts.extend(text)
-            else:
-                texts = "\n".join(texts)[:num_expected_tokens]
-                texts = texts.split('\n')
-                curr_tokens = num_expected_tokens
-            break
-        else:
-            texts.extend(text)
-            curr_tokens += sum(token_count)
-            curr_docs += len(text)
-        written = True
-    return texts, curr_tokens, curr_docs
-
-def extract_features(domain, add_bos_token, num_workers, batch_size, num_expected_tokens=100000, clusterer=None):
-    texts, curr_tokens, curr_docs = load_text(domain, add_bos_token, num_workers, batch_size, num_expected_tokens)
-    print(f'retrieved {curr_tokens} tokens, {curr_docs} docs')
-    vecs = clusterer['vectorizer'].fit_transform(tqdm(texts))
-    vecs = clusterer['svd'].fit_transform(vecs)
-    return vecs
-
-
 def get_cluster_id(clusterer, text):
     text = [x.replace("<|endoftext|>", "") for x in text]
     vec = clusterer['vectorizer'].transform(text)
@@ -102,10 +48,26 @@ def get_cluster_id(clusterer, text):
     return cluster_id
 
 
-def write_split(domain, add_bos_token, num_workers, batch_size, output_dir, split, files=None, ignore_files=[], clusterer=None, from_file=None, anonymize=False):
+def write_split(domain: str,
+                output_dir: str,
+                split: str,
+                add_bos_token: bool,
+                bos_token: str = "<|endoftext|>",
+                num_workers: int = 16,
+                batch_size: int = 16,
+                files=None,
+                ignore_files=[],
+                clusterer=None,
+                from_file=None,
+                anonymize=False):
 
     if not from_file:
-        dataset = Domain(PROJECT_DIR / domain / domain, filenames=files, add_bos_token=add_bos_token, ignore_files=ignore_files, anonymize=anonymize)
+        dataset = Domain(PROJECT_DIR / domain / domain,
+                         filenames=files,
+                         add_bos_token=add_bos_token,
+                         bos_token=bos_token,
+                         ignore_files=ignore_files,
+                         anonymize=anonymize)
         loader = DataLoader(dataset, num_workers=num_workers, batch_size=batch_size)
     else:
         fh = open(from_file, 'r')
@@ -124,11 +86,6 @@ def write_split(domain, add_bos_token, num_workers, batch_size, output_dir, spli
 
     pbar = tqdm(loader)
     written = False
-
-
-
-
-
 
     if not from_file:
         for fname, text,_, _ in pbar:
@@ -280,9 +237,6 @@ if __name__ == '__main__':
 
     if not args.from_file:
         resolved_path = str(PROJECT_DIR / domain / domain)
-        # if args.domain in ['reddit', '1b', 'openwebtext']:
-        #     domain_files = None
-        # else:
         with open(PROJECT_DIR / args.domain  / "metadata" / "filenames.txt", 'r') as f:
             domain_files = []
             for x in tqdm(f.readlines()):
@@ -301,11 +255,11 @@ if __name__ == '__main__':
         batch_size = args.batch_size
     if not args.test_only and not args.dev_only:
         train_files, train_files_to_ignore, num_train_tokens = write_split(args.domain,
-                                                        add_bos_token,
-                                                        num_workers,
-                                                        batch_size,
                                                         output_dir,
                                                         "train",
+                                                        add_bos_token,
+                                                        num_workers=num_workers,
+                                                        batch_size=batch_size,
                                                         files=args_train_files or domain_files,
                                                         clusterer=clusterer,
                                                         anonymize=args.anonymize)
@@ -318,12 +272,13 @@ if __name__ == '__main__':
         if not args.test_only:
             if args.from_file:
                 train_files_to_ignore = None
-            dev_files, dev_files_to_ignore, num_dev_tokens = write_split(args.domain,
-                                                        add_bos_token,
-                                                        num_workers,
-                                                        batch_size,
+            dev_files, dev_files_to_ignore, num_dev_tokens = write_split(
+                                                        args.domain,
                                                         output_dir,
                                                         "dev",
+                                                        add_bos_token,
+                                                        num_workers=num_workers,
+                                                        batch_size=batch_size,
                                                         files=args_dev_files or domain_files,
                                                         ignore_files=args_train_files or train_files_to_ignore,
                                                         clusterer=clusterer,
@@ -341,12 +296,13 @@ if __name__ == '__main__':
             else:
                 ignore_files = train_files_to_ignore + dev_files_to_ignore
 
-            test_files, test_files_to_ignore, num_test_tokens = write_split(args.domain,
-                                                add_bos_token,
-                                                num_workers,
-                                                batch_size,
+            test_files, test_files_to_ignore, num_test_tokens = write_split(
+                                                args.domain,
                                                 output_dir,
                                                 "test",
+                                                add_bos_token,
+                                                num_workers=num_workers,
+                                                batch_size=batch_size,
                                                 files=args_test_files or domain_files,
                                                 ignore_files=ignore_files,
                                                 clusterer=clusterer,

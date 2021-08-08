@@ -1,4 +1,3 @@
-
 def take_n_tokens(dataloader, num_tokens):
     curr_num_tokens = 0
     for _, text in dataloader:
