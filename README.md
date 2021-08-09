@@ -2,7 +2,7 @@
 
 This repository contains data utilities for "DEMix Layers: Disentangling Domains for Modular Language Modeling" (Gururangan et. al, 2021).
 
-Generally, this code can be used to build data binaries in a format compatible with Fairseq for language modeling. We follow the process necessary to reproduce results in the DEMix paper.
+This code is generic; it can be used to build any multi-domain, metadata-tagged datasets in a format compatible with Fairseq for language modeling. We also provide download links to data necessary to reproduce results in the DEMix paper.
 
 
 ## General Overview
