@@ -76,4 +76,7 @@ TOKEN_COUNTS = {"1b": {'num_train_tokens': 700_000_000,
                 "amazon": {"num_train_tokens": 500_000,
                             "num_dev_tokens": 100_000,
                             "num_test_tokens": 100_000},
+                "acl_papers": {"num_train_tokens": 500_000,
+			       "num_dev_tokens": 100_000,
+                               "num_test_tokens": 100_000}
                 }
