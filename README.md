@@ -124,7 +124,11 @@ You can apply the same process to the all other domains in the `example_domains`
 
 ```bash
 export DOMAIN=ag_news
-python -m domain_loader.shard_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 512 --text-field text
+python -m domain_loader.shard_dataset \
+                --domain $DOMAIN \
+                --input-file example_domains/$DOMAIN/$DOMAIN.jsonl \
+                --batch-size 512 \
+                --text-field text
 python -m domain_loader.scan_filenames --domain $DOMAIN
 python -m domain_loader.count_words --domain $DOMAIN
 ## set token counts for "ag_news" in domain_loader/constants.py
@@ -132,3 +136,5 @@ python -m domain_loader.make_splits --domain $DOMAIN --num-workers 0 --batch-siz
 bash scripts/pretokenize.sh ${DATA_DIR}/$DOMAIN/splits
 bash scripts/preprocess.sh ${DATA_DIR}/$DOMAIN/splits $DOMAIN ${DATA_DIR}/data-bin/
 ```
+
+Check out `bash scripts/preprocess_all_example_domains.sh` for other examples.
