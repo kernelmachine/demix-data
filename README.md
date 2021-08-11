@@ -132,7 +132,11 @@ python -m domain_loader.shard_dataset \
 python -m domain_loader.scan_filenames --domain $DOMAIN
 python -m domain_loader.count_words --domain $DOMAIN
 ## set token counts for "ag_news" in domain_loader/constants.py
-python -m domain_loader.make_splits --domain $DOMAIN --num-workers 0 --batch-size 1 --output-dir $DATA_DIR/$DOMAIN/splits
+python -m domain_loader.make_splits \
+                --domain $DOMAIN \
+                --num-workers 0 \
+                --batch-size 1 \
+                --output-dir $DATA_DIR/$DOMAIN/splits
 bash scripts/pretokenize.sh ${DATA_DIR}/$DOMAIN/splits
 bash scripts/preprocess.sh ${DATA_DIR}/$DOMAIN/splits $DOMAIN ${DATA_DIR}/data-bin/
 ```
