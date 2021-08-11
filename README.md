@@ -142,3 +142,9 @@ bash scripts/preprocess.sh ${DATA_DIR}/$DOMAIN/splits $DOMAIN ${DATA_DIR}/data-b
 ```
 
 Check out `bash scripts/preprocess_all_example_domains.sh` for other examples.
+
+
+
+## Train a multi-domain LM 
+
+Check out the [DEMix](http://github.com/kernelmachine/demix) repo to see how to train an LM on these data-bins. 
