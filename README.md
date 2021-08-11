@@ -34,14 +34,25 @@ export DATA_DIR=$(pwd)/example_domains
 
 We provide an example data input files in the directories in `example_domains/`.
 
+
+
+Check this [file](DOWNLOAD_DATA.md) for more information on how to download the data used in the DEMix paper.
+
+## Preprocess data
+
+We next want preprocess all the datasets into fairseq data-bins. We've made this easy with a script:
+
+```bash
+bash scripts/preprocess_all_example_domains.sh
+```
+
+Otherwise, you can follow along below to understand each preprocessing step.
+
 We will first preprocess the `imdb` domain.
 
 ```bash
 export DOMAIN=imdb
 ```
-
-Check this [file](DOWNLOAD_DATA.md) for more information on how to download the data used in the DEMix paper.
-
 
 ## Shard Data
 
@@ -112,10 +123,4 @@ python -m domain_loader.count_words --domain $DOMAIN
 python -m domain_loader.make_splits --domain $DOMAIN --num-workers 0 --batch-size 1 --output-dir $DATA_DIR/$DOMAIN/splits
 bash scripts/pretokenize.sh ${DATA_DIR}/$DOMAIN/splits
 bash scripts/preprocess.sh ${DATA_DIR}/$DOMAIN/splits $DOMAIN ${DATA_DIR}/data-bin/
-```
-
-We make this easy with a script:
-
-```bash
-bash scripts/preprocess_all_example_domains.sh
 ```
