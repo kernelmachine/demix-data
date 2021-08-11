@@ -81,8 +81,9 @@ First, count the total whitespace tokens in a domain:
 python -m domain_loader.count_words --domain $DOMAIN
 ```
 
-Then use these word counts to set the total number of tokens for train, dev, and test splits in `domain_loader/constants.py`.
+Then use these word counts to set the total number of tokens for train, dev, and test splits by editing `domain_loader/constants.py`.
 
+Then make the data splits:
 
 ```bash
 python -m domain_loader.make_splits \
