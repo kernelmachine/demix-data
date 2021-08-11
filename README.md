@@ -73,17 +73,16 @@ To make data loading faster, we first gather a list of filenames in a separate f
 python -m domain_loader.scan_filenames --domain $DOMAIN
 ```
 
-## Count words
+## Split data into train, dev, and test files
+
+First, count the total whitespace tokens in a domain:
 
 ```bash
 python -m domain_loader.count_words --domain $DOMAIN
 ```
 
+Then use these word counts to set the total number of tokens for train, dev, and test splits in `domain_loader/constants.py`.
 
-## Split data into train, dev, and test files
-
-
-We set the total number of tokens for train, dev, and test splits in `domain_loader/constants.py`.
 
 ```bash
 python -m domain_loader.make_splits \
