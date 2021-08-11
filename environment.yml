@@ -10,4 +10,5 @@ dependencies:
         - transformers
         - scikit-learn
         - fairseq
+        - wandb
         - git+https://github.com/fadel/pytorch_ema
