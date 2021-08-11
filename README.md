@@ -57,7 +57,11 @@ export DOMAIN=imdb
 ## Shard Data
 
 ```bash
-python -m domain_loader.shard_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 512 --text-field text
+python -m domain_loader.shard_dataset \
+    --domain $DOMAIN \
+    --input-file example_domains/$DOMAIN/$DOMAIN.jsonl \
+    --batch-size 512 \
+    --text-field text
 ```
 
 
@@ -82,7 +86,11 @@ python -m domain_loader.count_words --domain $DOMAIN
 We set the total number of tokens for train, dev, and test splits in `domain_loader/constants.py`.
 
 ```bash
-python -m domain_loader.make_splits --domain $DOMAIN --num-workers 0 --batch-size 1 --output-dir $DATA_DIR/$DOMAIN/splits
+python -m domain_loader.make_splits \
+            --domain $DOMAIN \
+            --num-workers 0 \
+            --batch-size 1 \
+            --output-dir $DATA_DIR/$DOMAIN/splits
 ```
 
 
