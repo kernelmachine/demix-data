@@ -34,19 +34,34 @@ export DATA_DIR=$(pwd)/example_domains
 
 We provide an example data input files in the directories in `example_domains/`.
 
+
+
+Check this [file](DOWNLOAD_DATA.md) for more information on how to download the data used in the DEMix paper.
+
+## Preprocess data
+
+We next want preprocess all the datasets into fairseq data-bins. We've made this easy with a script:
+
+```bash
+bash scripts/preprocess_all_example_domains.sh
+```
+
+Otherwise, you can follow along below to understand each preprocessing step.
+
 We will first preprocess the `imdb` domain.
 
 ```bash
 export DOMAIN=imdb
 ```
 
-Check this [file](DOWNLOAD_DATA.md) for more information on how to download the data used in the DEMix paper.
-
-
 ## Shard Data
 
 ```bash
-python -m domain_loader.shard_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 512 --text-field text
+python -m domain_loader.shard_dataset \
+    --domain $DOMAIN \
+    --input-file example_domains/$DOMAIN/$DOMAIN.jsonl \
+    --batch-size 512 \
+    --text-field text
 ```
 
 
@@ -58,20 +73,24 @@ To make data loading faster, we first gather a list of filenames in a separate f
 python -m domain_loader.scan_filenames --domain $DOMAIN
 ```
 
-## Count words
+## Split data into train, dev, and test files
+
+First, count the total whitespace tokens in a domain:
 
 ```bash
 python -m domain_loader.count_words --domain $DOMAIN
 ```
 
+Then use these word counts to set the total number of tokens for train, dev, and test splits by editing `domain_loader/constants.py`.
 
-## Split data into train, dev, and test files
-
-
-We set the total number of tokens for train, dev, and test splits in `domain_loader/constants.py`.
+Then make the data splits:
 
 ```bash
-python -m domain_loader.make_splits --domain $DOMAIN --num-workers 0 --batch-size 1 --output-dir $DATA_DIR/$DOMAIN/splits
+python -m domain_loader.make_splits \
+            --domain $DOMAIN \
+            --num-workers 0 \
+            --batch-size 1 \
+            --output-dir $DATA_DIR/$DOMAIN/splits
 ```
 
 
@@ -105,17 +124,27 @@ You can apply the same process to the all other domains in the `example_domains`
 
 ```bash
 export DOMAIN=ag_news
-python -m domain_loader.shard_dataset --domain $DOMAIN --input-file example_domains/$DOMAIN/$DOMAIN.jsonl --batch-size 512 --text-field text
+python -m domain_loader.shard_dataset \
+                --domain $DOMAIN \
+                --input-file example_domains/$DOMAIN/$DOMAIN.jsonl \
+                --batch-size 512 \
+                --text-field text
 python -m domain_loader.scan_filenames --domain $DOMAIN
 python -m domain_loader.count_words --domain $DOMAIN
 ## set token counts for "ag_news" in domain_loader/constants.py
-python -m domain_loader.make_splits --domain $DOMAIN --num-workers 0 --batch-size 1 --output-dir $DATA_DIR/$DOMAIN/splits
+python -m domain_loader.make_splits \
+                --domain $DOMAIN \
+                --num-workers 0 \
+                --batch-size 1 \
+                --output-dir $DATA_DIR/$DOMAIN/splits
 bash scripts/pretokenize.sh ${DATA_DIR}/$DOMAIN/splits
 bash scripts/preprocess.sh ${DATA_DIR}/$DOMAIN/splits $DOMAIN ${DATA_DIR}/data-bin/
 ```
 
-We make this easy with a script:
+Check out `bash scripts/preprocess_all_example_domains.sh` for other examples.
 
-```bash
-bash scripts/preprocess_all_example_domains.sh
-```
+
+
+## Train a multi-domain LM 
+
+Check out the [DEMix](http://github.com/kernelmachine/demix) repo to see how to train an LM on these data-bins. 
