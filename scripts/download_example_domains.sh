@@ -1,4 +1,4 @@
-for domain in ag amazon imdb chemprot rct-20k hyperpartisan_news; do
+for domain in "ag","amazon","imdb","chemprot","rct-20k","hyperpartisan_news"; do
     if [ ! -d "example_domains/$domain/" ]; then
         echo "Processing $domain"
         mkdir example_domains/$domain/
