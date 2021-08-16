@@ -2,7 +2,12 @@ metadata/
 splits/
 shards/
 data-bin/
-
+example_domains/ag/
+example_domains/chemprot/
+example_domains/imdb/
+example_domains/amazon/
+example_domains/rct-20k/
+example_domains/hyperpartisan_news/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

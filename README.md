@@ -32,9 +32,13 @@ export DATA_DIR=$(pwd)/example_domains
 
 ## Download data
 
-We provide an example data input files in the directories in `example_domains/`.
+You can download example domains for this tutorial here:
 
+```bash
+bash scripts/download_example_domains.sh
+```
 
+We include the legal contracts and ACL papers domains in the `example_domains` directory already.
 
 Check this [file](DOWNLOAD_DATA.md) for more information on how to download the data used in the DEMix paper.
 
@@ -43,7 +47,7 @@ Check this [file](DOWNLOAD_DATA.md) for more information on how to download the 
 We next want preprocess all the datasets into fairseq data-bins. We've made this easy with a script:
 
 ```bash
-bash scripts/preprocess_all_example_domains.sh
+bash scripts/preprocess_example_domains.sh
 ```
 
 Otherwise, you can follow along below to understand each preprocessing step.
@@ -141,10 +145,10 @@ bash scripts/pretokenize.sh ${DATA_DIR}/$DOMAIN/splits
 bash scripts/preprocess.sh ${DATA_DIR}/$DOMAIN/splits $DOMAIN ${DATA_DIR}/data-bin/
 ```
 
-Check out `bash scripts/preprocess_all_example_domains.sh` for other examples.
+Check out `bash scripts/preprocess_example_domains.sh` for other examples.
 
 
 
-## Train a multi-domain LM 
+## Train a multi-domain LM
 
-Check out the [DEMix](http://github.com/kernelmachine/demix) repo to see how to train an LM on these data-bins. 
+Check out the [DEMix](http://github.com/kernelmachine/demix) repo to see how to train an LM on these data-bins.
