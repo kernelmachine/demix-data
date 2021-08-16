@@ -40,7 +40,7 @@ bash scripts/download_example_domains.sh
 
 We include the legal contracts and ACL papers domains in the `example_domains` directory already.
 
-Check this [file](DOWNLOAD_DATA.md) for more information on how to download the data used in the DEMix paper.
+Check this [file](DOWNLOAD_DEMIX_DATA.md) for more information on how to download the data used in the DEMix paper.
 
 ## Preprocess data
 
