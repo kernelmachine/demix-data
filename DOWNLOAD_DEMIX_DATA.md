@@ -10,8 +10,6 @@ Download 1B words corpus from here: https://opensource.google/projects/lm-benchm
 
 Create an account and download data here https://case.law/
 
-Use the script at `domains/legal/split_legal.py` to split the resulting jsonl files into separate files.
-
 ### S2ORC (e.g., Med, CS)
 
 Follow instructions here to download papers: https://github.com/allenai/s2orc
@@ -28,13 +26,9 @@ Use the script at `domains/openwebtext/unpack_openwebtext.py` to unpack the data
 
 Download the dataset from here: https://docs.google.com/forms/d/1LMAUeUtHNPXO9koyAIlDpvyKsLSYlrBj3rYhC30a7Ak/viewform?edit_requested=true
 
-Use the script at `domains/realnews/split_realnews.py` to split the resulting jsonl file into separate files.
-
 ### Reviews
 
 Download the raw review data from here: http://deepyeti.ucsd.edu/jianmo/amazon/index.html
-
-Use the script at `domains/reviews/split_reviews.py` to split the resulting jsonl file into separate files.
 
 ### Gutenberg
 
@@ -58,7 +52,8 @@ Download dataset here: https://www.semanticscholar.org/cord19/download
 
 ### Tweets
 
-Sign up for the [Twitter Academic API](https://developer.twitter.com/en/products/twitter-api/academic-research), and download tweets in a jsonl format. Then split into files using a process similar to `domains/realnews/split_realnews.py`.
+Sign up for the [Twitter Academic API](https://developer.twitter.com/en/products/twitter-api/academic-research), and download tweets in a jsonl format.
+
 
 ### Breaking News
 
@@ -68,11 +63,7 @@ Use `domain/scripts/fetch_articles.py` to crawl breaking news articles. We use t
 python -m domain.scripts.fetch_articles --num-articles-per-source 100 --path-to-output news.jsonl
 ```
 
-Then split into files using a process similar to `domains/realnews/split_realnews.py`.
-
 
 ### Yelp Reviews
 
 Download dataset here https://www.yelp.com/dataset
-
-Then split into files using a process similar to `domains/realnews/split_realnews.py`.
