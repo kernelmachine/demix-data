@@ -15,7 +15,7 @@ The processing steps below generally build the following files:
 * A `data-bin/` folder, which contains data binaries for training and evaluation of language models in Fairseq
 * A `metadata/` folder, which contains `filenames.txt`, an index of the paths to all files in your dataset, and a `metadata.jsonl`, a json-lines file which contains per-document metadata. The former is used for faster data loading, and the later is used for finer-grained filtering of documents based on certain metadata.
 
-In this tutorial, we use the example datasets in the `example_domains/` directory to build these necessary folders and files. You can use the same process on any data of any size, provided that the original input data is in a `.jsonl` format. It's easy to convert a raw text file into a `.jsonl` format (see [below](#converting_to_jsonl)).
+In this tutorial, we use the example datasets in the `example_domains/` directory to build these necessary folders and files. You can use the same process on any data of any size, provided that the original input data is in a `.jsonl` format.
 
 ## Installation
 
