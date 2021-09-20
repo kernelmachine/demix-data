@@ -52,6 +52,7 @@ class Domain(Dataset):
                  anonymize: bool = False,
                  sample_by_metadata: Optional[Tuple[str, int]] = None,
                  metadata_columns: List[str] = None,
+                 silent: bool=False,
                  metadata_file: Optional[Path] = None,
                  **metadata_filters):
         """
@@ -81,67 +82,66 @@ class Domain(Dataset):
         self.bos_token = bos_token
         self.domain_directory = domain_directory
         self.files = {}
-
-        if metadata_file:
-            print(f'loading files from metadata in {metadata_file}')
-            with open(metadata_file, 'r') as f:
-                for ix, line in tqdm(enumerate(f)):
-                    if sample:
-                        if ix > sample:
-                            break
-                    z = json.loads(line)
-                    if filenames:
-                        if z['filename'] not in filenames:
-                            continue
-                    metadata_ = {metadata_column: z[metadata_column] for metadata_column in metadata_columns}
-                    if metadata_filters:
-                        for key, items in metadata_filters.items():
-                            if metadata_[key] in items:
-                                self.files[z['filename']] = metadata_
-                    else:
-                        self.files[z['filename']] = metadata_
-
-            if sample_by_metadata:
-                files_ = {}
-                self.metadata_counts = defaultdict(int)
-                for file in self.files:
-                    if self.metadata_counts[self.files[file][sample_by_metadata['metadata_column']]] < sample_by_metadata['sample_size']:
-                        self.metadata_counts[self.files[file][sample_by_metadata['metadata_column']]] += 1
-                        files_[file] = self.files[file]
-                self.files = files_
-        else:
-            self.metadata_file = None
-            if filenames:
-                if isinstance(filenames[0], Tuple):
-                    self.files = dict(filenames)
-                else:
-                    self.files = filenames
+        self.metadata_file = metadata_file
+        if filenames:
+            if isinstance(filenames[0], Tuple):
+                self.files = dict(filenames)
             else:
-                fs = tqdm(domain_directory.glob("*/*"))
-                if sample:
-                    print(f"Loading {sample} files from {domain_directory}...")
-                    if sample_from_head:
-                        sample_files = []
-                        for ix, file in enumerate(fs):
-                            if ix < sample:
-                                sample_files.append(file)
-                            else:
-                                break
-                    else:
-                        sample_files = reservoir_sampling(fs, sample)
-                    self.files = sample_files
+                self.files = filenames
+        else:
+            fs = tqdm(domain_directory.glob("*/*"))
+            if sample:
+                print(f"Loading {sample} files from {domain_directory}...")
+                if sample_from_head:
+                    sample_files = []
+                    for ix, file in enumerate(fs):
+                        if ix < sample:
+                            sample_files.append(file)
+                        else:
+                            break
                 else:
-                    print(f"Loading all files from {domain_directory}...")
-                    self.files = list(fs)
+                    sample_files = reservoir_sampling(fs, sample)
+                self.files = sample_files
+            else:
+                print(f"Loading all files from {domain_directory}...")
+                self.files = list(fs)
 
+        if self.metadata_file:
+            print(f'loading metadata in {metadata_file}')
+            self.metadata_df = pd.read_json(self.metadata_file, lines=True)
+            self.metadata_df['filename'] =  self.metadata_df.filename.apply(lambda x: str(domain_directory / x))
+            self.metadata_df = self.metadata_df.loc[self.metadata_df.filename.isin(self.files)]
+            self.metadata_columns = metadata_columns
+            # self.files = 
+            # metadata_df  = metadata_df.loc[metadata_df.filename ]
+            # with open(metadata_file, 'r') as f:
+            #     for ix, line in tqdm(enumerate(f)):
+            #         z = json.loads(line)
+            #         if filenames:
+            #             if not self.files.get(domain_directory / z['filename']):
+            #                 continue
+                    
+            #         metadata_ = {metadata_column: z[metadata_column] for metadata_column in metadata_columns}
+            #         self.files[z['filename']] = metadata_
+            # if sample_by_metadata:
+            #     files_ = {}
+            #     self.metadata_counts = defaultdict(int)
+            #     for file in self.files:
+            #         if self.metadata_counts[self.files[file][sample_by_metadata['metadata_column']]] < sample_by_metadata['sample_size']:
+            #             self.metadata_counts[self.files[file][sample_by_metadata['metadata_column']]] += 1
+            #             files_[file] = self.files[file]
+            #     self.files = files_
+        
         if ignore_files:
             self.files = list(set(self.files) - set(ignore_files))
-        print(f"loaded {len(self.files)} files, ignoring {len(ignore_files)} files")
+        if not silent:
+            print(f"loaded {len(self.files)} files, ignoring {len(ignore_files)} files")
+        self.filemap = {x: i for i, x in enumerate(self.files)}
 
     def __getitem__(self, idx):
         if self.metadata_file:
-            x = self.files[idx]
-            file, metadata = str(x[0]), x[1]
+            file = self.files[idx]
+            metadata = self.metadata_df.loc[self.metadata_df.filename == file][self.metadata_columns].to_dict()
         else:
             file = str(self.files[idx])
             metadata = []
@@ -160,7 +160,7 @@ class Domain(Dataset):
             for x,y in self.anonymizer.items():
                 text = x.sub(y, text)
         token_count = len(text.split())
-        return file, text, token_count, metadata
+        return self.filemap[file], file, text, token_count, metadata
 
     def __len__(self):
         return len(self.files)
@@ -196,15 +196,19 @@ class DomainTokenized(Domain):
 class DomainVectorized(Domain):
     def __init__(self,
                  domain_directory: Path,
+                 tokenizer: Optional[GPT2Tokenizer] = None,
                  vectorizer = None,
                  filenames: Optional[List[str]] = None,
                  add_bos_token: bool = False,
-                 metadata_columns: List[str] = None,
+                 bos_token: str = "<|endoftext|>",
                  ignore_files: Optional[List[str]] = [],
-                 sample_by_metadata: Optional[Tuple[str, int]] = None,
-                 metadata_file: Optional[Path] = None,
-                 tokenizer = None,
                  sample: int = None,
+                 sample_from_head: bool = False,
+                 track_token_count: bool = False,
+                 anonymize: bool = False,
+                 sample_by_metadata: Optional[Tuple[str, int]] = None,
+                 metadata_columns: List[str] = None,
+                 metadata_file: Optional[Path] = None,
                  **metadata_filters):
         """
         Domain dataset with document vectorization built in.
@@ -212,11 +216,15 @@ class DomainVectorized(Domain):
         super().__init__(domain_directory=domain_directory,
                  filenames=filenames,
                  add_bos_token=add_bos_token,
+                 bos_token=bos_token,
+                 sample=sample,
+                 sample_from_head=sample_from_head,
+                 track_token_count=track_token_count,
+                 anonymize=anonymize,
                  metadata_columns=metadata_columns,
                  ignore_files=ignore_files,
                  sample_by_metadata=sample_by_metadata,
                  metadata_file=metadata_file,
-                 sample=sample,
                  **metadata_filters)
         if not tokenizer:
             tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
@@ -229,6 +237,7 @@ class DomainVectorized(Domain):
 
     def __getitem__(self, idx) -> Tuple[str, np.array]:
         filename, text, token_count, metadata = super().__getitem__(idx)
+        tokenized_text = self.tokenizer(text)
         vectorized_text = self.vectorizer(tokenized_text)
         return filename, vectorized_text, token_count, metadata
 
