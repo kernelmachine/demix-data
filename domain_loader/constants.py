@@ -25,7 +25,7 @@ TOKEN_COUNTS = {"1b": {'num_train_tokens': 700_000_000,
                 "legal": {'num_train_tokens': 10_500_000_000,
                         'num_dev_tokens': 10_000_000,
                         'num_test_tokens': 10_000_000},
-                "med": {'num_train_tokens': 9_500_000_000,
+                "Medicine": {'num_train_tokens': 100_000_000,
                         'num_dev_tokens': 10_000_000,
                         'num_test_tokens': 10_000_000},
                 "gutenberg": {'num_train_tokens': 3_000_000_000,
@@ -78,5 +78,35 @@ TOKEN_COUNTS = {"1b": {'num_train_tokens': 700_000_000,
                             "num_test_tokens": 100_000},
                 "acl_papers": {"num_train_tokens": 500_000,
 			       "num_dev_tokens": 100_000,
-                               "num_test_tokens": 100_000}
+                               "num_test_tokens": 100_000},
+                "c4": {"num_train_tokens": 10_000_000_000,
+			       "num_dev_tokens": 1_000_000,
+                               "num_test_tokens": 1_000_000},
+                "rust": { "num_train_tokens":250_000_000,
+                          "num_dev_tokens": 1_000_000,
+                          "num_test_tokens": 1_000_000},
+                "go": { "num_train_tokens":1_000_000_000,
+                          "num_dev_tokens": 1_000_000,
+                          "num_test_tokens": 1_000_000},
+                "python": { 
+                        "num_train_tokens":4_500_000_000,
+                          "num_dev_tokens": 1_000_000,
+                          "num_test_tokens": 1_000_000},
+                "c": { 
+                        "num_train_tokens":10_000_000_000,
+                          "num_dev_tokens": 1_000_000,
+                          "num_test_tokens": 1_000_000},
+                "csharp": { 
+                        "num_train_tokens":3_000_000_000,
+                          "num_dev_tokens": 1_000_000,
+                          "num_test_tokens": 1_000_000},
+
+                "cpp": { 
+                        "num_train_tokens":6_000_000_000,
+                        "num_dev_tokens": 1_000_000,
+                        "num_test_tokens": 1_000_000},
+                "java": { 
+                        "num_train_tokens":10_000_000_000,
+                        "num_dev_tokens": 1_000_000,
+                        "num_test_tokens": 1_000_000}
                 }

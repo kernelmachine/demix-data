@@ -1,10 +1,10 @@
 import os
-from typing import Optional, List, Tuple, Iterable, Any
+from typing import Optional, List, Tuple, Iterable, Any, Dict
 from collections import defaultdict
 import json
 import random
 import numpy as np
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset, DataLoader, IterableDataset
 import torch
 from torch.utils.data.sampler import SubsetRandomSampler
 from transformers import GPT2Tokenizer
@@ -13,14 +13,17 @@ import pandas as pd
 from pathlib import Path
 import gzip
 from joblib import Parallel, delayed
-
+import itertools
 from domain_loader.constants import DATA_DIR, TOKEN_COUNTS
 from domain_loader.utils import take_n_tokens, REGEXES
 from tqdm.auto import tqdm
 import numpy as np
 from scipy import sparse
-import re
+import humanize
+from fairseq.data import ConcatDataset
 
+import re
+import gzip
 
 def reservoir_sampling(iterator: Iterable[Any], K: int):
     """
@@ -38,6 +41,59 @@ def reservoir_sampling(iterator: Iterable[Any], K: int):
                 result[ s ] = item
     return result
 
+class IterableDomain(IterableDataset):
+    def __init__(self,
+                domain_directory: Path,
+                add_bos_token: bool = False,
+                bos_token: str = "<|endoftext|>",
+                sample: int = None,
+                sample_from_head: bool = False,
+                track_token_count: bool = False,
+                anonymize: bool = False,
+                silent: bool=False,
+                ignore_ids: Dict[str, int]={},
+                text_field: str = "text",
+                ):
+        self.files = domain_directory.glob("*.json.gz")
+        self.num_files = len(list(domain_directory.glob("*.json.gz")))
+        self.add_bos_token = add_bos_token
+        self.anonymize = anonymize
+        self.anonymizer = {re.compile(regex['regex']): regex['repl'] for regex in REGEXES} 
+        self.track_token_count = track_token_count
+        self.bos_token = bos_token
+        self.domain_directory = domain_directory
+        self.text_field = text_field
+        self.ignore_ids = ignore_ids
+
+    def line_mapper(self, line):
+        sample = json.loads(line)
+        
+        if not sample.get(self.text_field):
+            return None, None, None
+        token_count = len(sample[self.text_field].split())
+        text = sample.pop(self.text_field)
+        if self.add_bos_token:
+            text = self.bos_token + " " + text
+        if self.anonymize:
+            for x,y in self.anonymizer.items():
+                text = x.sub(y, text)
+        return text, token_count, sample
+        
+    def __iter__(self):
+        if torch.utils.data.get_worker_info() is not None:
+            worker_total_num = torch.utils.data.get_worker_info().num_workers
+            worker_id = torch.utils.data.get_worker_info().id
+        else:
+            worker_total_num = 1
+            worker_id = 0
+        for json_file in itertools.islice(self.files, worker_id, None, worker_total_num):
+            file_itr = gzip.open(json_file, 'rb')
+            mapped_itr = map(self.line_mapper, file_itr)
+            for ix, item in enumerate(mapped_itr):
+                if item[0] is not None:
+                    yield [ix, str(json_file)] + list(item)
+                
+    
 
 class Domain(Dataset):
     def __init__(self,
@@ -83,6 +139,7 @@ class Domain(Dataset):
         self.domain_directory = domain_directory
         self.files = {}
         self.metadata_file = metadata_file
+        
         if filenames:
             if isinstance(filenames[0], Tuple):
                 self.files = dict(filenames)
@@ -105,7 +162,6 @@ class Domain(Dataset):
             else:
                 print(f"Loading all files from {domain_directory}...")
                 self.files = list(fs)
-
         if self.metadata_file:
             print(f'loading metadata in {metadata_file}')
             self.metadata_df = pd.read_json(self.metadata_file, lines=True)
@@ -136,12 +192,12 @@ class Domain(Dataset):
             self.files = list(set(self.files) - set(ignore_files))
         if not silent:
             print(f"loaded {len(self.files)} files, ignoring {len(ignore_files)} files")
-        self.filemap = {x: i for i, x in enumerate(self.files)}
 
     def __getitem__(self, idx):
+
         if self.metadata_file:
             file = self.files[idx]
-            metadata = self.metadata_df.loc[self.metadata_df.filename == file][self.metadata_columns].to_dict()
+            metadata = self.metadata_df.loc[self.metadata_df.filename == file][self.metadata_columns].to_dict('r')
         else:
             file = str(self.files[idx])
             metadata = []
@@ -160,7 +216,7 @@ class Domain(Dataset):
             for x,y in self.anonymizer.items():
                 text = x.sub(y, text)
         token_count = len(text.split())
-        return self.filemap[file], file, text, token_count, metadata
+        return idx, file, text, token_count, metadata
 
     def __len__(self):
         return len(self.files)
@@ -255,3 +311,64 @@ def domain_dataloader(domain_directory: Path,
         dataset = Domain(domain_directory, metadata_file, filenames, **metadata_filters)
     dataloader = DataLoader(dataset, num_workers=16, batch_size=batch_size)
     return dataloader
+
+
+
+
+def get_dataloader(domains, files=None, sample=None, num_workers=16, batch_size=16,metadata_file=None, metadata_columns=["domain"], silent=False):
+    datasets = []
+    for domain in tqdm(domains):
+        resolved_path = Path(DATA_DIR) / domain / domain
+        if files:
+            domain_files = files
+        else:
+            with open(Path(DATA_DIR) / domain  / "metadata" / "filenames.txt", 'r') as f:
+                domain_files = []
+                for x in f.readlines():
+                    fp = x.strip()
+                    domain_files.append(fp)
+            if sample:
+                domain_files = np.random.choice(domain_files, sample)
+        dataset = Domain(resolved_path,
+                         filenames=list(domain_files),
+                         add_bos_token=True,
+                         metadata_file=metadata_file,
+                         metadata_columns=metadata_columns,
+                         silent=silent)
+        datasets.append(dataset)
+    
+    dataset = ConcatDataset(datasets)
+    dataloader = DataLoader(dataset,
+                            num_workers=num_workers,
+                            batch_size=batch_size)
+    return  dataloader
+    
+def read_domains(domains, files=None, sample=None, num_tokens=None, dataloader_only=False, metadata_file=None, metadata_columns = ["domain"], num_workers=16, batch_size=16, silent=False):
+    
+    dataloader = get_dataloader(domains, files, sample, batch_size=batch_size, num_workers=num_workers, metadata_file=metadata_file, metadata_columns=metadata_columns, silent=silent)
+    
+    if dataloader_only:
+        return dataloader
+    curr_tokens = 0
+    texts = []
+    files = []
+    metadatas = []
+    pbar = tqdm(dataloader)
+    for id, file, text, token_count, metadata in pbar:
+        for  f, t, tc in zip(file, text, token_count):
+            curr_tokens += tc
+            pbar.set_description(f"number of tokens: {humanize.intword(curr_tokens)}")
+            if num_tokens and curr_tokens > num_tokens:
+                break
+            texts.append(t)
+            files.append(f)
+            metadatas.append(metadata)
+        if num_tokens and curr_tokens > num_tokens:
+            break
+
+    df = pd.DataFrame({"text": texts,
+                       "file": files,
+                       "metadata": metadatas})
+    df['id'] = range(len(df))
+    return df
+

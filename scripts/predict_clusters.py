@@ -1,5 +1,5 @@
 import pandas as pd
-from cluster.extract_features import extract_features
+from cluster.predict_clusters import extract_features
 import argparse
 from domain_loader.domain_loader import Domain, DomainVectorized
 import os
@@ -68,18 +68,14 @@ if __name__ == '__main__':
     parser.add_argument("--model")
     parser.add_argument("--domains",  nargs="+",  default=None)
     parser.add_argument("--path_to_file", default=None)
+    parser.add_argument("--path_to_clusterer", default=None)
     parser.add_argument("--path_to_data_bins", nargs="+", default=[])
     parser.add_argument("--batch_size", type=int)
     parser.add_argument("--num_gpus", type=int)
     parser.add_argument("--sample", type=int)
     parser.add_argument("--fairseq_binary", action='store_true')
-    parser.add_argument("--train_clusters", action='store_true')
-    parser.add_argument("--num_clusters", default=8, type=int)
-    parser.add_argument("--predict_clusters", action='store_true')
-    parser.add_argument("--path_to_clusters", default=None)
-    parser.add_argument("--path_to_output_dir", default=None)
 
-    parser.add_argument("--output_path", default=None)
+    parser.add_argument("--fname")
 
     parser.add_argument("--master_addr", default='127.0.0.1')
     parser.add_argument("--master_port", default='29500')
@@ -102,12 +98,9 @@ if __name__ == '__main__':
                  model=args.model,
                  batch_size=args.batch_size,
                  num_gpus=args.num_gpus,
-                 output_path=args.output_path,
+                 fname=args.fname,
                  master_addr=args.master_addr,
                  master_port=args.master_port,
                  sample=args.sample,
-                 train_clusters=args.train_clusters,
-                 num_clusters=args.num_clusters,
-                 predict_clusters=args.predict_clusters,
-                 path_to_clusters=args.path_to_clusters,
-                 path_to_output_dir=args.path_to_output_dir)
+                 path_to_clusterer=args.path_to_clusterer,
+                 notebook=False)
