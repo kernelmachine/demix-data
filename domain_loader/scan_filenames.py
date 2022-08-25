@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     domain = args.domain
 
-    dataset = Domain(DATA_DIR / domain / "shards")
+    dataset = Domain(DATA_DIR / domain )
 
     if domain in ["1b", "reddit"]:
         num_workers = 1
@@ -38,7 +38,7 @@ if __name__ == '__main__':
     curr_files = 0
     (DATA_DIR / domain / "metadata" ).mkdir(exist_ok=True)
     with open(DATA_DIR / domain / "metadata" / "filenames.txt", "w+") as f:
-        for fname, _, _, _ in pbar:
+        for _, fname, _, _, _ in pbar:
             for fn in fname:
                 f.write(fn + "\n")
                 curr_files += 1

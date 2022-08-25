@@ -18,7 +18,7 @@ from tqdm import tqdm
 from typing import TypeVar, Iterable, List, Sequence, Union, Any
 
 
-from domain_loader.constants import DATA_DIR, TOKEN_COUNTS
+from domain_loader.constants import DATA_DIR, TOKEN_COUNTS, TOKEN_COUNTS_DEMIX
 from domain_loader.domain_loader import Domain, IterableDomain
 from domain_loader.utils import take_n_tokens
 
@@ -62,7 +62,8 @@ def write_split(domain: str,
                 from_file=None,
                 text_field="text",
                 use_iterable_dataset=False,
-                anonymize=False):
+                anonymize=False,
+                num_random_splits=False):
 
     if not from_file:
         if use_iterable_dataset:
@@ -140,10 +141,10 @@ def write_split(domain: str,
                     else:
                         s = f"{split}, num tokens: {humanize.intword(curr_tokens[0])}"
                 pbar.set_description(s)
-                if sum(curr_tokens.values()) > TOKEN_COUNTS[domain][f'num_{split}_tokens']:
+                if sum(curr_tokens.values()) > TOKEN_COUNTS_DEMIX[domain][f'num_{split}_tokens']:
                     if not written:
                         count_ = 0
-                        item = " ".join(doc.split()[:TOKEN_COUNTS[domain][f'num_{split}_tokens']])
+                        item = " ".join(doc.split()[:TOKEN_COUNTS_DEMIX[domain][f'num_{split}_tokens']])
                         if clusterer:
                             filehandle[cluster_id].write(doc.strip() + "\n")
                             curr_tokens[cluster_id] += len(doc.split())

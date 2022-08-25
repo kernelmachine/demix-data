@@ -21,6 +21,7 @@ import numpy as np
 from scipy import sparse
 import humanize
 from fairseq.data import ConcatDataset
+from itertools import chain
 
 import re
 import gzip
@@ -53,9 +54,10 @@ class IterableDomain(IterableDataset):
                 silent: bool=False,
                 ignore_ids: Dict[str, int]={},
                 text_field: str = "text",
+                json: bool = True
                 ):
-        self.files = domain_directory.glob("*.json.gz")
-        self.num_files = len(list(domain_directory.glob("*.json.gz")))
+        self.files = chain(domain_directory.glob(r"*.json.gz"), domain_directory.glob(r"*.jsonl.gz"), domain_directory.glob(r"*.txt.gz"))
+        self.num_files = len(list(chain(domain_directory.glob(r"*.json.gz"), domain_directory.glob(r"*.jsonl.gz"), domain_directory.glob(r"*.txt.gz"))))
         self.add_bos_token = add_bos_token
         self.anonymize = anonymize
         self.anonymizer = {re.compile(regex['regex']): regex['repl'] for regex in REGEXES} 
@@ -64,10 +66,17 @@ class IterableDomain(IterableDataset):
         self.domain_directory = domain_directory
         self.text_field = text_field
         self.ignore_ids = ignore_ids
+        self.json = json
 
     def line_mapper(self, line):
-        sample = json.loads(line)
-        
+        if self.json:
+            sample = json.loads(line)
+            try:
+                sample.get(self.text_field)
+            except:
+                sample = {self.text_field : line}
+        else:
+            sample = {self.text_field: line}
         if not sample.get(self.text_field):
             return None, None, None
         token_count = len(sample[self.text_field].split())
@@ -146,7 +155,8 @@ class Domain(Dataset):
             else:
                 self.files = filenames
         else:
-            fs = tqdm(domain_directory.glob("*/*"))
+            
+            fs = tqdm(chain(domain_directory.glob("*"), domain_directory.glob("*/*"), domain_directory.glob("*/*/*")))
             if sample:
                 print(f"Loading {sample} files from {domain_directory}...")
                 if sample_from_head:
@@ -190,9 +200,10 @@ class Domain(Dataset):
         
         if ignore_files:
             self.files = list(set(self.files) - set(ignore_files))
+        self.num_files = len(self.files)
         if not silent:
             print(f"loaded {len(self.files)} files, ignoring {len(ignore_files)} files")
-
+        
     def __getitem__(self, idx):
 
         if self.metadata_file:
