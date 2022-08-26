@@ -27,7 +27,7 @@ domain_label_map = {
 
 label_domain_map = {y: x for x,y in domain_label_map.items()}
 class ClusterAnalysis:
-    def __init__(self, corpus: pd.DataFrame, clustering_output: Dict):
+    def __init__(self, corpus: pd.DataFrame, clustering_output):
         """
         Module for analyses + plots
         Params
@@ -36,8 +36,10 @@ class ClusterAnalysis:
         clustering_output: Dict => output of clustering algorithm (return value of cluster.Cluster)
         """
         self.corpus = corpus.sort_values(by='id')
-        self.clustering_output = clustering_output
-    
+        if isinstance('clustering_output', dict):
+            self.clustering_output = clustering_output
+        else:
+            self.clustering_output = {'model': clustering_output, 'model_type': 'kmeans'}
     def get_cluster(self, cluster_idx: int) -> pd.DataFrame:
         return self.corpus.loc[self.corpus.id.isin(self.clustering_output['clusters'][cluster_idx])]
 
@@ -117,6 +119,7 @@ class ClusterAnalysis:
                   sample: int=None,
                   legend: bool=True,
                   ground_truth: List[int]=None,
+                  ground_truth_only: bool=False,
                   save_path: str = None):
         """
         Plot TSNE of embeddings
@@ -146,8 +149,7 @@ class ClusterAnalysis:
         color_palette = sns.color_palette('Paired', max(np.unique(model_labels_)+1))
         if ground_truth is not None:
             ground_truth_color_palette = sns.color_palette('Paired', max(np.unique(model_labels_)+1))
-        print(len(ground_truth_color_palette))
-        if ground_truth is not None:
+        if ground_truth is not None and not ground_truth_only:
             fig, ax = plt.subplots(1,2, figsize=(20,8))
         else:
             fig, ax = plt.subplots(1,1, figsize=(8,8))
@@ -167,23 +169,23 @@ class ClusterAnalysis:
         unique_labels = np.unique(model_labels_)
         
         cluster_member_colors = np.array(cluster_member_colors)
+        if not ground_truth_only:
+            for label in tqdm(unique_labels, disable=disable_tqdm):
+                idx = np.where(model_labels_ == label)[0]
+                if ground_truth is not None:
+                    axes = ax[0]
+                else:
+                    axes = ax
+                axes.scatter(*projection.T[:, idx],
+                            s=50,
+                            linewidth=0,
+                            c=cluster_member_colors[idx],
+                            label=label)
+                if legend:
+                    axes.legend(title='Cluster Label')
+                axes.set_title(self.clustering_output['model_type'])
         
-        for label in tqdm(unique_labels, disable=disable_tqdm):
-            idx = np.where(model_labels_ == label)[0]
-            if ground_truth is not None:
-                axes = ax[0]
-            else:
-                axes = ax
-            axes.scatter(*projection.T[:, idx],
-                         s=50,
-                         linewidth=0,
-                         c=cluster_member_colors[idx],
-                         label=label)
-            if legend:
-                axes.legend(title='Cluster Label')
-            axes.set_title(self.clustering_output['model_type'])
-        
-        if ground_truth is not None:
+        if ground_truth is not None and not ground_truth_only:
             unique_labels = np.unique(ground_truth)
             cluster_colors_ground_truth = np.array(cluster_colors_ground_truth)
             for label in tqdm(unique_labels, disable=disable_tqdm):
@@ -195,5 +197,20 @@ class ClusterAnalysis:
                               label=domain_label_map[label])
             ax[1].legend(title='Domain Label')
             ax[1].set_title('Domain Labels')
+        elif ground_truth_only:
+            unique_labels = np.unique(ground_truth)
+            cluster_colors_ground_truth = np.array(cluster_colors_ground_truth)
+            for label in tqdm(unique_labels, disable=disable_tqdm):
+                idx = np.where(ground_truth == label)[0]
+                ax.scatter(*projection.T[:,idx],
+                              s=50,
+                              linewidth=0,
+                              c=cluster_colors_ground_truth[idx])
+            # ax.legend(title='Domain Label')
+            sns.despine(top=True, bottom=True, left=True)
+            ax.axes.xaxis.set_visible(False)
+            ax.axes.yaxis.set_visible(False)
+            
+
         if save_path is not None:
             plt.savefig(save_path, dpi=300)
