@@ -41,12 +41,13 @@ if __name__ == '__main__':
 
     dataset = MMDataset(args.path_to_vecs)
 
-    kmeans.train(dataset, n_clusters=11, output_dir=args.output_dir)
+    kmeans.train(dataset, n_clusters=8, output_dir=args.output_dir)
     kmeans = load_model(args.output_dir + "/model.pkl")
 
     dataset = MMDataset(args.path_to_vecs)
     clusters = []
-    for dataset_idx, ix, batch in DataLoader(dataset, batch_size=128):
+    loader = DataLoader(dataset, batch_size=128)
+    for dataset_idx, ix, batch in tqdm(loader):
         clusters.extend(list(zip(dataset_idx, ix, kmeans['model'].predict(batch.numpy()))))
 
     
@@ -71,6 +72,7 @@ if __name__ == '__main__':
                       "/private/home/suching/raw_data/demix_scale/data-bin/vocab.bpe")
     texts = pd.DataFrame([{'index': i, 
                             'text': bpe.decode(x)} for i, x in tqdm(enumerate(texts))])
+    
     res = clusters.merge(texts, on='index')
     import pdb; pdb.set_trace()        
 
